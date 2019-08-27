@@ -1,3 +1,12 @@
+---
+sidebarDepth: 0
+---
+
+# ESLint Config
+
+## Vscode 的 eslint 配置
+
+```json
 //  Vscode的eslint配置
 
 {
@@ -66,3 +75,23 @@
     "*.js": "javascript"
   }
 }
+```
+
+## 引入 ESLint 的依赖 packson.json
+
+```json
+{
+  "devDependencies": {
+    "babel-eslint": "^8.2.1",
+    "eslint": "^4.15.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-friendly-formatter": "^3.0.0",
+    "eslint-loader": "^1.7.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-node": "^5.2.0",
+    "eslint-plugin-promise": "^3.4.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "eslint-plugin-vue": "^4.0.0"
+  }
+}
+```
