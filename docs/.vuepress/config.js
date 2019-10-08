@@ -10,7 +10,7 @@ module.exports = {
     lastUpdated: '更新日期',
     sidebar: {
       '/vue/': ['eslint-config', 'question'],
-      '/javascript/': ['format','es6-format','p6-questions','dom-api','js-memory'],
+      '/javascript/': ['format','es6-format','es6-proxy','p6-questions','dom-api','js-memory','array-function'],
       '/nodejs/': ['introduction', 'koa']
     },
     nav: [
