@@ -1,0 +1,538 @@
+<div class="main-content">
+    <div class="left-area" style="width:100%;">
+        <div class="dd-tab active">
+            <div class="dd-card">
+                <div>
+                    <span class="card-title">推送信息</span>
+                </div>
+                <table class="table-card table-control">
+                    <tbody>
+                        <tr >
+                            <td>
+                                是否推送给客户
+                            </td>
+                            <td>
+                                <div><select class="form-control" ng-model="data.bizLaterContract.is_push_to_customer"><option value="">请选择</option><option value="Y">是</option><option value="N">否</option></select></div>
+                            </td>
+                        </tr>
+                        <tr ng-if="data.bizLaterContract.is_push_to_customer==='Y'">
+                            <td>
+                                请选择需要推送的客户
+                            </td>
+                            <td>
+                                <div></div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="dd-card">
+                <div>
+                    <span class="card-title">第一条 服务内容</span>
+                </div>
+                <table class="table-card table-control">
+                    <tbody>
+                        <tr class="firstRow">
+                            <td>
+                                服务类型
+                            </td>
+                            <td>
+                                <div ng-bind="data.bizLaterContract.service_type"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                借款金额
+                            </td>
+                            <td>
+                                <div ng-bind="data.bizLaterContract.borrowing_amount | number:'2'"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                借款协议-协议编号
+                            </td>
+                            <td>
+                                <div  ng-bind="data.bizLaterContract.contract_no"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                甲方指定第三方
+                            </td>
+                            <td>
+                                <div ng-bind="data.bizLaterContract.partyA_assign_third_party"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                证件号码
+                            </td>
+                            <td>
+                                <div ng-bind="data.bizLaterContract.partyA_assign_license_no"></div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="dd-card">
+                <div>
+                    <span class="card-title">基础信息</span>
+                </div>
+                <table class="table-card table-control">
+                    <tbody>
+                        <tr class="firstRow">
+                            <td>
+                                合同编号
+                            </td>
+                            <td>
+                                <div></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                乙方1
+                            </td>
+                            <td>
+                                <div>
+                                    姓名：窦燕，身份证：152824197507050324，电话：18601279915，住址：巴彦淖尔市乌拉特特前旗乌拉山镇三区三组41号
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                快签合同编号
+                            </td>
+                            <td>
+                                <div>
+                                    姓名：窦燕，身份证：152824197507050324，电话：18601279915，住址：巴彦淖尔市乌拉特特前旗乌拉山镇三区三组41号
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                物业1
+                            </td>
+                            <td>
+                                <div>
+                                    产权编号：X京房权证通字第0908438号，地址：北京市通州区群芳四园15号楼2层1-122
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="dd-card">
+                <div>
+                    <span class="card-title">第二条 收费标准</span>
+                </div>
+                <table class="table-card table-control">
+                    <tbody>
+                        <tr class="firstRow">
+                            <td>
+                                基础收费合计
+                            </td>
+                            <td>
+                                <div></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                偏远交通费
+                            </td>
+                            <td>
+                                <div></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                按揭服务费
+                            </td>
+                            <td>
+                                <div></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                公证服务费
+                            </td>
+                            <td>
+                                <div></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                其他（如有）
+                            </td>
+                            <td>
+                                <div></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                附加服务费合计
+                            </td>
+                            <td>
+                                <div></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                公证费
+                            </td>
+                            <td>
+                                <div></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                印花税
+                            </td>
+                            <td>
+                                <div></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                评估费
+                            </td>
+                            <td>
+                                <div></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                第三方服务费
+                            </td>
+                            <td>
+                                <div></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                其他（如有）
+                            </td>
+                            <td>
+                                <div></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                代收费用合计
+                            </td>
+                            <td>
+                                <div></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                收费方式
+                            </td>
+                            <td>
+                                <div></div>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <td>
+                                预估用款期限
+                            </td>
+                            <td>
+                                <div></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                a综合费率
+                            </td>
+                            <td>
+                                <div></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                b综合费率
+                            </td>
+                            <td>
+                                <div></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                c综合服务费
+                            </td>
+                            <td>
+                                <div></div>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <td>
+                                a综合费率
+                            </td>
+                            <td>
+                                <div></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                b综合费率
+                            </td>
+                            <td>
+                                <div></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                最低收费天数
+                            </td>
+                            <td>
+                                <div></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                最低收费费率
+                            </td>
+                            <td>
+                                <div></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                c综合服务费
+                            </td>
+                            <td>
+                                <div></div>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <td>
+                                首段天数（N1）
+                            </td>
+                            <td>
+                                <div></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                a综合费率
+                            </td>
+                            <td>
+                                <div></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                分段期限天数（N2）
+                            </td>
+                            <td>
+                                <div></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                c综合服务费
+                            </td>
+                            <td>
+                                <div></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                期限间隔
+                            </td>
+                            <td>
+                                <div></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                b综合服务费
+                            </td>
+                            <td>
+                                <div></div>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <td>
+                                特别约定-最低收费
+                            </td>
+                            <td>
+                                <div></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                预付费用
+                            </td>
+                            <td>
+                                <div ng-bind="data.bizLaterContract.prepaid_fee"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                乙方指定退款账户
+                            </td>
+                            <td>
+                                    <div ng-bind="data.bizLaterContract.refund_account_name"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                账号
+                            </td>
+                            <td>
+                                <div ng-bind="data.bizLaterContract.refund_account_no"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                开户银行
+                            </td>
+                            <td>
+                                <div ng-bind="data.bizLaterContract.refund_account_open_bank"></div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="dd-card">
+                <div>
+                    <span class="card-title">第三条 账户托管及资金划拨</span>
+                </div>
+                <table class="table-card table-control">
+                    <tbody>
+                        <tr class="firstRow">
+                            <td>
+                                乙方指定收款账户
+                            </td>
+                            <td>
+                                <div ng-bind="data.bizLaterContract.receipt_account_name"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                账号
+                            </td>
+                            <td>
+                                <div ng-bind="data.bizLaterContract.receipt_account_no"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                开户银行
+                            </td>
+                            <td>
+                                <div ng-bind="data.bizLaterContract.receipt_account_open_bank"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                乙方授权划拨账户
+                            </td>
+                            <td>
+                                <div ng-bind="data.bizLaterContract.funds_transfer_account_name"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                账号
+                            </td>
+                            <td>
+                                <div ng-bind="data.bizLaterContract.funds_transfer_account_no"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                开户银行
+                            </td>
+                            <td>
+                                <div ng-bind="data.bizLaterContract.funds_transfer_account_open_bank"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                乙方指定第三方
+                            </td>
+                            <td>
+                                <div ng-bind="data.bizLaterContract.partyB_assign_third_party"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                证件号码
+                            </td>
+                            <td>
+                                <div ng-bind="data.bizLaterContract.partyB_assign_license_no"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                抵押贷款/售房款
+                            </td>
+                            <td>
+                                <div ng-bind="data.bizLaterContract.mortgage_amount"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                乙方指定新贷款账户
+                            </td>
+                            <td>
+                                <div ng-bind="data.bizLaterContract.new_loan_account_name"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                账号
+                            </td>
+                            <td>
+                                <div ng-bind="data.bizLaterContract.new_loan_account_no"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                开户银行
+                            </td>
+                            <td>
+                                <div ng-bind="data.bizLaterContract.new_loan_account_open_bank"></div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="dd-card">
+                <div>
+                    <span class="card-title">第四条 争议解决</span>
+                </div>
+                <table class="table-card table-control">
+                    <tbody>
+                        <tr class="firstRow">
+                            <td>
+                                解决方式
+                            </td>
+                            <td>
+                                <div><select class="form-control" ng-model="data.bizLaterContract.resolve_way"><option value="">请选择</option><option value="0">诉讼</option><option value="1">仲裁</option></select></div>
+                            </td>
+                        </tr>
+                        <tr ng-if="data.bizLaterContract.resolve_way==='1'">
+                                <td>
+                                    解决方式
+                                </td>
+                                <td>
+                                    <div><select class="form-control" ng-model="data.bizLaterContract.resolve_way"><option value="">请选择</option><option value="0">诉讼</option><option value="1">仲裁</option></select></div>
+                                </td>
+                            </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
