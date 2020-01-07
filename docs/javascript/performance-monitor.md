@@ -28,6 +28,8 @@ DOM 的节点数（不是绑定在dom上才算）
 
 通过操作页面，可以看到指标值发生变化
 
+![performance monitor](../images/javascript/monitor.gif)
+
  1、如果CPU占用率很高而且降不下来则程序会有很耗cpu的运算函数
 
  2、如果JS内存只有上升没有下降，则程序会有内存溢出，可能有闭包函数，内存不能释放
