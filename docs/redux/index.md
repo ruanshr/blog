@@ -40,6 +40,7 @@ State：state 是存储的数据，数据会以对象树的结构来管理，这
 在小程序中使用 Redux
 先看目录结构：
 
+```
 project
 |--app.js
 |--libs
@@ -55,6 +56,8 @@ project
 | | |--index.js
 | | |--person.js
 |--index.js
+```
+
 以存储人的年龄信息为例说一下步骤：
 
 - 1、引入 redux 的 lib，（redux-min.js）。文章最后有 demo，libs 文件夹里有可以直接使用的库，下载即可。
@@ -161,6 +164,7 @@ App({
     console.log('store.subscribe person:', person)
   }
 ```
+
 任何时候都可以获取到当前最新的状态树，不一定要在订阅监听器函数中，要灵活使用。
 
 ## 一些使用建议（以网络请求回数据为例）
