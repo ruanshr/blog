@@ -1,6 +1,6 @@
 # Typescript 为什么这么吃香
 
-![typescript-javascript](../images/typescript/typescript.jpeg)
+
 
 - 1、为什么有了 Javascript 还需要 Typescript
 
