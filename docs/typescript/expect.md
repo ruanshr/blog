@@ -1,7 +1,6 @@
 # Typescript 为什么这么吃香
 
 
-
 - 1、为什么有了 Javascript 还需要 Typescript
 
   随着 Javascript 的发展，代码变得复杂而沉重，甚至无法满足面向对象编程语言的要求。这会阻止 Javascript 作为服务器端技术广泛用于企业级应用上，然后就有了 Typescript 来弥合这种差距。
