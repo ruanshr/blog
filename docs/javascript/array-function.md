@@ -28,7 +28,7 @@ console.log(a)  // [3,5,6,1,2]
 ```
 
 ## Array.prototype.shift
-pop() 方法 将第一个元素移除数组,返回移除元素
+shift() 方法 将第一个元素移除数组,返回移除元素
 ```js
 const a = [1,2,3,4];
 const b = a.shift(); 
@@ -40,16 +40,19 @@ console.log(a)  // [2,3,4]
 slice(start,end) 方法 复制数组项，返回新的数组
 默认复制整个数组，start为undefined时从0开始，end为空值时以最后为结束
 但是元素的引用还是一样
+如果start为负数，则从右边开始复制数组项，end值必须比start大，当start的绝对值大于数组长度时，则从左边0位开始
 ```js
 const a = [1,2,3,4];
 const b = a.slice(); 
 const c = a.slice(1)
 const d = a.slice(1,3)
+const e = a.slice(-3,3)
 
 console.log(b)  // [1,2,3,4]
 console.log(c)  // [2,3,4]
 console.log(d)  // [2,3]
 console.log(a)  // [1,2,3,4]
+console.log(e)  // [2,3]
 
 const students = [{name:'Jack'},{name:'Marry'}];
 const mystudents = students.slice();
@@ -207,7 +210,7 @@ console.log( arr1 );
 ```js
 parseInt("1",0);//上面说过第二个参数为进制，所以"1"，0会被忽略，按照，parseInt默认的型的1。
 parseInt("2",1);//此时将2转为1进制数，由于超过进制数1，所以返回NaN。
-parseInt("3",2);//此时将3转为1进制数，由于超过进制数1，所以返回NaN。
+parseInt("3",2);//此时将3转为1进制数，由于超过进制数2，所以返回NaN。
 ```
 所以最终的结果为[1,NaN,NaN]。
 
@@ -281,6 +284,26 @@ Array.prototype.myFilter = function myFilter(handler){
 }
 
 ```
+## Array.prototype.toString
+toString 方法返回数组元素值，用“,”号分割
+```js
+const arr = [1,2,3]
+
+console.log(arr.toString())  // 1,2,3
+
+const arr2 = [1,[2,3],[4,[5,6]]] 
+
+console.log(arr2.toString()) // 1,2,3,4,5,6
+
+// 利用toString将多维数组去重
+
+const arr3 = [1,[2,3],[4,[1,3]]] 
+// 1
+const result1 = [...new Set(arr3.toString().split(','))]
+
+const result3 = arr3.toString().split(',').filter((item,index,arr) => arr.indexof(item) === index)
+```
+
 
 ## Array.prototype.filter
 filter(过滤，筛选) 方法创建一个新数组,原始数组不发生改变。

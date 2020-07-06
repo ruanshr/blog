@@ -22,9 +22,9 @@ F. Object.keys(obj).length ≥ Reflect.ownKeys(obj).length ≥ Object.getOwnProp
 
 ### 2. 关于新的 DOM 方法 append() 和老的 appendChild() 的区别，下面说法错误的是哪个：
 
-A. append() 方法可以直接追加字符串为文本节点，比如 append("text") ，appendChild() 不行
+A. append() 方法可以直接追加字符串为文本节点，比如 append("text");appendChild() 不行
 
-B. append() 方法可以直接追加 HTML 片段字符串为元素节点，比如 append("<p>test</p>")， appendChild() 不行
+B. append() 方法可以直接追加 HTML 片段字符串为元素节点，比如 append('\<p\>test\<\/p\>');appendChild() 不行
 
 C. append() 方法支持追加多个参数，appendChild() 只能追加一个
 
@@ -54,7 +54,7 @@ F. 在指定的节点被删除时自动断点
 
 参考答案：A
 
-考查知识点：页面调试能力。A 为错误项，Chrome 开发者工具目前还没有该能力，B 在 Sources 面板中右下角的 Event Listener Breakpoints > Script > Script First Statement，C 用 Console 面板上的 debug() 函数，比如 debug(alert) ，然后所有调用alert() 的地方都会自动中断。D 在 Sources 面板右上角的 Pause on exceptions 按钮。E 在 Sources 面板右下角的 XHR/fetch Breakpoints。F 在 Elements 面板中元素上右键 -> Break on -> node removal。
+考查知识点：页面调试能力。A 为错误项，Chrome 开发者工具目前还没有该能力，B 在 Sources 面板中右下角的 Event Listener Breakpoints > Script > Script First Statement，C 用 Console 面板上的 debug() 函数，比如 debug(alert) ，然后所有调用 alert() 的地方都会自动中断。D 在 Sources 面板右上角的 Pause on exceptions 按钮。E 在 Sources 面板右下角的 XHR/fetch Breakpoints。F 在 Elements 面板中元素上右键 -> Break on -> node removal。
 
 ### 4. 关于 HTTP 协议，下面说话错误的是哪个一个：
 
@@ -68,7 +68,7 @@ D. 服务端返回的 Date 响应头表示服务器上的系统时间，除给�
 
 E. HTTP 是无状态的，网站是通过 Cookie 请求头来识别出两个请求是不是来自同一个浏览器的
 
-F. Access-Control-Allow-Origin 响应头只支持配置单个的域名或者是 * ，不支持配置多个特定的域名
+F. Access-Control-Allow-Origin 响应头只支持配置单个的域名或者是 \* ，不支持配置多个特定的域名
 
 参考答案：D
 
@@ -104,7 +104,7 @@ C. 箭头函数可以像普通函数一样使用 arguments 对象
 
 D. 过度追求箭头函数的“单行代码”写法可能会降低代码可读性
 
-E. 箭头函数虽然表面上看是匿名的，但它可以根据前面的变量名和属性名自动推断出同名的 name属性
+E. 箭头函数虽然表面上看是匿名的，但它可以根据前面的变量名和属性名自动推断出同名的 name 属性
 
 F. 箭头函数不可以被 new，也不会像普通函数一样自动拥有 prototype 属性
 
@@ -112,7 +112,7 @@ F. 箭头函数不可以被 new，也不会像普通函数一样自动拥有 pro
 
 B 是箭头函数不支持动态改变 this 值，C 是箭头函数同样也没有 arguments。
 
-### 2. 带有 target="_blank" 的 a 标签被认为是有安全风险的，因为点击它后打开的新标签页面可以通过 window.opener.location = 来将来源页面跳转到钓鱼页面，不过给该 a 标签增加下面哪些属性就能阻止这一行为？
+### 2. 带有 target="\_blank" 的 a 标签被认为是有安全风险的，因为点击它后打开的新标签页面可以通过 window.opener.location = 来将来源页面跳转到钓鱼页面，不过给该 a 标签增加下面哪些属性就能阻止这一行为？
 
 A. rel="nofollow"
 
@@ -170,7 +170,7 @@ A. const foo = () => {}
 
 B {foo: function(){}}
 
-C. {*foo(){}}
+C. {\*foo(){}}
 
 D. {[Symbol("foo")](){}}
 
@@ -205,89 +205,98 @@ F. Element.prototype.contains()
 ### 1. JavaScript 采用原型继承，即一个对象继承自另外一个对象，另外一个对象再继承自别的对象，依此往复。请写一个通用的 JavaScript 函数，来找出某个对象身上的某个属性继承自哪个对象。
 
 函数签名：
-```js
-function findPrototypeByProperty(obj, propertyName){
- // 请实现函数体
-}
-```
-使用举例：
-```js
-const foo = {a: 1}
-const bar = Object.create(foo)
-bar.b = 2
-const baz = Object.create(bar)
-baz.c = 3
-console.log(findPrototypeByProperty(baz, "c") === baz) // true
-console.log(findPrototypeByProperty(baz, "b") === bar) // true
-console.log(findPrototypeByProperty(baz, "a") === foo) // true
-```
-参考答案：
+
 ```js
 function findPrototypeByProperty(obj, propertyName) {
- do {
- if (obj.hasOwnProperty(propertyName)) {
- return obj
- }
- } while (obj = Object.getPrototypeOf(obj))
+  // 请实现函数体
 }
 ```
+
+使用举例：
+
+```js
+const foo = { a: 1 };
+const bar = Object.create(foo);
+bar.b = 2;
+const baz = Object.create(bar);
+baz.c = 3;
+console.log(findPrototypeByProperty(baz, "c") === baz); // true
+console.log(findPrototypeByProperty(baz, "b") === bar); // true
+console.log(findPrototypeByProperty(baz, "a") === foo); // true
+```
+
+参考答案：
+
+```js
+function findPrototypeByProperty(obj, propertyName) {
+  do {
+    if (obj.hasOwnProperty(propertyName)) {
+      return obj;
+    }
+  } while ((obj = Object.getPrototypeOf(obj)));
+}
+```
+
 ### 2. URLSearchParams() 接口是用来解析和处理 URL 参数的 API，目前最新的浏览器和 Node 都支持它。请用 class URLSearchParams {} 语法实现一个该接口的 polyfill，考虑到时间因素，答题者只需实现下面列举的要求即可：
+
 ```js
 // 构造函数支持传入 URL 参数串
-searchParams = new URLSearchParams("foo=1&bar=2") 
+searchParams = new URLSearchParams("foo=1&bar=2");
 // 构造函数也支持传入一个包含参数键值对的对象
-searchParams = new URLSearchParams({foo: "1", bar: "2"})
+searchParams = new URLSearchParams({ foo: "1", bar: "2" });
 // 实例支持 get()、set()、has()、append() 四个方法
-console.log(searchParams.get("foo")) // "1"
-searchParams.set("foo", "10") 
-console.log(searchParams.has("bar")) // true
-searchParams.append("foo", "100") 
+console.log(searchParams.get("foo")); // "1"
+searchParams.set("foo", "10");
+console.log(searchParams.has("bar")); // true
+searchParams.append("foo", "100");
 // 实例支持 toString() 方法
-console.log(searchParams.toString()) // "foo=10&bar=2&foo=100"
+console.log(searchParams.toString()); // "foo=10&bar=2&foo=100"
 // 实例支持 for-of 迭代
-for(const [key, value] of searchParams) {
- console.log([key, value])
- // ["foo", "10"]
- // ["bar", "2"]
- // ["foo", "100"]
+for (const [key, value] of searchParams) {
+  console.log([key, value]);
+  // ["foo", "10"]
+  // ["bar", "2"]
+  // ["foo", "100"]
 }
 ```
+
 参考答案：
 
 考察学生对 URL 的认识以及对 class 语法、for-of 语法的熟悉程度，以下代码在 Chrome 74 中可用。实现逻辑不需要完全依照规范，能跑通题干中的要求即可。
+
 ```js
 class URLSearchParams {
- #searchParams = []
- constructor(init) {
- if (typeof init === "string") {
- this.#searchParams = init.split("&").map(kv => kv.split("="))
- } else {
- this.#searchParams = Object.entries(init)
- }
- }
- get(key) {
- const param = this.#searchParams.find(param => param[0] === key)
- return param && param[1]
- }
- set(key, value) {
- const param = this.#searchParams.find(param => param[0] === key)
- if (param) {
- param[1] = value
- } else {
- this.#searchParams.push([key, value])
- }
- }
- has(key) {
- return this.#searchParams.some(param => param[0] === key)
- }
- append(key, value) {
- this.#searchParams.push([key, value])
- }
- toString() {
- return this.#searchParams.map(param => param.join("=")).join("&")
- }
- *[Symbol.iterator]() {
- yield* this.#searchParams
- }
-} 
+  #searchParams = [];
+  constructor(init) {
+    if (typeof init === "string") {
+      this.#searchParams = init.split("&").map((kv) => kv.split("="));
+    } else {
+      this.#searchParams = Object.entries(init);
+    }
+  }
+  get(key) {
+    const param = this.#searchParams.find((param) => param[0] === key);
+    return param && param[1];
+  }
+  set(key, value) {
+    const param = this.#searchParams.find((param) => param[0] === key);
+    if (param) {
+      param[1] = value;
+    } else {
+      this.#searchParams.push([key, value]);
+    }
+  }
+  has(key) {
+    return this.#searchParams.some((param) => param[0] === key);
+  }
+  append(key, value) {
+    this.#searchParams.push([key, value]);
+  }
+  toString() {
+    return this.#searchParams.map((param) => param.join("=")).join("&");
+  }
+  *[Symbol.iterator]() {
+    yield* this.#searchParams;
+  }
+}
 ```

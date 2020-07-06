@@ -19,7 +19,8 @@ sidebarDepth: 0
 
 - ECMAScript: js 基础语法
 - 核心模块
-  > fs 文件操作模块
+
+> fs 文件操作模块
 
 > http 网络服务构造模块
 
