@@ -1,7 +1,8 @@
 # ES6 新特性之 Symbol
 
 ## 数据类型 Symbol
-ES6 引入 Symbol 作为一种新的基础数据类型，表示独一无二的值，主要是为了防止属性名冲突
+
+ES6 引入 Symbol 作为一种新的基础数据类型，表示独一无二的值，每个从Symbol()返回的symbol值都是唯一的，一个symbol值能作为对象属性的标识符，这是该数据类型仅有的目的。
 
 ES6 之后，JavaScript 一共有 6 种基础数据类型：Symbol、undefined、null、Boolean、String、Number。
 
@@ -22,8 +23,8 @@ console.log(a2 === b2) // false
 
 ```js
 let a3 = Symbol('hello')
-a3 += ' word'`${a3 // TypeError
-} world` // TypeError
+a3 += ' word' // TypeError
+let a4 = `${a3} world` // TypeError
 ```
 
 - Symbol 可以显式转换为字符串
@@ -71,13 +72,12 @@ ES6 提供 11 个内置的 Symbol 值，指向语言内部使用的方法
   当其他对象使用 instanceof 运算符，判断是否为该对象的实例时，会调用这个方法。比如，foo instanceof Foo 在语言内部，实际调用的是 Foo[Symbol.hasInstance](foo)。
 
 ```js
-class P{
-    [Symbol.hasInstance](obj){
-        return obj instanceof Array
-    }
+class P {
+  [Symbol.hasInstance](obj) {
+    return obj instanceof Array
+  }
 }
-[1,2,3] instanceof Array
-
+;[1, 2, 3] instanceof Array
 ```
 
 P 是一个类，new P()会返回一个实例，该实例的 Symbol.hasInstance 方法，会在进行 instanceof 运算时自动调用，判断左侧的运算子是否为 Array 的实例。
@@ -86,21 +86,21 @@ P 是一个类，new P()会返回一个实例，该实例的 Symbol.hasInstance 
   值为布尔值，表示该对象用于 Array.prototype.concat()时，是否可以展开
 
 ```js
-let a = ['aa','bb']
-['cc','dd'].concat(a,'ee') // ['aa','bb','cc','dd','ee']
+let a = ['aa', 'bb'][('cc', 'dd')].concat(a, 'ee') // ['aa','bb','cc','dd','ee']
 a[Symbol.isConcatSpreadable] // undefined
 
-let b = ['aa','bb']
-b[Symbol.isConcatSpreadable] = false
-['cc','dd'].concat(b,'ee') // ['aa','bb',['cc','dd'],'ee']
+let b = ['aa', 'bb']
+b[Symbol.isConcatSpreadable] = false[('cc', 'dd')].concat(b, 'ee') // ['aa','bb',['cc','dd'],'ee']
 ```
 
 - 3、Symbol.species
   指向一个构造函数，在创建衍生对象时会使用，使用时需要用 get 取值器。
 
 ```js
-class P extends Array{
-    static get [Symbol.species](){ return this}
+class P extends Array {
+  static get [Symbol.species]() {
+    return this
+  }
 }
 ```
 
@@ -127,12 +127,12 @@ b2 instanceof P2      // false
 
 ```js
 class M {
-    constructor(){
-        this.matchTemplate = 'hello word'
-    }
-    [Symbol.match](str){
-        return this.matchTemplate.indexOf(str) > -1
-    }
+  constructor() {
+    this.matchTemplate = 'hello word'
+  }
+  [Symbol.match](str) {
+    return this.matchTemplate.indexOf(str) > -1
+  }
 }
 'h'.match(new M())
 ```
@@ -141,9 +141,11 @@ class M {
 
 ```js
 let a = {}
-a[Symbol.replace] = (...s) => { console.log(s); return s }
-'Hello'.replace(a,'Word')  //  ["Hello", "Word"]
-
+a[Symbol.replace] = (...s) => {
+  console.log(s)
+  return s
+}
+'Hello'.replace(a, 'Word') //  ["Hello", "Word"]
 ```
 
 - 6、Symbol.hasInstance
@@ -151,12 +153,12 @@ a[Symbol.replace] = (...s) => { console.log(s); return s }
 
 ```js
 class S {
-    constructor(val){
-        this.val = val
-    }
-    [Symbol.search](s){
-        return s.indexOf(this.val)
-    }
+  constructor(val) {
+    this.val = val
+  }
+  [Symbol.search](s) {
+    return s.indexOf(this.val)
+  }
 }
 'Tommery'.search(new S('mm')) // 2
 ```
@@ -166,16 +168,16 @@ class S {
 
 ```js
 class SP {
-    constructor(val){
-        this.val = val
+  constructor(val) {
+    this.val = val
+  }
+  [Symbol.split](s) {
+    let i = s.indexOf(this.val)
+    if (i === -1) {
+      return s
     }
-    [Symbol.split](s){
-        let i = s.indexOf(this.val)
-        if(i === -1){
-            return s
-        }
-        return [s.substr(0,i),s.substr(i + this.val.length)]
-    }
+    return [s.substr(0, i), s.substr(i + this.val.length)]
+  }
 }
 'helloword'.split(new SP('llo')) // ['he','word']
 ```
@@ -184,14 +186,14 @@ class SP {
   对象进行 for...of 循环时，会调用 Symbol.iterator 方法，返回该对象的默认遍历器。
 
 ```js
-class It{
-    *[Symbol.iterator](){
-        let i = 0
-        while(this[i] !== undefined){
-            yield this[i];
-            i++;
-        }
+class It {
+  *[Symbol.iterator]() {
+    let i = 0
+    while (this[i] !== undefined) {
+      yield this[i]
+      i++
     }
+  }
 }
 ```
 
@@ -203,25 +205,25 @@ class It{
 
 ```js
 let obj = {
-    num: 3,
-    str: 'three',
-    [Symbol.toPrimitive](hint){
-        switch(hint){
-            case 'number':
-                return this.num
-            case 'string':
-                return this.str
-            case 'default':
-                return this.num
-            default :
-                throw new Error()
-        }
+  num: 3,
+  str: 'three',
+  [Symbol.toPrimitive](hint) {
+    switch (hint) {
+      case 'number':
+        return this.num
+      case 'string':
+        return this.str
+      case 'default':
+        return this.num
+      default:
+        throw new Error()
     }
+  },
 }
 
-2 + obj  // 5                  hint 为 default
-5 - obj  // 2                  hint 为 number
-~obj     // 2                  hint 为 number
+2 + obj // 5                  hint 为 default
+5 - obj // 2                  hint 为 number
+~obj // 2                  hint 为 number
 
 '2' + obj // 23                hint 为 default
 obj + '2' // 23                hint 为 default
@@ -234,18 +236,17 @@ String(obj) // three           hint 为 string
   在该对象上面调用 Object.prototype.toString 方法时，如果这个属性存在，它的返回值会出现在 toString 方法返回的字符串之中，表示对象的类型。也就是说，这个属性可以用来定制[object Object]或[object Array]中 object 后面的那个字符串。
 
 ```js
-  ({[Symbol.toStringTag]:'Foo'}).toString() 
-  // [Object Foo]
+;({ [Symbol.toStringTag]: 'Foo' }.toString())
+// [Object Foo]
 
-  class Collection{
-      get [Symbol.toStringTag](){
-          return 'xxx'
-      }
+class Collection {
+  get [Symbol.toStringTag]() {
+    return 'xxx'
   }
+}
 
-  let x = new Collection()
-  Object.prototype.toString.call(x) // [Object xxx]
-
+let x = new Collection()
+Object.prototype.toString.call(x) // [Object xxx]
 ```
 
 - 11、Symbol.unscopables

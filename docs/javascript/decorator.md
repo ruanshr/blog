@@ -100,20 +100,6 @@ var Hero = (function () {
 
 ```js
 
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
 // 保证上下文中只有一个 __decorate 函数，不会被反复重载
 var __decorate = (this && this.__decorate) || function(decorators, target, key, desc) {
     var c = arguments.length,

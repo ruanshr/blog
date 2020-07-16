@@ -271,7 +271,7 @@ Array.prototype.myMap = function myMap(handler){
 
 ```
 
-## reduce实现map方法
+## reduce实现filter方法
 
 ```js
 Array.prototype.myFilter = function myFilter(handler){
@@ -335,7 +335,7 @@ console.log(arrayFilter); // [1, 2, 3]
 ```
 通过例子可以看出:过滤测试的返回值只要是弱等于== true/false就可以了，而非非得返回 === true/false.
 
-### Array.prototype.sort
+## Array.prototype.sort
 sort()方法用原地算法对数组的元素进行排序，并返回数组，该排序方法会在原数组上直接进行排序，并不会生成一个排好序的新数组。排序算法现在是稳定的。默认排序顺序是根据字符串Unicode码点。
 ```js
 // 语法
