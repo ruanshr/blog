@@ -8,12 +8,12 @@
 1、标准盒子模型中width指的是内容区域content的宽度；height指的是内容区域content的高度
 标准盒子模型下盒子的大小 = content + border + padding + margin
 
-![stand-box](../../images/common/stand-box.jpg)
+![css3](../images/common/ie-box.jpg)
 
 2、怪异盒子模型的width指的是内容、边框、内边距总的宽度（content + border + padding）；高度是指内容、边框、内边距总的高度
 怪异盒子模型下盒子的大小 = width （ content + border + padding ） + margin
 
-![stand-box](../../images/common/stand-box.jpg)
+![css3](../images/common/stand-box.jpg)
 
 
 ### 如何选择盒子模型
