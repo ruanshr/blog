@@ -53,9 +53,6 @@ selectSort([1, 3, 4, 5, 8, 1, 3, 4]);
 ```js
 function insertSort(arr) {
   const len = arr.length;
-  if (len < 2) {
-    return arr;
-  }
   for (let i = 1; i < n; i++) {
     let temp = arr[i];
     let k = i - 1;
