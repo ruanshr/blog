@@ -111,7 +111,7 @@ removeEventListener('bar', listener, { capture: true }) // {capture: true} 必�
 
 passive 监听器能保证的只有一点，那就是调用 preventDefault() 无效，至于浏览器对默认行为卡顿的优化，那是浏览器的事情，是在规范要求之外的。鉴于这个新特性本来就是为解决滚动和触摸事件的卡顿而发明的，目前 Chrome 和 Firefox 支持优化的事件类型也仅限这类事件，比如 touchstart，touchmove，wheel 等事件
 
-## 特性检测
+### 特性检测
 
 modernizr 的检测脚本
 
