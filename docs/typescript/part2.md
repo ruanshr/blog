@@ -10,5 +10,12 @@ interface item {
     occupation: string
 }
 
+const users: item[] = [
+    {
+        name: 'Max nustermann',
+        age: 25,
+        occupation :''
+    }
+]
 
 ```
