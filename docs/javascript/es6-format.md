@@ -1,3 +1,7 @@
+---
+prev: /javascript/es6-api
+next: /javascript/es6-proxy
+---
 # ES6 代码规范
 
 **不再使用 var，而使用 let 和 const 。优先使用 const**

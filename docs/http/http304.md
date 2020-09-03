@@ -1,3 +1,8 @@
+---
+prev: /http/http-cache
+next: /http/simple-complex
+---
+
 # HTTP 304状态码的详细讲解
 
 304状态码或许不应该认为是一种错误，而是对客户端有缓存情况下服务端的一种响应。

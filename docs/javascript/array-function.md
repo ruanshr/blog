@@ -1,3 +1,8 @@
+---
+prev: /javascript/simple-complex
+next: /javascript/babel-stage
+---
+
 # javascript 数组Array详解
 
 ## Array.prototype.push

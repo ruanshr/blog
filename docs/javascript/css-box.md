@@ -1,3 +1,8 @@
+---
+prev: /javascript/css-function
+next: /javascript/css-position
+---
+
 # CSS盒子模型与怪异盒子模型
 盒子模式（box module） 可以用来对元素进行布局，包括边距，边框，外边距，和实际内容这几个部分。
 盒子模型分为两种：一种是W3c标准的盒子模型（标准盒子模型）、第二种是IE标准的盒子模型（怪异盒子模型）

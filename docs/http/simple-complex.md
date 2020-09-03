@@ -1,3 +1,8 @@
+---
+prev: /http/http304
+next: /javascript/array-function
+---
+
 # 简单请求与复杂请求
 这两种请求的区别主要在于是否会触发CORS（Cross-Origin Resuource Sharing）预检请求
 

@@ -1,3 +1,8 @@
+---
+prev: /javascript/date-function
+next: /javascript/dom-api
+---
+
 # JavaScript 中的装饰器
 
 装饰器是 ES7 的新语法。可以借助一些编译器（比如babel）实现，这样在正式环境中使用它了。另外，TypeScript 已经支持装饰器语法了。基于 TypeScript 开发的 Angular2 里面也大量的使用了装饰器。

@@ -1,3 +1,7 @@
+---
+prev: /javascript/decorator
+next: /javascript/es6-format
+---
 # before(),after(),prepend(),append()等新增 DOM API
 
 ## 1. DOM API 之 before()

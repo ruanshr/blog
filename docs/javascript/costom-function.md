@@ -1,3 +1,8 @@
+---
+prev: /javascript/bigInt
+next: /javascript/css-box
+---
+
 # Javascript 中函数的代码实现
 ![javascript](../images/javascript/javascript-func.png)
 在业务开发中经常会用的 Javascript 内置对象提供的，可以很方便的实现想要的需求，对于这些功能我们也能手动实现，这样可以更深入了解其工作原理。

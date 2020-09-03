@@ -1,3 +1,7 @@
+---
+prev: /javascript/es6-format
+next: /javascript/es2020
+---
  # Proxy
  ## Proxy代理是一个共通的概念，可以起到拦截的作用。
  ES6将Proxy标准化，提供了Proxy构造函数，用来生成Proxy实例。

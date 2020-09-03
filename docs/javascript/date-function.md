@@ -1,3 +1,8 @@
+---
+prev: /javascript/css-position
+next: /javascript/decorator
+---
+
 # javascript 日期Date详解
 
 Date()构造函数有四种基本形式
