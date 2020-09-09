@@ -1,6 +1,6 @@
 ---
 prev: /javascript/babel-stage
-next: /javascript/custom-function
+next: /javascript/costom-function
 ---
 
 # ES6 新特性之 BigInt

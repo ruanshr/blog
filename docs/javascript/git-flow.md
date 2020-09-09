@@ -1,3 +1,8 @@
+---
+prev: /javascript/garbage
+next: /javascript/html-load
+---
+
 # 如何规范 Git 版本分支的管理
 
 在团队开发中，我们需要规范 Git 版本分支的管理，提高开发效率

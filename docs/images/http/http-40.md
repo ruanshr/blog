@@ -6,4 +6,4 @@
 
 总的来说，401 Unauthorized响应应该用来表示缺失或错误的认证；403 Forbidden响应应该在这之后用，当用户被认证后，但用户没有被授权在特定资源上执行操作。
 
-![http-code-summary](../images/http/http-code-summary.png)
+<!-- ![http-code-summary](../images/http/http-code-summary.png) -->

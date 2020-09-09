@@ -1,5 +1,5 @@
 ---
-prev: /javascript/es6-api
+prev: /javascript/dom-api
 next: /javascript/es6-proxy
 ---
 # ES6 代码规范

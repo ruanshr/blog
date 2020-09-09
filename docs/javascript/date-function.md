@@ -14,37 +14,50 @@ new Date(dateString);
 new Date(year, monthIndex [, day [, hours [, minutes [, seconds [, milliseconds]]]]]);
 
 ```
-- Date.length
+
+**Date.length**
+
 可接收参数个数，值为7
 
-- Date.now()
+**Date.now()**
+
 返回自 1970 年 1 月 1 日 00:00:00 (UTC) 到当前时间的毫秒数。
 
-- Date.prototype.getDate()
+**Date.prototype.getDate()**
+
 根据本地时间，返回一个指定的日期对象为一个月中的哪一日（从1--31）
 
-- Date.prototype.getDay()
+**Date.prototype.getDay()**
+
 根据本地时间，返回一个具体日期中一周的第几天，0 表示星期天。对于某个月中的第几天（从0--6）
 
-- Date.prototype.getFullYear()
+**Date.prototype.getFullYear()**
+
 根据本地时间返回指定日期的年份
 
-- Date.prototype.getHours()
+**Date.prototype.getHours()**
+
 根据本地时间，返回一个指定的日期对象的小时
 
-- Date.prototype.getMilliseconds()
+**Date.prototype.getMilliseconds()**
+
 根据本地时间，返回一个指定的日期对象的毫秒数
 
-- Date.prototype.getMinutes()
-根据本地时间，返回一个指定的日期对象的分钟数
+**Date.prototype.getMinutes()**
 
-- Date.prototype.getMonth()
+根据本地时间，返回一个指定的日期对象的分
+钟数
+
+**Date.prototype.getMonth()**
+
 根据本地时间，返回一个指定的日期对象的月份，为基于0的值（0表示一年中的第一月）
 
-- Date.prototype.getSeconds()
+**Date.prototype.getSeconds()**
+
 根据本地时间，返回一个指定的日期对象的秒数
 
-- Date.prototype.getTime()
+**Date.prototype.getTime()**
+
 根据本地时间，返回一个时间的格林威治时间数值
 
 ```js

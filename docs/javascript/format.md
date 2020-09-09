@@ -1,6 +1,6 @@
 ---
-prev: false
-next: /vue/question
+prev: /javascript/event-loop
+next: /javascript/garbage
 ---
 
 # JavaScript 风格指南

@@ -1,3 +1,7 @@
+---
+prev: /javascript/string
+next: /javascript/symbol
+---
 
 # 前端收藏网站
 

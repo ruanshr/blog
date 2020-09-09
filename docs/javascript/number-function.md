@@ -1,3 +1,7 @@
+---
+prev: /javascript/jslint
+next: /javascript/orientation
+---
 # javascript 数字Number详解
 
 JavaScript 的 Number 对象是经过封装的能让你处理数字值的对象。Number 对象由 Number() 构造器创建。
@@ -28,7 +32,7 @@ Number 对象主要用于：
 
 - Number.EPSILON
 两个可表示(representable)数之间的最小间隔。
-EPSILON 属性的值接近于 2.2204460492503130808472633361816E-16，或者 2-52。
+EPSILON 属性的值接近于 2.2204460492503130808472633361816E-16，或者 2^52。
 
 - Number.MAX_SAFE_INTEGER
 JavaScript 中最大的安全整数 (2的53次幂 - 1)。

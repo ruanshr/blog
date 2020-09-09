@@ -1,3 +1,8 @@
+---
+prev: /javascript/prototype
+next: /javascript/restful
+---
+
 # 面试题
 
 ## 单选题

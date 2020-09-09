@@ -1,4 +1,10 @@
-passive 的事件监听器
+---
+prev: /javascript/es2020
+next: /javascript/event-loop
+---
+
+# Dom 之 addEventListener
+
 很久以前，addEventListener() 的参数约定是这样的：
 
 ```js

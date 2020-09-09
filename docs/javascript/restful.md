@@ -1,3 +1,8 @@
+---
+prev: /javascript/question-es6
+next: /javascript/rule
+---
+
 # 什么是REST？什么是RESTful？
 
 ![logo](../images/common/1.jpg)

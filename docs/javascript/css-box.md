@@ -26,7 +26,11 @@ next: /javascript/css-position
 
 ### box-sizing
 我们还可以通过属性box-sizing来设置盒子模型的解析模式
+
 box-sizing可选值有三个：
-content-box: 默认值，border和padding不算到width范围内，可以理解为是W3c的标准模型（default）
-border-box: border和padding划归到width范围内，可以理解为是IE的怪异盒子模型
-padding-box: 将padding算入width范围
+
+**content-box**: 默认值，border和padding不算到width范围内，可以理解为是W3c的标准模型（default）
+
+**border-box**: border和padding划归到width范围内，可以理解为是IE的怪异盒子模型
+
+**padding-box**: 将padding算入width范围

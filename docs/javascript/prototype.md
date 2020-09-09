@@ -1,3 +1,8 @@
+---
+prev: /javascript/performance-monitor
+next: /javascript/question-es6
+---
+
 # javascript——原型与原型链
 ### 原型
 

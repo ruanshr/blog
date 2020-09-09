@@ -1,3 +1,8 @@
+---
+prev: /javascript/part2
+next: /javascript/prototype
+---
+
 # 前端性能分析工具
 chrome的强大性能监测功能 performance monitor
 首先打开chrome的开发者工具，然后 ctrl+shift+p （mac: command+shift+p）

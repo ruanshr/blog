@@ -1,3 +1,7 @@
+---
+prev: /javascript/set_map
+next: /javascript/string
+---
 # 十大算法
 
 十大排序算法可以说是每个程序都必须得掌握的。

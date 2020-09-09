@@ -1,3 +1,8 @@
+---
+prev: /javascript/vscode-shortcut
+next: /nodejs/gulp-plugin
+---
+
 # 前端性能之Chrome的Waterfall
 
 浏览器根据HTML中外连资源出现的顺序，依次放入队列，然后根据优先级确定向服务获取资源的顺序。同优先级的资源根据HTML中出现的先后顺序来向服务器获取资源

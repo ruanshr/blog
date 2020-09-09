@@ -1,3 +1,8 @@
+---
+prev: /javascript/event-listener
+next: /javascript/format
+---
+
 # Javascript 异步
 
 JavaScript语言的一大特点就是单线程。单线程就意味着，所有任务需要排队，前一个任务结束，才会执行后一个任务。如果前一个任务耗时很长，后一个任务就不得不一直等着。因此javascript通过Event Loop，实现异步操作。

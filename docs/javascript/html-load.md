@@ -1,3 +1,8 @@
+---
+prev: /javascript/git-flow
+next: /javascript/html5
+---
+
 # HTML页面加载和解析流程 
 
 1. 用户输入网址（假设是个html页面，并且是第一次访问），浏览器向服务器发出请求，服务器返回html文件。 

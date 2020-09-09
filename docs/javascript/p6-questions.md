@@ -1,3 +1,8 @@
+---
+prev: /javascript/orientation
+next: /javascript/part2
+---
+
 # 阿里 P6web 前端笔试题
 
 ```js

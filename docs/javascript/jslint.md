@@ -1,3 +1,8 @@
+---
+prev: /javascript/js-memory
+next: /javascript/number-function
+---
+
 # jslint
 
 在项目根目录下建立一个 .jshintrc 文件，这个文件就是 JSHint 的配置文件，JSHint 会自动识别这个文件，根据这里面的规则对文件进行检查

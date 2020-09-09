@@ -1,3 +1,9 @@
+---
+prev: /javascript/restful
+next: /javascript/script-tab
+---
+
+
 # 架构设计原则
 
 软件设计原则分软件架构设计和组织原则

@@ -1,3 +1,8 @@
+---
+prev: /javascript/symbol
+next: /javascript/vscode-shortcut
+---
+
 # TCP的基本原理
 
 TCP/IP整体协议的实现采用CS架构（客户端-服务端架构）。其中程序包括两部分，分别为客户端（Client）和服务端（Server）。当然，实际的环境还要复杂的多，在客户端和服务端之间可能有多种不同种类和数量的设备，这些设备都会增加网络通信的复杂性。自然，也会增加程序开发容错的复杂性。

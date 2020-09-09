@@ -1,3 +1,8 @@
+---
+prev: /javascript/p6-questions
+next: /javascript/performance-monitor
+---
+
 # Array
 
 ### 数组交集

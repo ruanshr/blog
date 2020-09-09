@@ -1,3 +1,8 @@
+---
+prev: /javascript/http
+next: /javascript/jslint
+---
+
 # JS内存泄漏排查方法
 ## 1、使用工具 Heap Profiling
 1.  Heap Profiling 可以记录当前的堆内存（heap）的快照，并生成对象的描述文件，该描述文件给出了当时Js运行所用的所有对象，以及这些对象所占用的内存大小，引用的层级关系等等。

@@ -1,3 +1,8 @@
+---
+prev: /javascript/html-load
+next: /javascript/http
+---
+
 # HTML5有哪些新特性
 + 1、新增选择器 document.querySelector、 document.querySelectorAll
 + 2、拖拽释放 （Drag and drop） API

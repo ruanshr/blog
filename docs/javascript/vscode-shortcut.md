@@ -1,3 +1,7 @@
+---
+prev: /javascript/tcp-introduction
+next: /javascript/waterfall
+---
 # VS Code 快捷键
 
 列出VS Code实用的快捷方式，记住快捷键能够提高工作效率，尤其是使用笔记本开发的。

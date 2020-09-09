@@ -6,9 +6,9 @@ next: /javascript/es6-format
 
 ## 1. DOM API 之 before()
 
-这里的 before()是个 ChildNode 方法，也就是节点方法。节点方法对应于元素方法。区别在于，节点可以直接是文本节点，甚至注释等。但是，元素必须要有 HTML 标签。
+这里的 **before()**是个 ChildNode 方法，也就是节点方法。节点方法对应于元素方法。区别在于，节点可以直接是文本节点，甚至注释等。但是，元素必须要有 HTML 标签。
 
-因此，before()的参数既可以是 DOM 元素，也可以是 DOM 节点，甚至可以直接字符内容，咦，感觉活脱脱的 jQuery 的 before() API 嘛？没错，真的很类似似，并且语义也是一样的，表示当前节点的前面是 XXX。
+因此，**before()**的参数既可以是 DOM 元素，也可以是 DOM 节点，甚至可以直接字符内容，咦，感觉活脱脱的 jQuery 的 before() API 嘛？没错，真的很类似似，并且语义也是一样的，表示当前节点的前面是 XXX。
 
 语法如下：
 
@@ -19,10 +19,10 @@ void ChildNode.before((节点或字符串)... 其它更多节点);
 
 如果我们想要在图片前面插入 HTML 内容，可以使用 DOM 节点方式插入
 
-元素 DOM 的 before() API 还有一个很棒的特性，那就是可以同时插入多个节点内容
+元素 DOM 的 **before()** API 还有一个很棒的特性，那就是可以同时插入多个节点内容
 
 兼容性
-before() API Chrome54+，Firefox49+才支持，还算比较新，IE edge 目前还未支持
+**before()** API Chrome54+，Firefox49+才支持，还算比较新，IE edge 目前还未支持
 
 对于团队或公司内部的一些项目，管理平台或者工具之类的 web 页面我们可以放心大胆使用 before()等 API，如果是面向用户对兼容性有要求的项目呢？
 
@@ -56,14 +56,15 @@ before() API Chrome54+，Firefox49+才支持，还算比较新，IE edge 目前�
 
 注意，上面的 polyfill 并不支持 IE8 及其以下浏览器。也就是 before() API 只能在至少兼容到 IE9 浏览器的项目使用。
 
-和 insertBefore()比较
-insertBefore()作为老牌传统的 API，优势在于兼容性好。不足之处，其语法着实很奇怪，A 元素插到 B 元素前面，需要父元素 parentNode.insertBefore(newNode, referenceNode)，小辈之间的打打闹闹牵扯到父辈，显然事情就会麻烦。至少这么多年下来 insertBefore 的参数究竟是新插入节点在前还是先插入节点在后，我都没有准确记清楚。
+和 **insertBefore()**比较
+
+**insertBefore()**作为老牌传统的 API，优势在于兼容性好。不足之处，其语法着实很奇怪，A 元素插到 B 元素前面，需要父元素 parentNode.insertBefore(newNode, referenceNode)，小辈之间的打打闹闹牵扯到父辈，显然事情就会麻烦。至少这么多年下来 insertBefore 的参数究竟是新插入节点在前还是先插入节点在后，我都没有准确记清楚。
 
 但是，before() API 就不一样了，语法仅涉及到插入节点和相对节点，非常好记，不容易出错，而且 API 名称更短。
 
 ## 2. DOM API 之 after()
 
-after()和 before()的语法特性兼容性都是一一对应的，差别就在于语义上，一个是在前面插入，一个是在后面插入。
+**after()**和 **before()**的语法特性兼容性都是一一对应的，差别就在于语义上，一个是在前面插入，一个是在后面插入。
 
 由于语法类似，因此，就不一个一个示意了，若想直观体验 after()的特性表现，您可以狠狠的点击这里：DOM after()节点 API 方法 demo
 
@@ -154,14 +155,15 @@ if (!DocumentType.prototype.replaceWith) {
 
 其语法如下：
 
-ParentNode.prepend((节点或字符串)... 更多节点);
+**ParentNode.prepend((节点或字符串)... 更多节点);**
+
 表示在当前节点的最前面插入其它节点内容（作为子节点）。其意思和 jQuery 中的 prepend() API 是一样的，对 jQuery 熟悉的人学习这几个 API 都是分分钟的事情。
 
-参数值特性什么的和 before(), after()等方法类似，就不重复展开。
+参数值特性什么的和 **before()**,**after()**等方法类似，就不重复展开。
 
-prepend()这个 api 要更简单和直接。
+**prepend()**这个 api 要更简单和直接。
 
-兼容性和 before()一模一样，对于 IE9+支持项目，可以辅助下面的 polyfill：
+兼容性和 **before()**一模一样，对于 IE9+支持项目，可以辅助下面的 polyfill：
 
 ```js
 ;(function(arr) {
@@ -193,8 +195,9 @@ prepend()这个 api 要更简单和直接。
 
 其语法如下：
 
-ParentNode.append((节点或字符串)... 更多节点);
-表示在当前节点的最后面插入其它节点内容（作为子节点）。其意思和 jQuery 中的 append() API 是一样的，细节上就是不支持 html 字符串直接显示的差别。
+**ParentNode.append((节点或字符串)... 更多节点);**
+
+表示在当前节点的最后面插入其它节点内容（作为子节点）。其意思和 jQuery 中的 **append()** API 是一样的，细节上就是不支持 html 字符串直接显示的差别。
 
 polyfill 如下：
 
