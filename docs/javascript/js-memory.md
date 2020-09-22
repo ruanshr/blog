@@ -1,5 +1,5 @@
 ---
-prev: /javascript/http
+prev: /javascript/js-call-stack
 next: /javascript/jslint
 ---
 

@@ -1,6 +1,6 @@
 ---
 prev: /javascript/css-position
-next: /javascript/decorator
+next: /javascript/debounce-throttle
 ---
 
 # javascript 日期Date详解

@@ -1,7 +1,8 @@
 ---
-prev: /javascript/date-function
-next: /javascript/dom-api
+prev: /javascript/debounce-throttle
+next: /javascript/document
 ---
+
 
 # JavaScript 中的装饰器
 

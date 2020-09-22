@@ -1,3 +1,8 @@
+---
+prev: /javascript/http
+next: /javascript/js-memory
+---
+
 # JS调用堆栈
 Javascript程序内部的执行机制
 
@@ -100,7 +105,7 @@ FunctionExectionContext = {// 函数执行上下文
 ```
 
 
-变量环境：
+**变量环境 Variable Environment**：
 
 变量环境是一个词法环境，因此它具有上面定义的词法环境的所有属性
 
@@ -116,3 +121,27 @@ FunctionExectionContext = {// 函数执行上下文
 
 如果Javascript引擎在源代码中国声明的实际位置找不到let变量的值，那么将为其分配undefined值
 
+
+### 打印函数调用栈
+
+```js
+function  getFunctionName(func) {
+  if(typeof func === 'function' || typeof func === 'object') {
+    var nameMatch = func.toString().match(/function\s*([\w\$]*)\s*\(/)
+    return nameMatch && nameMatch[1]
+  }
+}
+
+if(!console.trace){
+  console.trace = function trace() {
+    var stack = []
+    var caller = arguments.callee.caller
+    while(caller) {
+      stack.unshift(getFunctionName(caller))
+      caller = caller && caller.caller
+    }
+    console.log('function on stack:\n' + stack.join('\n'))
+  }
+}
+
+```

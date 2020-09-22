@@ -1,6 +1,6 @@
 ---
 prev: /javascript/http5
-next: /javascript/js-memory
+next: /javascript/js-call-stack
 ---
 
 # http 状态码 301 和 302 详解及区别
