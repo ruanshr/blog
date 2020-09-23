@@ -75,6 +75,18 @@ Function.prototype.bind = function bind(context = window, ...bindArgs) {
   };
 };
 
+
+Function.prototype.bind = function bind(context = window, ...bindArgs) {
+  const self = this;
+  return function handler(...args) {
+    if(this instanceof handler){
+       return self.apply(this, bindArgs.concat(args));
+    } else {
+      return self.apply(context, bindArgs.concat(args)); 
+    }
+
+  };
+};
 // function test(...args) {
 //   console.log(this.type,args);
 // }

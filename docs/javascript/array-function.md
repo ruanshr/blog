@@ -1,5 +1,5 @@
 ---
-prev: /javascript/simple-complex
+prev: /javascript/alibaba-pm6
 next: /javascript/babel-stage
 ---
 
