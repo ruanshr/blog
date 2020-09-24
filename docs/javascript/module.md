@@ -26,5 +26,3 @@ MVC模式的意思是，软件可以分成三个部分
 ### MVP
 
 MVP模式将Controller改名为Presenter，同时改变了通信方向
-
-MVP模式将Controller改名为Presenter，同时改变了通信方向
