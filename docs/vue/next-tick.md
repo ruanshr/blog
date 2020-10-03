@@ -1,6 +1,7 @@
 # next-tick
 
 nextTick 是Vue的一个核心实现。
+$nextTick 是在下次 DOM 更新循环结束之后执行延迟回调，在修改数据之后使用 $nextTick，则可以在回调中获取更新后的 DOM
 
 ### Vue的实现
 
