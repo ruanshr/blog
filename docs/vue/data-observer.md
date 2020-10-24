@@ -95,9 +95,7 @@ Watcher.prototype.update = function update() {
 }
 ```
 
-
 ```js
-
 /**
  * run 方法内的 cb 方法建立 Watcher 和 VNode 之间的关联关系，从而引发视图的更新。
  */
