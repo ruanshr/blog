@@ -28,3 +28,17 @@ https://github.com/cn/GB2260
 
 11、学习Typescript
 https://ts.xcatliu.com/introduction/index.html
+
+
+12、深入浅出 Babel 上篇：架构和原理 + 实战
+https://juejin.im/post/6844903956905197576
+
+13、React学习地址
+https://react.docschina.org/docs/getting-started.html
+
+14【bilibili 前端面试题】
+https://www.bilibili.com/video/av83427212?p=1
+
+15【vue面试题云锦】
+
+https://github.com/haizlin/fe-interview/blob/master/lib/Vue.md
