@@ -67,6 +67,44 @@ event.once('sleep', ()=>console.log('I want sleep'));
 event.fire('sleep');
 */
 
+```js
+
+class Events {
+  constructor(){
+    this.events = {}
+  }
+  on(type, fn, ...args) {
+    const ev = this.events[type]
+    if(!(ev instanceof Array)) {
+      ev = this.events[type] = []
+    }
+    ev.push(fn.bind(null, ...args))
+  }
+  fire(type, ...args) {
+    const ev = this.events[type] 
+    if(ev instanceof Array){
+      ev.forEach((handle) => {
+        handle.call(null, ...args)
+      })
+    }
+  }
+  off(type, fn) {
+    const ev = this.events[type] 
+    if(ev instanceof Array){
+      var idx = ev.findIndex(h => h === fn)
+      if(idx > -1) {
+        ev.splice(idx,1)
+      }
+    }
+  }
+  once(type, fn) {
+    fn.call(null)
+    this.on(type)
+    this.events[type] = []
+  }
+}
+
+```
 // 5、字符串去重、并统计出出现次数最多的那个字符，实现一个方法返回去重后的字符串和出现次数最多的字符
 ```js
 function getUnicleStringAndMaxChar(str) {
