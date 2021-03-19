@@ -34,6 +34,17 @@ Number 对象主要用于：
 两个可表示(representable)数之间的最小间隔。
 EPSILON 属性的值接近于 2.2204460492503130808472633361816E-16，或者 2^52。
 
+```js
+
+function getRealNum(num) {
+   if(num - num.toFixed(16) < Number.EPSILON) {
+      return Number(num.toFixed(16))
+   }
+   return NaN
+}
+
+```
+
 - Number.MAX_SAFE_INTEGER
 JavaScript 中最大的安全整数 (2的53次幂 - 1)。
 
