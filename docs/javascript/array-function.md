@@ -9,7 +9,7 @@ next: /javascript/babel-stage
 push() 方法 参数数列尾部添加到数组,返回当前数组长度
 ```js
 const a = [1,2];
-const b = a.join(3,5,6); 
+const b = a.push(3,5,6); 
 console.log(b)  // 5
 console.log(a)  // [1,2,3,5,6]
 ```
@@ -163,13 +163,13 @@ console.log(arr3) // [1,2,3,4,5,6,7,8,9]
 includes() 方法 判断元素是否存在于当前数组，结果为布尔值，其比较的是 === ， 其等价于  indexOf
 ```js
 const a = [1,2,3,7];
-const b = a.includes(1);     // false
+const b = a.includes(1);     // true
 const c = a.includes(4);     // false
 const d = a.includes('1');   // false
 
 const students =  [{name:'Jack'},{name:'Marry'}];
 
-const exist = students.includes({name:'Jack'})  // false
+const exist = students.includes({name:'Jack'})  // false  对象引用值不同
 ```
 
 ## Array.prototype.map
@@ -309,6 +309,20 @@ const result1 = [...new Set(arr3.toString().split(','))]
 const result3 = arr3.toString().split(',').filter((item,index,arr) => arr.indexof(item) === index)
 ```
 
+## Array.prototye.flat 扁平化数组
+
+```js
+
+Array.prototype.myFlat = function(n = 1) {
+    return this.reduce((acc, v) => {
+        if( n <= 1) {
+            return acc.concat(v)
+        }
+        return Array.isArray(v) ? acc.concat(v.myFlat(n -1)) : acc.concat(v)
+    }, [])
+}
+
+```
 
 ## Array.prototype.filter
 filter(过滤，筛选) 方法创建一个新数组,原始数组不发生改变。
@@ -328,6 +342,7 @@ console.log( arr2 );
 // [1, 2, 3, 5, 4]
 console.log( arr1 );
 // [1, 2, 1, 2, 3, 5, 4, 5, 3, 4, 4, 4, 4]
+
 ```
 filter注意点说明
 callback在过滤测试的时候，一定要是Boolean值吗？例子：

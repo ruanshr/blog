@@ -6,7 +6,7 @@ next: /javascript/orientation
 
 JavaScript 的 Number 对象是经过封装的能让你处理数字值的对象。Number 对象由 Number() 构造器创建。
 JavaScript的Number类型为双精度IEEE 754 64位浮点类型。
-最近出了stage3BigInt 任意精度数字类型，已经进入stage3规范
+最近出了stage3 BigInt 任意精度数字类型，已经进入stage3规范
 
 
 通过new 创建出来的对象与Number函数返回的值类型是不同的

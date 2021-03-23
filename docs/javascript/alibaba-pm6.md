@@ -49,6 +49,21 @@ function getObjectDataByKey(obj, key){
   })
   return obj
 }
+
+
+
+function getObjectDataByKey2(obj, key){
+  key = key.replace(/[', '.')
+  key.split('.').forEach(k => {
+    const matchs = k.match(/^(\w+)\[(\d+)\]$/)
+    if(matchs){
+      obj = obj[matchs[1]][matchs[2]]
+    } else {
+      obj = obj[k]
+    }
+  })
+  return obj
+}
 ```
 
 // 4、请使用原生代码实现一个Events模块，可以实现自定义事件的订阅、触发、移除功能，如

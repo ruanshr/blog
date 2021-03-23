@@ -29,7 +29,7 @@ F. Object.keys(obj).length ≥ Reflect.ownKeys(obj).length ≥ Object.getOwnProp
 
 A. append() 方法可以直接追加字符串为文本节点，比如 append("text");appendChild() 不行
 
-B. append() 方法可以直接追加 HTML 片段字符串为元素节点，比如 append('\<p\>test\<\/p\>');appendChild() 不行
+B. append() 方法可以直接追加 HTML 片段字符串为元素节点，比如 append('&lt;p&gt;test&lt;/p&gt;');appendChild() 不行
 
 C. append() 方法支持追加多个参数，appendChild() 只能追加一个
 
@@ -185,7 +185,7 @@ F. {async foo(){}}
 
 参考答案：DE
 
-考查知识点：对 ES6 中函数 name 属性的了解。D 中 name 属性为 [foo] ，Symbol 类型的属性键需要加中括号，E 中 name 属性为 get foo，getter 和 setter 分别加 get 和 set 前缀。
+考查知识点：对 ES6 中函数 name 属性的了解。D 中 name 属性为 [Symbol(foo)] ，Symbol 类型的属性键需要加中括号，E 中 name 属性为 get foo，getter 和 setter 分别加 get 和 set 前缀。
 
 ### 5. 下面这些 Element 上的方法，有哪些是支持传入一个选择器作为参数的？
 
