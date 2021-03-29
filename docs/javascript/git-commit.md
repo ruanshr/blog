@@ -127,24 +127,24 @@ git config --global credential.helper store
 
 GitFlow流程图:
 
-![gitflow](../images/javascript/git-gitflow-1.png)
+<!-- ![gitflow](../images/javascript/git-gitflow-1.png) -->
 
 **feature** 分支都是从 **develop** 分支创建，完成后再合并到 **develop** 分支上，等待发布
 
-![gitflow](../images/javascript/git-gitflow-2.png)
+<!-- ![gitflow](../images/javascript/git-gitflow-2.png) -->
 
 当需要发布时，我们从 **develop** 分支创建一个 **release** 分支
 
 然后这个 release 分支会发布到测试环境进行测试，如果发现问题就在这个分支直接进行修复。在所有问题修复之前，我们会不停的**重复发布->测试->修复->重新发布->重新测试**这个流程。
 
-![gitflow](../images/javascript/git-gitflow-3.png)
+<!-- ![gitflow](../images/javascript/git-gitflow-3.png) -->
 
 发布结束后，这个 release 分支会合并到 develop 和 master 分支，从而保证不会有代码丢失。
 
-![gitflow](../images/javascript/git-gitflow-4.png)
+<!-- ![gitflow](../images/javascript/git-gitflow-4.png) -->
 
 master 分支只跟踪已经发布的代码，合并到 master 上的 commit 只能来自 release 分支和 hotfix 分支。
 
 **hotfix** 分支的作用是紧急修复一些 Bug。它们都是从 master 分支上的某个 tag 建立，修复结束后再合并到 **develop** 和 **master** 分支上。
 
-![gitflow](../images/javascript/git-gitflow-5.png)
+<!-- ![gitflow](../images/javascript/git-gitflow-5.png) -->
