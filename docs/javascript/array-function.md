@@ -322,6 +322,19 @@ Array.prototype.myFlat = function(n = 1) {
     }, [])
 }
 
+Array.prototype.myFlat2 = function myFlat2(n) {
+    return this.reduce((acc, v) => {
+        if(typeof n === 'number') {
+            if(n <= 1) {
+                return acc.concat(v)
+            }
+            return Array.isArray(v) ? acc.concat(v.myFlat2(n -1)) : acc.concat(v)
+        } else {
+            return Array.isArray(v) ? acc.concat(v.myFlat2()) : acc.concat(v)
+        }
+    }, [])
+}
+
 ```
 
 ## Array.prototype.filter

@@ -201,3 +201,377 @@ export function useEffect(rawEffect, deps) {
 }
 
 ```
+
+从源码可以看出，，effect hooks其实就是在life-cycle hooks 的mounted和updated中执行的side effect function、一旦当前实例执行挂载和更新方法的时候，执行一次自己绑定effect方法。在一些不需要在updated的时候，也强制执行的场景，可以传入第二个deps，如果deps是个空数组，则不需要在updated的时候再次执行effect方法
+
+```js
+useEffect(rawEffect, deps)
+```
+
+
+useEffect的第一个参数rawEffect是要执行的副作用函数，它可以是任意的用户自定义函数，用户可以在这个函数里面操作一些流程器的API或者和外部环境进行交互，这个函数会在每次组件渲染完成之后被调用。
+
+而我们从源码中可以看到，useEffect的实现涉及到组件的三个生命周期，mounted，updated，destoryed，副作用逻辑的执行细节由参赛deps控制
+
+1、mounted时，固定地执行一次
+2、如果deps未指定，为空，则每次updated后都执行一次
+3、如果deps为空数组，则updated后不执行
+4、如果deps指定了依赖项，则当相应的依赖项的值改变时，执行一次
+
+通过参赛，我们可以为useEffect指定3种信息：
+
+1、rawEffect - 副作用逻辑内容
+2、清理逻辑 - 通过rawEfect的返回值定义
+3、依赖 - 定义何时需要重复执行副作用逻辑
+
+其中，清理逻辑，会在2种情况下执行：
+
+1、rawEffect需要重复执行之前，清理上次运行所带来的副作用
+2、组件销毁时
+
+```js
+
+useEffect(() => {
+    window.addEventListener('resize' handleResize)
+    return () => {
+        window.removeEventListener('resize', handleResize)
+    }
+
+})
+
+```
+
+### useRef
+
+useRef是用来在组件不同渲染之间共用一些数据的，它的作用和我们在Vue Class Compponent里面为$ref.XXX 赋值是一样的，那么它的一些特性就跟refs是类似：
+
+1、组件更新之后，可以获得最新的状态，值
+2、值不需要响应式处理
+3、独立于其他作用域之外，不污染其他作用域
+4、useRef 返回的是对象
+
+```js
+
+const [count , setCount ] = useState
+const num = useRef(count)
+
+const addCount = () => {
+    let sum = count++ 
+    setCount(sum)
+    num.current = num
+    console.log(count, num.current)
+}
+
+```
+
+可以看出， num.current 永远是最新的值，而count获取到的是上一次render的值，这就是useRef的使用场景
+
+### useData
+
+useData 我们可以理解为Vue Class Function里面的$data,也可以认为与useState类似，不同的是，useData不提供更新器。只是作为数据变量的声明，修改调用
+
+```js
+
+export function useData(initial) {
+    const id = ++callIndex
+    const state = currentInstance.$data._state
+    if(isMounting) {
+        currentInstance.$set(state, id, initial)
+    }
+    return state[id]
+}
+
+```
+
+源码中的currentInstance就是实例化的组件Vue class Function 里面调用$set 就是跟$data的某个对象赋值
+
+使用方法如下：
+
+```js
+
+const data = useData({
+    count: 0
+})
+console.log(data.count)
+
+```
+
+### useMounted
+
+useMounted需要在 mounted 事件中执行的逻辑。
+
+```
+//源码
+export function useMounted(fn) {
+  useEffect(fn, [])
+}
+
+```
+
+看源码 useEffect 的参数 deps 指定为空数组的话，fn 就不在 updated 后执行了 – 即仅在 mounted 时执行一次，与vue class Function 里面的mounted() 一样。
+
+使用方法如下：
+```js
+useMounted(() => {
+    console.log('mounted!')
+})
+
+```
+### useDestroyed
+
+useDestroyed需要在 destroyed 事件中执行的逻辑。
+```js
+//源码
+export function useDestroyed(fn) {
+  useEffect(() => fn, [])
+}
+
+```
+看源码 useEffect 的参数 deps 指定为空数组的话，fn 就不在 updated 后执行了 – 即仅在 destroyed 时执行一次，与vue class Function 里面的destroyed()一样。
+
+使用方法如下：
+```js
+useDestroyed(() => {
+    console.log('destroyed!')
+})
+```
+
+### useUpdated
+
+useUpdated就是Vue class Function 组件更新后执行的操作逻辑
+```js
+//源码
+export function useUpdated(fn, deps) {
+  const isMount = useRef(true)
+  useEffect(() => {
+    if (isMount.current) {
+      isMount.current = false
+    } else {
+      return fn()
+    }
+  }, deps)
+  
+  ```
+其实现方式还是通过 useEffect 实现，通过 useRef 声明一个标志变量，避免 useEffect 的副作用逻辑在 mounted 中执行。数据方式变动的时候，都会实现这个钩子函数。
+
+使用方法如下：
+```js
+useUpdated(() => {
+    console.log('updated!')
+})
+
+```
+### useWatch
+
+useWatch 就是给组件添加 watch 方法，用于监听数据变化的改动逻辑
+```js
+export function useWatch(getter, cb, options) {
+  ensureCurrentInstance()
+  if (isMounting) {
+    currentInstance.$watch(getter, cb, options)
+  }
+}
+
+```
+currentInstance就是实例化的组件 Vue class Function 直接通过组件实例的 $watch 方法实现。
+
+使用方法如下：
+```js
+useWatch(() => data.count, (val, prevVal) => {
+    console.log(`count is: ${val}`)
+})
+h('button', { on: { click: () => {
+      data.count++
+}}}, 'count++')
+```
+
+data.count 每次的变化，useWatch 这个钩子函数都会执行一次。
+
+### useComputed
+
+useComputed 就是给组件添加 computed 属性，用于动态获取数据
+```js
+export function useComputed(getter) {
+  ensureCurrentInstance()
+  const id = ++callIndex
+  const store = currentInstance._computedStore
+  if (isMounting) {
+    store[id] = getter()
+    currentInstance.$watch(getter, val => {
+      store[id] = val
+    }, { sync: true })
+  }
+  return store[id]
+}
+
+```
+
+数据存储在了内部对象 _computedStore 中。而其本质上就是通过组件 Vue class Function 实例的 $watch 实现。
+
+使用方法如下：
+```js
+const double = useComputed(() => data.count * 2)
+h('button', { on: { click: () => {
+      data.count++
+}}}, 'count++')
+
+```
+data.count 每次的变动，double 会自动跟着变化。
+
+### withHooks
+
+withHooks就是一个Vue 版的函数式组件。
+```js
+export function withHooks(render) {
+  return {
+    data() {
+      return {
+        _state: {}
+      }
+    },
+    created() {
+      this._effectStore = {}
+      this._refsStore = {}
+      this._computedStore = {}
+    },
+    render(h) {
+      callIndex = 0
+      currentInstance = this
+      isMounting = !this._vnode
+      const ret = render(h, this.$attrs, this.$props)
+      currentInstance = null
+      return ret
+    }
+  }
+}
+
+```
+h函数是createElement，生产一个VNode节点，即html DOM节点
+
+createElement(也就是h)是vuejs里的一个函数。这个函数的作用就是生成一个 VNode节点，render 函数得到这个 VNode 节点之后，返回给 Vue.js 的 mount 函数，渲染成真实 DOM 节点，并挂载到根节点上。而withHooks 就是返回一个包装过的 Vue 实例配置，给组件 Vue class Function 提供了hooks+VNode的使用方法。关于详细的createElement的介绍，大家可以去查看相关文档或者看vue的源码 vue 源码解读
+
+使用方法如下：
+```js
+const Foo = withHooks(h => {
+  const data = useData({
+    count: 0
+  })
+
+  const double = useComputed(() => data.count * 2)
+
+  useWatch(() => data.count, (val, prevVal) => {
+    console.log(`count is: ${val}`)
+  })
+
+  useMounted(() => {
+    console.log('mounted!')
+  })
+  useUpdated(() => {
+    console.log('updated!')
+  })
+  useDestroyed(() => {
+    console.log('destroyed!')
+  })
+
+  return h('div', [
+    h('div', `count is ${data.count}`),
+    h('div', `double count is ${double}`),
+    h('button', { on: { click: () => {
+      // still got that direct mutation!
+      data.count++
+    }}}, 'count++')
+  ])
+})
+
+```
+
+所有vue hook 里面的钩子函数在withHooks里面都可以使用，withHooks的这种方式，可以独立于组件之外的且包含了一系列类似组件的功能都可以使用。这样的好处就是可以相对独立又互相不影响。跨组件代码就可以去去复用，嵌套层级少，易维护，且代码颗粒度小，逻辑清晰等。
+注：withHooks 如果我们在实际开发中，不需要再页面上渲染元素，比如我们根据每个接口或者条件，来给页面弹出Toast 或则MessageBox 等无需页面挂载的组件。那么withHooks 就不需要有 return ,只需要写业务逻辑即可。
+值得注意的是，使用了vue hook 的时候，vue的写法需要改变：
+
+```js
+//vue 通用写法
+new Vue({
+  el: 'app',
+  render: h => h(App) //App为页面组件
+})
+//vue hook 引用写法
+new Vue({
+  el: "#app",
+  render: h => {
+    return h("div", [h(Foo), h(App)]) //
+  }
+})
+
+```
+App为页面组件， Foo 就是 withHooks 的函数库组件 div 就是我们这些组件挂载的父类元素 h 里面的参数遵循
+Vue里createElement 参数。具体详细的说明，请查看Vue源码解析(4)-createElement
+
+### hooks
+
+hooks 这个方法的出现，功能与原理就是Vue mixin ，在组件中引用的方式上稍微不一样了点，其他的与Vue mixin 一模一样。看源码就很清楚了
+```js
+export function hooks (Vue) {
+  Vue.mixin({
+    beforeCreate() {
+      const { hooks, data } = this.$options
+      if (hooks) {
+        this._effectStore = {}
+        this._refsStore = {}
+        this._computedStore = {}
+        this.$options.data = function () {
+          const ret = data ? data.call(this) : {}
+          ret._state = {}
+          return ret
+        }
+      }
+    },
+    beforeMount() {
+      const { hooks, render } = this.$options
+      if (hooks && render) {
+        this.$options.render = function(h) {
+          callIndex = 0
+          currentInstance = this
+          isMounting = !this._vnode
+          const hookProps = hooks(this.$props)
+          Object.assign(this._self, hookProps)
+          const ret = render.call(this, h)
+          currentInstance = null
+          return ret
+        }
+      }
+    }
+  })
+}
+
+```
+
+从源码我们知晓hooks 返回的就是实例化的组件，所以在使用之前我们需要Vue.use(hooks)，这样才可以直接在Vue class Function中使用。而hooks返回的属性对象，自动合并进组件的自身实例中，这样数据就可以在当前组件模板上直接使用了。
+
+使用方法如下：
+```JS
+import { hooks, useData, useComputed } from 'vue-hooks'
+Vue.use(hooks)
+new Vue({
+  template: `
+    <div @click="data.count++">
+      {{ data.count }} {{ double }}
+    </div>
+  `,
+  hooks() {
+    const data = useData({
+      count: 0
+    })
+    const double = useComputed(() => data.count * 2)
+    return {
+      data,
+      double
+    }
+  }
+})
+
+```
+
+hooks 方法的使用，给我们在使用mixin的选择上，新增了另外一种有别与mixin的缺点的方式，这种新方式的出现，能解决mixin带来的诸多问题，同时也能够可以对组件开发更加抽象化，也可以是的一些公共的方法或者一些在业务场景中共同的业务逻辑抽离出来，可以做到高复用的，易维护。
+但是也有一些不足与缺点。比如useEffect这个方式使用的依赖性与特殊性。稍微不熟悉整体链路的，往往会导致一些问题出现。比如引起render的死循环等。
+Vue hooks 的出来，这种函数式的组件，给了我们新的视野，就像我们使用 vue-property-decorator 结合Ts对 Vue class Function 来实践一样。也是对于编码方面新的尝试。类似 Java 

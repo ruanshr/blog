@@ -113,9 +113,8 @@ class Events {
     }
   }
   once(type, fn) {
-    fn.call(null)
-    this.on(type)
-    this.events[type] = []
+    this.on(type, fn)
+    this.on(type, () => { this.events[type] = []})
   }
 }
 
@@ -143,7 +142,32 @@ function getUnicleStringAndMaxChar(str) {
 ```
 
 // 6  Promise.all 的实现
+```js
+function promiseAll(iteration) {
+  return new Promise((resolve, reject) => {
+     const len = iteration.length
+     const result = []
+     iteration.forEach(p => {
+       p.then((data) => {
+         result.push(data)
+         if(result.length === len) {
+           resolve(result)
+         }
+       }, (e)=> {
+         reject(e)
+       })
+     })
+  })
+}
 
+function promiseRace(iteration) {
+  return new Promise((resolve, reject) => {
+    iteration.forEach(p => p.then((data) => {
+      resolve(data)
+    }, () => {}))
+  })
+}
+```
 // 7 斐波那契数列
 ```js
 function fb(n) {

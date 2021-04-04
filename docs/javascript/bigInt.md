@@ -125,7 +125,7 @@ mixed.sort()
 BigInt(7).toString(2)
 // ↪ '111'
 
-15n.toString(7)
+15n.toString(2)
 // ↪ '1111'
 
 ```
