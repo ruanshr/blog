@@ -1,3 +1,8 @@
+---
+prev: /css/css-standard
+next: /css/skeleton.md
+---
+
 # rem适配移动端的原理和应用场景
 
 我们在H5项目终端适配采用的是淘宝那套《flexible实现手淘H5页面的终端适配》方案。主要原理是rem布局。

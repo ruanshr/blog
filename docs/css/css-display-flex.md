@@ -1,3 +1,8 @@
+---
+prev: /css/css-box
+next: /css/css-extends
+---
+
 # flex 布局
 
 flex 是 flexible box 的缩写，意为“弹性布局”，用来为盒状模型提供最大的灵活性

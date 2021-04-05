@@ -1,3 +1,8 @@
+---
+prev: false
+next: /css/css-box
+---
+
 # animation 和 transition 的区别
 
 **animation** 可以用 name 设置动画的名称，用 duration 设置动画完成的周期，用 timing-function 设置动画的速度曲线，delay 设置动画什么时候开始，iteration-count 设置动画播放的次数，direction 规定下一个周期是否逆向的播放，play-state 动画是否正在进行或者暂停，fill-mode 设置动画停了之后位置什么状态

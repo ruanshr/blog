@@ -1,3 +1,7 @@
+---
+prev: /css/css-load
+next: /css/css-position
+---
 # CSS面试题
 
 **1、介绍一下标准的CSS的盒子模型？与IE的合作模型有什么不同的？**
@@ -66,7 +70,13 @@ inline-block 行内块 （设置宽和高生效，占空间根据宽和高）
 
 static（默认）： 按照正常文档进行排列
 
+relative:
 
+absolute:
+
+fixed:
+
+sticky:
 
  
 

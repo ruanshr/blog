@@ -1,3 +1,10 @@
+---
+prev: /css/rem
+next: false
+---
+
+# 骨架屏 
+
 ```html
 <!DOCTYPE html>
 <html lang="en">

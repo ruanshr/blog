@@ -1,3 +1,8 @@
+---
+prev: /css/css-display-flex
+next: /css/css-fake
+---
+
 # css有哪些属性可以继承
 
 ## 有继承性的属性：

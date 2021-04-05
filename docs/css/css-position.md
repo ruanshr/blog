@@ -1,6 +1,6 @@
 ---
-prev: /javascript/css-box
-next: /javascript/date-function
+prev: /css/css-part1
+next: /css/css-reflow
 ---
 
 # CSS中position详解

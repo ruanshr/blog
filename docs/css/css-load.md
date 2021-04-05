@@ -1,3 +1,7 @@
+---
+prev: /css/css-fake
+next: /css/css-part1
+---
 # css加载会对dom的解析渲染造成阻塞吗
 
 - 1、css加载不会阻塞DOM树的解析

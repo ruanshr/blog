@@ -1,3 +1,8 @@
+---
+prev: /css/css-extends
+next: /css/css-load
+---
+
 # CSS3中什么是伪类和伪元素？
 
 ## 伪类

@@ -1,6 +1,6 @@
 ---
-prev: /javascript/css-function
-next: /javascript/css-position
+prev: /css/css-animate-transition
+next: /css/css-display-flex
 ---
 
 # CSS盒子模型与怪异盒子模型
