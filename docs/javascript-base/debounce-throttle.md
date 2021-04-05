@@ -1,6 +1,6 @@
 ---
-prev: /javascript/date-function
-next: /javascript/decorator
+prev: /javascript-base/date-function
+next: /javascript-base/decorator
 ---
 
 # 防抖（debounce）和节流（throttle）

@@ -1,6 +1,6 @@
 ---
-prev: /javascript/script-tab
-next: /javascript/sort-info
+prev: /javascript-base/prototype
+next: /javascript-base/sort-info
 ---
 
 # Set和Map

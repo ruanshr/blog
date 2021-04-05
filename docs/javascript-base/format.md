@@ -1,6 +1,6 @@
 ---
-prev: /javascript/event-loop
-next: /javascript/garbage
+prev: /javascript-base/exotic
+next: /javascript-base/garbage
 ---
 
 # JavaScript 风格指南

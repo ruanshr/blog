@@ -1,6 +1,6 @@
 ---
-prev: /javascript/performance-monitor
-next: /javascript/question-es6
+prev: /javascript-base/number-function
+next: /javascript-base/set-map
 ---
 
 # javascript——原型与原型链

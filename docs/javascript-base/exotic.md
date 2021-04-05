@@ -1,3 +1,7 @@
+---
+prev: /javascript-base/event-loop
+next: /javascript-base/format
+---
 # JavaScript 里的奇葩知识
 
 ### 1、Function.prototype 竟然是个函数类型，而自定义函数的原型却是对象类型

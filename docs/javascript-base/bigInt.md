@@ -1,6 +1,6 @@
 ---
-prev: /javascript/babel-stage
-next: /javascript/costom-function
+prev: /javascript-base/array-reduce
+next: /javascript-base/costom-function
 ---
 
 # ES6 新特性之 BigInt

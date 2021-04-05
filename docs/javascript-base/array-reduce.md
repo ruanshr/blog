@@ -1,3 +1,7 @@
+---
+prev: /javascript-base/array-function
+next: /javascript-base/bigInt
+---
 # Array.prototype.reduce
 
 reduce的核心在于降维，降数字reduce为一个值，比如求和：

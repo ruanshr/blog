@@ -1,6 +1,6 @@
 ---
-prev: /javascript/es2020
-next: /javascript/event-loop
+prev: /javascript-base/es2020
+next: /javascript-base/event-loop
 ---
 
 # Dom 之 addEventListener

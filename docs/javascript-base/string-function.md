@@ -1,6 +1,6 @@
 ---
-prev: /javascript/sort-info
-next: /javascript/study
+prev: /javascript-base/sort-info
+next: /javascript-base/symbol-function
 ---
 
 # javascript 字符串String详解

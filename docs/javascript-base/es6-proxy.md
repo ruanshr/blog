@@ -1,6 +1,6 @@
 ---
-prev: /javascript/es6-format
-next: /javascript/es2020
+prev: /javascript-base/es6-format
+next: /javascript-base/es6-summary
 ---
 
 # Proxy

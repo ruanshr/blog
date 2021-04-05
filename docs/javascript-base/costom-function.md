@@ -1,6 +1,6 @@
 ---
-prev: /javascript/bigInt
-next: /javascript/css-box
+prev: /javascript-base/bigInt
+next: /javascript-base/data-function
 ---
 
 # Javascript中函数的代码实现

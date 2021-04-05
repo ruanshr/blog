@@ -1,6 +1,6 @@
 ---
-prev: /javascript/debounce-throttle
-next: /javascript/document
+prev: /javascript-base/debounce-throttle
+next: /javascript-base/es6-format
 ---
 
 

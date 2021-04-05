@@ -1,9 +1,33 @@
 ---
-prev: /javascript/alibaba-pm6
-next: /javascript/babel-stage
+prev: false
+next: /javascript-base/array-reduce
 ---
 
 # javascript 数组Array详解
+
+## Array.from(arrayLike, mapFun, thisArg)
+将类数组元素转换成数组，有iterator的对象
+```js
+
+Array.from('abcdef')
+
+Array.from('abcdef', function(item){ return `item-${item}`})
+
+Array.from('abcdef', function(item){ return `${this.foo}-item-${item}`}, { foo : 'demo'})
+
+```
+
+
+## Array.isArray
+
+判断对象是否为数组
+
+```js
+
+const isArray = Array.isArray([])
+console.log(isArray)
+
+```
 
 ## Array.prototype.push
 push() 方法 参数数列尾部添加到数组,返回当前数组长度
@@ -242,7 +266,7 @@ console.log( sum );
 console.log( arr );
 // [0, 1, 2, 3, 4]
 ```
-没有 initialValue 的情况，callback 总共调用四次。
+没有 initialValue 的情况，callback 总共调用四次。（数组长度减一次，如果数组长度为一则不调callback，直接返回第一个元素）
 
  
 有 initialValue 值
@@ -258,7 +282,7 @@ console.log( sum );
 console.log( arr );
 // [0, 1, 2, 3, 4]
 ```
-有 initialValue 值 callback 总共调用五次。
+有 initialValue 值 callback 总共调用五次。（数组长度次数）
 
 ## Array.prototype.reduceRight
 reduceRight 与 reduce相同，数组遍历是从结尾开始
@@ -322,16 +346,9 @@ Array.prototype.myFlat = function(n = 1) {
     }, [])
 }
 
-Array.prototype.myFlat2 = function myFlat2(n) {
+Array.prototype.myFlat2 = function myFlat2() {
     return this.reduce((acc, v) => {
-        if(typeof n === 'number') {
-            if(n <= 1) {
-                return acc.concat(v)
-            }
-            return Array.isArray(v) ? acc.concat(v.myFlat2(n -1)) : acc.concat(v)
-        } else {
-            return Array.isArray(v) ? acc.concat(v.myFlat2()) : acc.concat(v)
-        }
+        return Array.isArray(v) ? acc.concat(v.myFlat2()) : acc.concat(v)
     }, [])
 }
 
@@ -371,6 +388,7 @@ console.log(arrayFilter); // [1, 2, 3]
 ## Array.prototype.sort
 sort()方法用原地算法对数组的元素进行排序，并返回数组，该排序方法会在原数组上直接进行排序，并不会生成一个排好序的新数组。排序算法现在是稳定的。默认排序顺序是根据字符串Unicode码点。
 ```js
+
 // 语法
 arr.sort([compareFunction])
 ```

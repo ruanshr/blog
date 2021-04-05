@@ -1,6 +1,6 @@
 ---
-prev: /javascript/set_map
-next: /javascript/string
+prev: /javascript-base/set-map
+next: /javascript-base/string-function
 ---
 # 十大算法
 

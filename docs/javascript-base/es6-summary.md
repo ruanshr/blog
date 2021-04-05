@@ -1,3 +1,7 @@
+---
+prev: /javascript-base/es6-proxy
+next: /javascript-base/es2020
+---
 # ES常用语法总汇
 
 1、声明变量
@@ -28,9 +32,11 @@ let word = `${name}, 你好`
 
 ```js
 
-let obj = {name: 'admin', password: '123456'}
+let obj = {name: 'admin', password: '123456', age: null}
 
-const { name, age, password } = obj
+const { name, age = 23, password, sex = 'F' } = obj
+
+console.log(age) // null
 
 ```
 

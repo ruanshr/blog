@@ -1,6 +1,6 @@
 ---
-prev: /javascript/jslint
-next: /javascript/orientation
+prev: /javascript-base/garbage
+next: /javascript-base/prototype
 ---
 # javascript 数字Number详解
 
@@ -59,7 +59,7 @@ console.log(BigInt(Number.MAX_VALUE))
 
 console.log(Number.MAX_VALUE)              // 1.7976931348623157e+308
 
-console.log(Number.MAX_VALUE.toString(2))  // 返回字符串长度为1024   // Math.pow(2,1023)
+console.log(Number.MAX_VALUE.toString(2))  // 返回字符串长度为1024   // Math.pow(2,1024)
 
 console.log(Number.MAX_VALUE + 1)          // 精度丢失
 

@@ -1,6 +1,6 @@
 ---
-prev: /javascript/format
-next: /javascript/git-flow
+prev: /javascript-base/format
+next: /javascript-base/number-function
 ---
 
 # 垃圾回收
@@ -206,4 +206,4 @@ Javascript中类型：值类型，引用类型
 
 它的键名所引用的对象都是弱引用，就是垃圾回收机制就会释放该对象所占用的内存。
 
-也就是，一旦不再需要，WeakMap里面的键名对象和所应对的键值对会自动小时，不用手动删除引用
+也就是，一旦不再需要，WeakMap里面的键名对象和所应对的键值对会自动释放，不用手动删除引用

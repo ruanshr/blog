@@ -1,6 +1,6 @@
 ---
-prev: /javascript/css-position
-next: /javascript/debounce-throttle
+prev: /javascript-base/custom-function
+next: /javascript-base/debounce-throttle
 ---
 
 # javascript 日期Date详解
