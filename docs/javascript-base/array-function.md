@@ -409,7 +409,7 @@ compareFunction参数是可选的，用来指定按某种顺序进行排列的�
 // apple排在了最后:
 ['Google', 'apple', 'Microsoft'].sort(); // ['Google', 'Microsoft", 'apple']
 
-// 无法理解的结果:
+// 无法理解的结果:  因为 
 [10, 20, 1, 2].sort(); // [1, 10, 2, 20]
 //正确的结果
 [6, 8, 1, 2].sort(); // [1, 2，6, 8]
