@@ -1,6 +1,6 @@
 ---
-prev: /javascript/http5
-next: /javascript/js-call-stack
+prev: /http/http-304
+next: /http/http-cache
 ---
 
 # http 状态码 301 和 302 详解及区别

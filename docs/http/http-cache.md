@@ -1,5 +1,5 @@
 ---
-prev: /http/http-304
+prev: /http/http-base
 next: /http/http-cdn
 ---
 
