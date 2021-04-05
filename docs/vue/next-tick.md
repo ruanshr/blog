@@ -129,7 +129,7 @@ export function nextTick(fn?: Function, ctx?: Object) {
 }
 ```
 
-next-tick.js申明了microTimerFunc 和 macroTimerFunc 2 个变量，他们分别对应的是micro task的函数和marco task 的函数。对于macro task的实现，优先检查是否支持原生的setImmediate，这是一个高版本IE和Edge才支持的特性，不支持的话再去检测是否支持原生的MessageChannel，如果也不支持的话就会降级为setTimeout; 而对于micro task的实现，则检测浏览器是否原生支持Promise，不支持的话直接指向macro task的实现。
+next-tick.js申明了microTimerFunc 和 macroTimerFunc 2 个变量，他们分别对应的是micro task的函数和marco task 的函数。对于macro task的实现，优先检查是否支持原生的setImmedpiate，这是一个高版本IE和Edge才支持的特性，不支持的话再去检测是否支持原生的MessageChannel，如果也不支持的话就会降级为setTimeout; 而对于micro task的实现，则检测浏览器是否原生支持Promise，不支持的话直接指向macro task的实现。
 
 mext-tick.js对外暴露了2个函数，先来看nextTick，这就是我们执行nextTick(flushScheduleQueue) 所用到的函数，他的逻辑是把传入的回调函数cb压入callbacks数组，最后一次性地根据useMacroTask条件执行marcoTimerFunc或者microTimerFunc，而他们都会在下一个tick执行flushCallbacks。flushCallbacks的功能为遍历callbacks，然后执行相应的回调函数。
 

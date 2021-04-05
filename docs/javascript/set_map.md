@@ -86,6 +86,11 @@ Vue3.0采用了ES6最新的数据结构，那么Set和Map有什么不同
 声明：const set = new Map(arr)
 
 入参：具有Iterator接口且每个成员都是一个双元素数组的数据结构
+```js
+
+
+const studentMap = new Map([['name','张三'], ['age', '34']])
+```
 
 > 属性
 

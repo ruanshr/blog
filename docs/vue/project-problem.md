@@ -142,3 +142,8 @@ Vue.use(DatetimePicker)
 
 ```
 PS:除了vant库外，像antiUi、elementUi等，很多ui库都支持按需加载，可以去看文档，上面都会有提到。基本都是通过安装babel-plugin-import插件来支持按需加载的，使用方式与vant的如出一辙
+
+
+### 如何优雅的只有在当前页面中覆盖ui库中组件的样式
+
+首先我们vue文件的样式都是些在&lt;stype lang="less" scoped&gt;&lt;\style&gt;标签中的，加scoped是为了使得样式只有在当前
