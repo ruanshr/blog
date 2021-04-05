@@ -1,3 +1,8 @@
+---
+prev: /http/http-cors
+next: /http/http-simple-complex
+---
+
 #  一个TCP连接是可以发多少个http请求？
 
 ### 现代浏览器在与服务器建立了一个tcp连接后是否会在一个http请求完成后断开？什么情况会断开

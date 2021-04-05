@@ -1,6 +1,6 @@
 ---
-prev: /http/http304
-next: /javascript/array-function
+prev: /http/http-request
+next: /http/https
 ---
 
 # 简单请求与复杂请求

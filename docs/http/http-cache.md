@@ -1,6 +1,6 @@
 ---
-prev: /http/cdn
-next: /http/http304
+prev: /http/http-304
+next: /http/http-cdn
 ---
 
 # 浏览器的Http缓存机制

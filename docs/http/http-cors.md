@@ -1,3 +1,8 @@
+---
+prev: /http/http-cdn
+next: /http/http-request
+---
+
 # CORS跨域资源共享
 
 CORS是一个W3C标准，全称是"跨域资源共享"（Cross-origin resource sharing）。

@@ -1,6 +1,6 @@
 ---
-prev: false
-next: /http/http-cache
+prev: /http/http-cache
+next: /http/http-cors
 ---
 # CDN
 
