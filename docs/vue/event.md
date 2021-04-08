@@ -96,8 +96,8 @@ addEventListener('bar', listener, { capture: false }) // 这句算 执行2次lis
 addEventListener('bar', listener, { passive: true })
 addEventListener('bar', listener, { passive: false }) // 这句不算
 
-addEventListener('bar', listener, { passive: false })
-addEventListener('bar', listener, { passive: true }) // 这句不算
+addEventListener('bar', listener, { once: false })
+addEventListener('bar', listener, { once: true }) // 这句不算
 ```
 
 所以说在 removeEventListener 的时候不需写 passive 和 once，但 capture 可能要：
