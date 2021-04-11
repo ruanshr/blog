@@ -214,6 +214,10 @@ npm i cross-env -D
 npm install -S vuex
 ```
 
+创建 vuex 工厂函数
+
+
+
 客户端数据预取处理 main.js
 
 ```js
