@@ -1,6 +1,6 @@
 ---
-prev: /javascript/rule
-next: /javascript/set_map
+prev: /javascript-extend/rule
+next: /javascript-extend/tree-shaking
 ---
 
 # script标签

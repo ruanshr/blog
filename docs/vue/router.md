@@ -57,9 +57,13 @@ router.beforeEach((to, from, next) => {
   } else {
     // 简单的判断IE10及以下不进入富文本编辑器，该组件不兼容
     if (navigator.userAgent.indexOf('MSIE') > -1 && to.path === '/editor') {
-      Vue.prototype.$alert('vue-quill-editor组件不兼容IE10及以下浏览器，请使用更高版本的浏览器查看', '浏览器不兼容通知', {
-        confirmButtonText: '确定'
-      })
+      Vue.prototype.$alert(
+        'vue-quill-editor组件不兼容IE10及以下浏览器，请使用更高版本的浏览器查看',
+        '浏览器不兼容通知',
+        {
+          confirmButtonText: '确定'
+        }
+      )
     } else {
       next()
     }
@@ -67,8 +71,7 @@ router.beforeEach((to, from, next) => {
 })
 ```
 
-
-- 应用场景，记录历史访问页面，缓存数据退出重新登录到该页面的时候是没有历史访问页面的，跳到指定页面就不能用go(-1)，需要用replace代替
+- 应用场景，记录历史访问页面，缓存数据退出重新登录到该页面的时候是没有历史访问页面的，跳到指定页面就不能用 go(-1)，需要用 replace 代替
 
 ```js
 const routeHistory = []
@@ -80,7 +83,7 @@ router.afterEach((to, from, next) => {
   }
   routeHistory.push(to.name)
 })
-window.addEventListener('popstate', function onPopstate( ) {
+window.addEventListener('popstate', function onPopstate() {
   routeHistory.pop()
 })
 ```
@@ -142,10 +145,13 @@ const Foo = {
 
 当一个组件中有一个定时器时, 在路由进行切换的时候, 可使用 beforeRouteLeave 将定时器进行清楚, 以免占用内存:
 
+```js
 beforeRouteLeave (to, from, next) {
-window.clearInterval(this.timer) //清楚定时器
-next()
+  window.clearInterval(this.timer) //清楚定时器
+  next()
 }
+
+```
 
 (二) 当页面中有未关闭的窗口, 或未保存的内容时, 阻止页面跳转
 
@@ -178,6 +184,7 @@ beforeRouteLeave (to, from, next) {
 ```
 
 ## 完整的导航解析流程
+
 - 1、导航被触发。
 - 2、在失活的组件里调用离开守卫。
 - 3、调用全局的 beforeEach 守卫。

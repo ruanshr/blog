@@ -10,7 +10,7 @@ module.exports = {
     lastUpdated: '更新日期',
     sidebar: {
       '/vue/': ['eslint-config', 'question'],
-      '/javascript/': ['format','es6-format','es6-proxy','p6-questions','dom-api','js-memory','array-function'],
+      '/javascript-base/': ['format','es6-format','es6-proxy','p6-questions','dom-api','js-memory','array-function'],
       '/nodejs/': ['introduction', 'koa']
     },
     nav: [
@@ -20,11 +20,11 @@ module.exports = {
       },
       {
         text: 'javascript',
-        link: '/javascript/format',
+        link: '/javascript-base/format',
         items: [
           {
             text: 'JavaScript 风格指南',
-            link: '/javascript/format'
+            link: '/javascript-base/format'
           },
           {
             text: 'vue 面试题',
