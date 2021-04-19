@@ -1,6 +1,6 @@
 ---
-prev: /javascript/jslint
-next: /javascript/p6-questions
+prev: /javascript-extend/module
+next: /javascript-extend/part2
 ---
 
 # orientation 

@@ -28,7 +28,7 @@ webpack 内部执行流程
 
 webpack 底层基本流程图
 
-![webpack-plugin](../../images/plugin/webpack-plugin.jpg)
+![webpack-plugin](../images/webpack/plugin/webpack-plugin.jpg)
 
 webpck 内部的一些钩子
 
@@ -143,7 +143,7 @@ module.exports = MyPlugin
 这就是一个最简单的 webpack 插件了，它注册了 Compiler 上的异步串行钩子 done，在钩子中注入了一条控制台打印的语句。根据上文钩子的介绍我们可以知道，done 会在一次编译完成后执行。所以这个插件会在每次打包结束，向控制台首先输出这句 Bravo!。
 
 
-![webpack-plugin](../../images/plugin/webpack-plugin-1.jpg)
+![webpack-plugin](../images/webpack/plugin/webpack-plugin.jpg)
 
 开发一个文件清单插件
 　　我希望每次 webpack 打包后，自动产生一个打包文件清单，上面要记录文件名、文件数量等信息。
@@ -209,10 +209,10 @@ plugins: [
 npm run build 执行，可以看到生成了 \_filelist.md 文件：
 
 
-![webpack-plugin](../../images/plugin/webpack-plugin-2.jpg)
+![webpack-plugin](../images/webpack/plugin/webpack-plugin-2.jpg)
 
 
-![webpack-plugin](../../images/plugin/webpack-plugin-3.jpg)
+![webpack-plugin](../images/webpack/plugin/webpack-plugin-3.jpg)
 
 
 总结

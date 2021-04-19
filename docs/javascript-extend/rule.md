@@ -1,6 +1,6 @@
 ---
-prev: /javascript/restful
-next: /javascript/script-tab
+prev: /javascript-extend/restful
+next: /javascript-extend/script-tab
 ---
 
 

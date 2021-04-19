@@ -1,6 +1,6 @@
 ---
-prev: /javascript/p6-questions
-next: /javascript/performance-monitor
+prev: /javascript-extend/orientation
+next: /javascript-extend/performance-monitor
 ---
 
 # Array
@@ -103,7 +103,7 @@ const arr1 = [1, 2, 3, 4].concat([5, 6]) //[1,2,3,4,5,6]
 const arr2 = [...[1, 2, 3, 4], ...[4, 5]] //[1,2,3,4,5,6]
 const arrA = [1, 2]
 const arrB = [3, 4]
-const arr3 = Array.prototype.push.apply(arrA, arrB) //arrA值为[1,2,3,4
+const arr3 = Array.prototype.push.apply(arrA, arrB) //arrA值为[1,2,3,4]
 ```
 
 ### 数组是否包含值

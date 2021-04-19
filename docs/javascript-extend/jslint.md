@@ -1,6 +1,6 @@
 ---
-prev: /javascript/js-memory
-next: /javascript/number-function
+prev: /javascript-extend/js-memory
+next: /javascript-extend/jsnew
 ---
 
 # jslint
@@ -77,9 +77,13 @@ worker Web Workers
 wsh Windows Scripting Host
 
 全局变量
+
+```json
 globals: {
-jQuery: true,
-console: true,
-module: true,
-\$:true
+    jQuery: true,
+    console: true,
+    module: true,
+    $: true
 }
+
+```

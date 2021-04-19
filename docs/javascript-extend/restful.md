@@ -1,6 +1,6 @@
 ---
-prev: /javascript/question-es6
-next: /javascript/rule
+prev: /javascript-extend/requestAnimationFrame
+next: /javascript-extend/rule
 ---
 
 # 什么是REST？什么是RESTful？

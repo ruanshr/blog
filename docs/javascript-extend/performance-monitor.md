@@ -1,6 +1,6 @@
 ---
-prev: /javascript/part2
-next: /javascript/prototype
+prev: /javascript-extend/part2
+next: /javascript-extend/performance
 ---
 
 # 前端性能分析工具

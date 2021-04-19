@@ -1,6 +1,6 @@
 ---
-prev: /javascript/js-call-stack
-next: /javascript/jslint
+prev: /javascript-extend/js-height-part
+next: /javascript-extend/jslint
 ---
 
 # JS内存泄漏排查方法

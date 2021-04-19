@@ -1,6 +1,6 @@
 ---
-prev: /javascript/prototype
-next: /javascript/restful
+prev: /javascript-extend/performance
+next: /javascript-extend/requestAnimationFrame
 ---
 
 # 面试题

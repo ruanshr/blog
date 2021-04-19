@@ -1,3 +1,8 @@
+---
+prev: /javascript-extend/performance-monitor
+next: /javascript-extend/requestAnimationFrame
+---
+
 # Performance - 前端性能监控利器
 
 performance是一个做前端性能监控离不开的API，最好再也没完全加载完成之后再使用，因为很多值必须在页面完全加载之后才能得到。最简单的办法是在window.onload事件中读取各种数据。
