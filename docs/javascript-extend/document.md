@@ -1,6 +1,6 @@
 ---
-prev: /javascript/decorater
-next: /javascript/dom-api
+prev: /javascript-extend/cmd-amd-umd-esm
+next: /javascript-extend/dom-api
 ---
 
 # document

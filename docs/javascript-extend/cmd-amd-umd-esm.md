@@ -1,3 +1,8 @@
+---
+prev: /javascript-extend/babel
+next: /javascript-extend/document
+---
+
 # Javascript: 什么是CJS，AMD，UMD，ESM
 
 js刚开始的时候没有引入和导出功能。由于js代码越来越大，后来引入模块的概念。其中就有CJS，AMD，UMD，ESM这些模块的出现。

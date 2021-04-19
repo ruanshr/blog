@@ -1,6 +1,6 @@
 ---
-prev: /javascript/html-load
-next: /javascript/http
+prev: /javascript-extend/html-load
+next: /javascript-extend/input
 ---
 
 # HTML5有哪些新特性

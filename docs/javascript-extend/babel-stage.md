@@ -1,6 +1,6 @@
 ---
-prev: /javascript/array-function
-next: /javascript/bigInt
+prev: false
+next: /javascript-extend/babel
 ---
 
 # 如何区分 Babel 中的 stage-0,stage-1,stage-2 以及 stage-3

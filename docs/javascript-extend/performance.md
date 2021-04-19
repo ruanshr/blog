@@ -91,7 +91,7 @@ onload时间（总下载时间）：loadEventEnd - navigationStart
 | TYPE_BACK_FORWARD	| 2	 | 通过操作历史记录进入，包括：浏览器的前进后退按钮、快捷键操作、history.forward()、history.back()、history.go(num)。 |
 | TYPE_UNDEFINED	| 255	| 其他非以上类型的方式进入。 |
 
-注意：稍带个小知识，history.go(url)这种非标准写法目前主流浏览器均不支持，问题可参考![http://stackoverflow.com/questions/6277283/history-gourl-issue](http://stackoverflow.com/questions/6277283/history-gourl-issue)
+注意：稍带个小知识，history.go(url)这种非标准写法目前主流浏览器均不支持，问题可参考[http://stackoverflow.com/questions/6277283/history-gourl-issue](http://stackoverflow.com/questions/6277283/history-gourl-issue)
 
 
 **redirectCount**: 表示到达最终页面前，重定向的次数，但是这个接口有同源策略限制，即仅能检测同源的重定向。

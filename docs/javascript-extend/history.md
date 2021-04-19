@@ -1,3 +1,8 @@
+---
+prev: /javascript-extend/for-of
+next: /javascript-extend/history
+---
+
 # history栈
 
 DOM window对象通过history对象提供了对浏览器的会话历史的访问。它允许你在用户浏览历史中向前和向后跳转，同时从HTML5开始提供了对history栈中内容的操作

@@ -1,6 +1,6 @@
 ---
-prev: /javascript/tcp-introduction
-next: /javascript/waterfall
+prev: /javascript-extend/tree-shaking
+next: /javascript-extend/waterfall
 ---
 # VS Code 快捷键
 

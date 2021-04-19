@@ -1,3 +1,8 @@
+---
+prev: false
+next: /question/javascript-part-1
+---
+
 # 阿里笔试题
 
 // 1 实现一个方法让页面平滑滚动到顶部，需要动画过度，动画时间可指定
@@ -5,6 +10,10 @@
 ```js
 function scrollToTopAnimation(time){
 	
+  var step = function step() {
+
+    window.requestAnimation()
+  }
 }
 ```
 

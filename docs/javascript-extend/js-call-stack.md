@@ -1,6 +1,6 @@
 ---
-prev: /javascript/http
-next: /javascript/js-memory
+prev: /javascript-extend/input
+next: /javascript-extend/js-call-stack
 ---
 
 # JS调用堆栈
@@ -119,7 +119,7 @@ FunctionExectionContext = {// 函数执行上下文
 
 此阶段，完成对所有变量的分配，最后执行代码
 
-如果Javascript引擎在源代码中国声明的实际位置找不到let变量的值，那么将为其分配undefined值
+如果Javascript引擎在源代码中声明的实际位置找不到let变量的值，那么将为其分配undefined值
 
 
 ### 打印函数调用栈

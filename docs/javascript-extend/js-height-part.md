@@ -1,3 +1,9 @@
+---
+prev: /javascript-extend/js-call-stack
+next: /javascript-extend/js-memory
+---
+
+
 # Js代码片段
 
 ### deepClone
@@ -5,14 +11,16 @@
 使用递归，使用Object.assign() 和空对象创建原始对象的浅克隆。使用object.keys() 和array.prototype.forEach()确定需要深度克隆哪些键值对
  
 ```js
-const deepClone = obj => {
-  let clone = Object.assign({}, obj)
-  Object.keys(clone).forEach( key => {
-    clone[key] = typeof obj[key] === 'object'  ? deepClone(obj[key]) : obj[key]
-  })
-  return Array.isArray(obj) && obj.length ? (clone.length = obj.length) && Array.from(clone) : Array.isArray(obj)  ? Array.from(obj) : clone
-}
 
+function deepClone(obj) {
+    let clone = Array.isArray(obj) ? Array.from(obj) : Object.assign({}, obj)
+    Object.keys(clone).forEach(key => {
+        clone[key] = typeof  obj[key] === 'object' ? deepClone(obj[key]) : obj[key]
+    })
+    
+    return clone
+
+}
 
 ```
 

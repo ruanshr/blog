@@ -1,3 +1,8 @@
+---
+prev: /javascript-extend/html5
+next: /javascript-extend/js-call-stack
+---
+
 # input 上传图片并压缩
 
 上传图片需要的步骤

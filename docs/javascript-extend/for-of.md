@@ -1,3 +1,9 @@
+---
+prev: /javascript-extend/event-loop
+next: /javascript-extend/history
+---
+
+
 # 实现ES6用for...of遍历对象，编写iterator接口
 
 

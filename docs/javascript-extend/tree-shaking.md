@@ -1,3 +1,8 @@
+---
+prev: /javascript-extend/script-tab
+next: /javascript-extend/vscode-shortcut
+---
+
 # Tree-shaking性能优化实践
 
 ### 什么是Tree-shaking

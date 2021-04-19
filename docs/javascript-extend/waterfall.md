@@ -1,5 +1,5 @@
 ---
-prev: /javascript/vscode-shortcut
+prev: /javascript-extend/vscode-shortcut
 next: /nodejs/gulp-plugin
 ---
 

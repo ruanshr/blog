@@ -1,3 +1,8 @@
+---
+prev: /nodejs/node-link
+next: /nodejs/setup-nodejs
+---
+
 # npx
 
 ## npx 是什么？和 npm 的关系？

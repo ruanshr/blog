@@ -1,3 +1,8 @@
+---
+prev: /nodejs/npx
+next: false
+---
+
 # 在 Linux 系统安装 Nodejs 最简单步骤
 
 1、去官网下载和自己系统匹配的文件：

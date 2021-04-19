@@ -1,3 +1,8 @@
+---
+prev: /javascript-extend/babel-stage
+next: /javascript-extend/cmd-amd-umd-esm
+---
+
 # Babel中的 stage-x 及 Babel 7
 
 大家知道，将 ES6 代码编译为 ES5 时，我们常用到 Babel 这个编译工具。大家参考一些网上的文章或者官方文档，里面常会建议大家在.babelrc 中输入如下代码：

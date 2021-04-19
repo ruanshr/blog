@@ -1,6 +1,6 @@
 ---
-prev: /javascript/git-flow
-next: /javascript/html5
+prev: /javascript-extend/history
+next: /javascript-extend/html5
 ---
 
 # HTML页面加载和解析流程 
@@ -29,6 +29,6 @@ next: /javascript/html5
 
 因此，一般情况下，css放head标签里，js引用放最后
 
-link并不会阻塞dom tree的生成，但是会阻塞paint（也有可能是render tree）,个人理解，应该是link阻止了css tree,从而导致paint延迟
+**link并不会阻塞dom tree的生成，但是会阻塞paint（也有可能是render tree）**,个人理解，应该是link阻止了css tree,从而导致paint延迟
 
-script标签肯定是会阻塞dom解析的，假如浏览器遇到它，会下载它并执行里面的内容，才去继续解析下面的dom，解决办法有两个，一是在script标签上加上async,一是使用createElement动态创建script
+**script标签肯定是会阻塞dom解析的，假如浏览器遇到它，会下载它并执行里面的内容，才去继续解析下面的dom**，解决办法有两个，一是在script标签上加上async,一是使用createElement动态创建script
