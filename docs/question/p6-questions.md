@@ -1,6 +1,6 @@
 ---
-prev: /javascript/orientation
-next: /javascript/part2
+prev: /question/javascript-part-1
+next: /question/zijie-part1
 ---
 
 # 阿里 P6web 前端笔试题

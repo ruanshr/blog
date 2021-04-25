@@ -184,7 +184,7 @@ module.exports = {
 ```js
 const { default: _ } = await import(/* webpackChunkName: "lodash" */ /* webpackPrefetch: true */ 'lodash');
 ```
-就会以<link rel="prefetch" as="script">的形式预拉取 lodash 代码
+就会以&lt;link rel="prefetch" as="script"&gt;的形式预拉取 lodash 代码
 
 这个异步加载的代码不需要手动点击 button 触发，webpack 会在父 chunk 完成加载后，闲时加载 lodash 文件。
 

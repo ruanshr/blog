@@ -1,3 +1,8 @@
+---
+prev: /question/alibaba-pm6
+next: /question/p6-questions
+---
+
 # Javascript 面试题
 ### 选择题
 1、下列哪个属性可以让js脚本在文档完全呈现之后再执行（ C ）

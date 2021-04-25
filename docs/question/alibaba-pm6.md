@@ -9,11 +9,18 @@ next: /question/javascript-part-1
 // window.scrollTo(x,y)
 ```js
 function scrollToTopAnimation(time){
-	
+	let scrollTop = window.pageYOffset
+  let temp = parseInt(scrollTop / (time / (1000 / 60))) + 1
+  let left = scrollTop
   var step = function step() {
-
-    window.requestAnimation()
+    if(left > 0) {
+      left = left - temp 
+      window,scrollTo(0, left)
+      window.requestAnimationFrame(step)
+    }
   }
+
+  step()
 }
 ```
 
@@ -48,31 +55,11 @@ getObjectDataByKey(data,'b.bb.cc') ==>11
 
 ```js
 function getObjectDataByKey(obj, key){
-  key.split('.').forEach(k => {
-    const matchs = k.match(/^(\w+)\[(\d+)\]$/)
-    if(matchs){
-      obj = obj[matchs[1]][matchs[2]]
-    } else {
-      obj = obj[k]
-    }
-  })
-  return obj
+  return key.replace('[', '.').replace(']', '').split('.').reduce((acc,key) => {
+    return acc ? acc[key] : acc
+  }, obj)
 }
 
-
-
-function getObjectDataByKey2(obj, key){
-  key = key.replace(/[', '.')
-  key.split('.').forEach(k => {
-    const matchs = k.match(/^(\w+)\[(\d+)\]$/)
-    if(matchs){
-      obj = obj[matchs[1]][matchs[2]]
-    } else {
-      obj = obj[k]
-    }
-  })
-  return obj
-}
 ```
 
 // 4、请使用原生代码实现一个Events模块，可以实现自定义事件的订阅、触发、移除功能，如
