@@ -17,6 +17,7 @@ function investBinaryTree(node) {
         swrap(node.left)
         swrap(node.right)
     }
+    swrap(node)
 } 
 
 ```

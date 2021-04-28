@@ -4,7 +4,7 @@ next: /http/https
 ---
 
 # 简单请求与复杂请求
-这两种请求的区别主要在于是否会触发CORS（Cross-Origin Resuource Sharing）预检请求
+这两种请求的区别主要在于是否会触发CORS（Cross-Origin Resource Sharing）预检请求
 
 ### 简单请求
 
