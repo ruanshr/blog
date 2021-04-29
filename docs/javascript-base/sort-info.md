@@ -70,6 +70,24 @@ function insertSort(arr) {
   }
   return arr;
 }
+
+
+
+function insertSort(arr) {
+    let len = arr.length
+    for(let i = 0; i < len; i++) {
+        for(let j = i+1;j > 0; j--) {
+          // 这里开始和左边已排好序的进行比较，如果小于前面的就换位
+            if(arr[j] < arr[j - 1]) {
+                [arr[j - 1], arr[j]] = [arr[j], arr[j - 1]]
+            } else {
+               // 已经排好序
+                break
+            }
+        }
+    }
+    return arr
+}
 ```
 
 性质：
