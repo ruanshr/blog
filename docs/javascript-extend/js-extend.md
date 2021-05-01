@@ -39,4 +39,13 @@ Child.prototype = create(Parent.prototype)
 
 Child.prototype.constructor = Child
 
+
+
+
+function Animal(name, age) {
+
+    this.name = name
+    this.age = age
+    return null
+}
 ```
