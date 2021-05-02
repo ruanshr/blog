@@ -29,29 +29,7 @@ function findMaxSubString(str) {
             count
         }
     }
-    let maxnum = 0;
-    let maxname 
-    let strmore = maxRepectSubString(str)
-    for(let item in strmore){
-        if(strmore[item] > maxnum) {
-            maxnum = strmore[item]
-            maxname = item
-        }
-    }
-    let namestr = []
-    for(let i in strmore) {
-        if(strmore[i] === maxnum) {
-            let str = ''
-            for(let k = 0;k < maxnum;k++) {
-                str += i
-            }
-            namestr.push(str)
-        }
-    }
-    return {
-        maxnum,
-        namestr
-    }
+    
 }
 
 ```
