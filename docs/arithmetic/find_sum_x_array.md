@@ -6,7 +6,18 @@
 
 
 function getResult(data, n, sum) {
-
+    function insertSort(array) {
+        for(let i = 0;i< arr.length;i++) {
+            for(let j = i;j > 0; j--) {
+                if(arr[j] < arr[j-1]) {
+                    [arr[j],arr[j-1]] = [arr[j-1], arr[j]]
+                } else {
+                    break
+                }
+            } 
+        }
+        return array
+    }
     function getAllCombine(array, n, sum, temp) {
         if(temp.length === n) {
             if(temp.reduce((a, b) => a + b) === sum) {
@@ -25,6 +36,6 @@ function getResult(data, n, sum) {
             array.push(temp.pop())
         }
     }
-
-    return getAllCombine(data, n, sum, [])
+    const array = insertSort(data)
+    return getAllCombine(array, n, sum, [])
 }

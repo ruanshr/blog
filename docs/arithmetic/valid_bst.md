@@ -20,7 +20,7 @@
 输出 false
 ```js
 
-
+// 中序排序后数组是从小到大有序数组
 function validBST(root) {
     const inOrderList = []
     function inOrder(node) {
