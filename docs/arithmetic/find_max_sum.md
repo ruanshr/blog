@@ -32,7 +32,7 @@ findMaxSubArray(arr)
 
 ```js
 
-findMaxSumArray(arr) {
+function findMaxSumArray(arr) {
     let max = - Number.MAX_VALUE
     let sum = 0
     let idx = 0

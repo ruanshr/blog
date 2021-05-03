@@ -345,11 +345,15 @@ class MyPromise{
             this.rejectedCallbacks.push(onReject)
         }
         if(this.state === 'RESOLVED') {
-            onFulfilled(this.value)
+            if(typeof onFulfilled === 'function'){
+                onFulfilled(this.value)
+            }
         }
 
         if(this.state === 'REJECTED') {
-            onReject(this.value)
+            if(typeof onReject === 'function'){
+                onReject(this.value)
+            }
         }
         return this
     }
