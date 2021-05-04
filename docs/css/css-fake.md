@@ -1,6 +1,6 @@
 ---
 prev: /css/css-extends
-next: /css/css-load
+next: /css/css-import
 ---
 
 # CSS3中什么是伪类和伪元素？

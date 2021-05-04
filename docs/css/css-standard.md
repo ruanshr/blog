@@ -1,6 +1,6 @@
 ---
 prev: /css/css-reflow
-next: /css/rem
+next: /css/css-weight
 ---
 
 # CSS 规范

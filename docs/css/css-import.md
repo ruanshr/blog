@@ -1,3 +1,7 @@
+---
+prev: /css/css-fake
+next: /css/css-load
+---
 # link 与 @import 区别
 
 两者都是外部引用CSS的方式，但是存在一定的区别：

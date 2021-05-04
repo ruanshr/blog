@@ -266,7 +266,7 @@ console.log( sum );
 console.log( arr );
 // [0, 1, 2, 3, 4]
 ```
-没有 initialValue 的情况，callback 总共调用四次。（数组长度减一次，如果数组长度为一则不调callback，直接返回第一个元素）
+没有 initialValue 的情况，callback 总共调用四次。（数组长度减一次，如果数组长度为一则不调callback，直接返回第一个元素）如果是空数组会报错
 
  
 有 initialValue 值

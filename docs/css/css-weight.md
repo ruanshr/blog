@@ -1,3 +1,8 @@
+---
+prev: /css/css-standard
+next: /css/rem
+---
+
 # CSS权重
 
 
@@ -6,8 +11,8 @@
 - !important
 - 内联样式
 - ID选择器
-- class选择器
-- 元素选择器
+- class选择器|伪类选择器|属性选择器
+- 元素选择器|伪元素选择器
 - 通配符选择器
 
 ### 权值和权级的概念

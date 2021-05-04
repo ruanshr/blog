@@ -363,7 +363,7 @@ class MyPromise{
 
 ### js脚本加载问题， async、defer问题
 
-- 如何依赖其他脚本和DOM结果，使用defer
+- 如果依赖其他脚本和DOM结果，使用defer
 - 如果与DOM和其他脚本依赖不强时，使用async
 
 ### 如何判断一个对象是不是空对象
@@ -380,6 +380,11 @@ onclick, addEventListener
 
 ### 说一下原型链与原型链的继承
 
+原型链继承 Child.prototype = new Parent()
+
+原型式继承 (Object.create)
+
+寄生租合继承 (extend)
 
 ### 说一下对JS的了解吧
 
