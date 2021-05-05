@@ -25,9 +25,8 @@ rl.on('line', function(line) {
   if (resultList.length < line) {
     var result = line.split(' ')
     resultList.push(result)
-    console.log(result)
-  } else if(resultList.length === line) {
-      console.log(resultList)
+  } else if (resultList.length === line) {
+    console.log(resultList)
   }
   rl.close()
 })

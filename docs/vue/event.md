@@ -1,4 +1,4 @@
-# DOM 之 addEventListener详解
+# DOM 之 addEventListener 详解
 
 Vue 官方文档有这么一个说明
 
@@ -11,7 +11,6 @@ Vue 官方文档有这么一个说明
 ```js
 // useCapture 捕获
 addEventListener(type, listener, useCapture)
-
 ```
 
 后来，最后一个参数，也就是控制监听器是在捕获阶段执行还是在冒泡阶段执行的 useCapture 参数，变成了可选参数（传 true 的情况太少了），成了：
@@ -62,7 +61,9 @@ let event = new Event('bar', {
   cancelable: true
 })
 
-document.addEventListener('bar',function(event) {
+document.addEventListener(
+  'bar',
+  function(event) {
     // 在 document 上绑定 bar 事件的监听函数
     console.log(event.defaultPrevented) // false
     event.preventDefault()
@@ -90,7 +91,7 @@ VM416:11 Unable to preventDefault inside passive event listener invocation.
 那现在 addEventListener("bar", listener, {passive: true}) 添加的监听器该如何删除呢？答案是 removeEventListener("bar", listener) 就可以了，passive 可以省略，原因是：在浏览器内部，用来存储监听器的 map 的 key 是由事件类型，监听器函数，是否捕获这三者组成的，passive 和 once 不在其中，理由显而易见，一个监听器同时是 passive 和非 passive（以及同时是 once 和非 once）是说不通的，如果你添加了两者，那么后添加的不算，浏览器会认为添加过了：
 
 ```js
-addEventListener('bar', listener, { capture: true })  // 这句算
+addEventListener('bar', listener, { capture: true }) // 这句算
 addEventListener('bar', listener, { capture: false }) // 这句算 执行2次listener
 
 addEventListener('bar', listener, { passive: true })

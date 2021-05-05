@@ -11,10 +11,10 @@ http://www.cnblogs.com/sb19871023/p/3894452.html
 前端知识结构
 https://github.com/JacksonTian/fks
 
-Web前端开发大系概览
+Web 前端开发大系概览
 https://github.com/unruledboy/WebFrontEndStack
 
-Web前端开发大系概览-中文版
+Web 前端开发大系概览-中文版
 http://www.cnblogs.com/unruledboy/p/WebFrontEndStack.html
 
 Web Front-end Stack v2.2
@@ -35,7 +35,7 @@ http://www.cnblogs.com/sb19871023/p/3894452.html
 免费的编程中文书籍索引
 https://github.com/justjavac/free-programming-books-zh_CN
 
-智能社 - 精通JavaScript开发
+智能社 - 精通 JavaScript 开发
 http://study.163.com/course/introduction/224014.htm
 
 重新介绍 JavaScript（JS 教程）
@@ -44,16 +44,16 @@ https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/A_re-introduction_to_Jav
 麻省理工学院公开课：计算机科学及编程导论
 http://v.163.com/special/opencourse/bianchengdaolun.html
 
-JavaScript中的this陷阱的最全收集--没有之一
+JavaScript 中的 this 陷阱的最全收集--没有之一
 http://segmentfault.com/a/1190000002640298
 
-JS函数式编程指南
+JS 函数式编程指南
 https://llh911001.gitbooks.io/mostly-adequate-guide-chinese/content/ch1.html
 
-JavaScript Promise迷你书（中文版）
+JavaScript Promise 迷你书（中文版）
 http://liubin.github.io/promises-book
 
-腾讯移动Web前端知识库
+腾讯移动 Web 前端知识库
 https://github.com/AlloyTeam/Mars
 
 Front-End-Develop-Guide 前端开发指南
@@ -80,13 +80,13 @@ https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/A_re-introduction_to_Jav
 前端入门教程
 http://www.cnblogs.com/jikey/p/3613082.html
 
-廖雪峰的Javascript教程
+廖雪峰的 Javascript 教程
 http://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000
 
-jQuery基础教程
+jQuery 基础教程
 http://www.imooc.com/view/11
 
-前端工程师必备的PS技能——切图篇
+前端工程师必备的 PS 技能——切图篇
 http://www.imooc.com/view/506
 
 结合个人经历总结的前端入门方法
@@ -110,7 +110,7 @@ http://www.imooc.com/learn/93
 版本控制入门 – 搬进 Github
 http://www.imooc.com/learn/390
 
-Grunt-beginner前端自动化工具
+Grunt-beginner 前端自动化工具
 http://www.imooc.com/learn/30
 
 慕课专题
@@ -125,7 +125,7 @@ http://www.imooc.com/space/teacher/id/104593
 艾伦 - 慕课系列
 http://www.imooc.com/space/teacher/id/290139
 
-碧仔 - Hello，移动WEB
+碧仔 - Hello，移动 WEB
 http://www.imooc.com/view/494
 
 周报类
@@ -137,26 +137,26 @@ https://github.com/PaicHyperionDev/MobileDevWeekly
 开发中心
 地址
 
-mozilla js参考
+mozilla js 参考
 https://developer.mozilla.org/zh-CN/docs/Web/JavaScript
 
-chrome开发中心（chrome的内核已转向blink）
+chrome 开发中心（chrome 的内核已转向 blink）
 https://developer.chrome.com/extensions/api_index.html
 
-safari开发中心
+safari 开发中心
 https://developer.apple.com/library/safari/navigation
 
-microsoft js参考
+microsoft js 参考
 https://msdn.microsoft.com/zh-cn/library/d1et7k7c(v=vs.94.aspx
 
-js秘密花园
+js 秘密花园
 http://sanshi.me/articles/JavaScript-Garden-CN/html/index.html
 
-js秘密花园
+js 秘密花园
 http://bonsaiden.github.io/JavaScript-Garden/zh
 
 w3help
-http://www.w3help.org 综合Bug集合网站
+http://www.w3help.org 综合 Bug 集合网站
 
 综合搜索
 地址
@@ -167,17 +167,17 @@ http://www.javascripting.com
 各种流行库搜索
 http://microjs.com
 
-综合API
+综合 API
 地址
 
-runoob.com-包含各种API集合
+runoob.com-包含各种 API 集合
 http://www.runoob.com
 
-开源中国在线API文档合集
+开源中国在线 API 文档合集
 http://tool.oschina.net/apidocs
 
 devdocs
-http://devdocs.io 英文综合API网站
+http://devdocs.io 英文综合 API 网站
 
 jQuery
 地址
@@ -194,7 +194,7 @@ http://www.css88.com/jqapi-1.9/on
 css88 jqui api
 http://www.css88.com/jquery-ui-api
 
-学习jquery
+学习 jquery
 http://learn.jquery.com
 
 jquery 源码查找
@@ -209,10 +209,10 @@ https://leanpub.com/understandinges6/read
 exploring-es6
 https://leanpub.com/exploring-es6/read
 
-exploring-es6翻译
+exploring-es6 翻译
 https://github.com/es6-org/exploring-es6
 
-exploring-es6翻译后预览
+exploring-es6 翻译后预览
 http://es6-org.github.io/exploring-es6
 
 阮一峰 es6
@@ -239,7 +239,7 @@ https://github.com/aui/artTemplate
 tomdjs
 https://github.com/aui/tmodjs/blob/master/README.md
 
-淘宝模板juicer模板
+淘宝模板 juicer 模板
 http://juicer.name/docs/docs_zh_cn.html
 
 Fxtpl v1.0 繁星前端模板引擎
@@ -278,7 +278,7 @@ http://layer.layui.com
 响应式用户交互组件库
 https://github.com/bh-lay/UI
 
-sweetalert-有css3动画弹出层
+sweetalert-有 css3 动画弹出层
 http://t4t5.github.io/sweetalert
 
 CSS
@@ -287,13 +287,13 @@ CSS
 CSS 语法参考
 http://tympanus.net/codrops/css_reference
 
-CSS3动画手册
+CSS3 动画手册
 http://isux.tencent.com/css3/index.html
 
-腾讯css3动画制作工具
+腾讯 css3 动画制作工具
 http://isux.tencent.com/css3/tools.html
 
-志爷css小工具集合
+志爷 css 小工具集合
 http://linxz.github.io/tianyizone
 
 css3 js 移动大杂烩
@@ -308,7 +308,7 @@ http://fian.my.id/Waves
 animate.css
 http://daneden.github.io/animate.css
 
-全局CSS的终结(狗带 [译]
+全局 CSS 的终结(狗带 [译]
 http://www.alloyteam.com/2015/10/8536
 
 Angularjs
@@ -317,16 +317,16 @@ Angularjs
 Angular.js 的一些学习资源
 https://github.com/dolymood/AngularLearning
 
-angularjs中文社区
+angularjs 中文社区
 http://angularjs.cn
 
-Angularjs源码学习
+Angularjs 源码学习
 http://www.cnblogs.com/xuwenmin888/p/3739096.html
 
-Angularjs源码学习
+Angularjs 源码学习
 http://www.ifeenan.com/?c=AngularJS
 
-angular对bootstrap的封装
+angular 对 bootstrap 的封装
 http://angular-ui.github.io/bootstrap
 
 angularjs + nodejs
@@ -338,28 +338,28 @@ http://www.cnblogs.com/lvdabao/tag/AngularJs
 AngularJS 最佳实践
 http://www.infoq.com/cn/news/2013/02/angular-web-app
 
-Angular的一些扩展指令
+Angular 的一些扩展指令
 http://www.lovelucy.info/angularjs-best-practices.html
 
-Angular数据绑定原理
+Angular 数据绑定原理
 https://github.com/Pasvaz/bindonce
 
-一些扩展Angular UI组件
+一些扩展 Angular UI 组件
 https://github.com/angular-ui
 
-Ember和AngularJS的性能测试
+Ember 和 AngularJS 的性能测试
 http://voidcanvas.com/emberjs-vs-angularjs-performance-testing
 
-带你走近AngularJS - 基本功能介绍
+带你走近 AngularJS - 基本功能介绍
 http://www.cnblogs.com/powertoolsteam/p/angularjs-introdection.html
 
-Angularjs开发指南
+Angularjs 开发指南
 http://angular.duapp.com/docs/guide
 
-Angularjs学习
+Angularjs 学习
 http://www.cnblogs.com/amosli/p/3710648.html
 
-不要带着jQuery的思维去学习AngularJS
+不要带着 jQuery 的思维去学习 AngularJS
 http://www.rainweb.cn/article/angularjs-jquery.html
 
 angularjs 学习笔记
@@ -380,16 +380,16 @@ https://github.com/opitzconsulting/jquery-mobile-angular-adapter
 angular ui
 http://mgcrea.github.io/angular-strap
 
-整合jQuery Mobile+AngularJS经验谈
+整合 jQuery Mobile+AngularJS 经验谈
 http://www.tuicool.com/articles/7ZZVr2
 
-有jQuery背景，该如何用AngularJS编程思想
+有 jQuery 背景，该如何用 AngularJS 编程思想
 http://blog.jobbole.com/46589/
 
-AngularJS在线教程
+AngularJS 在线教程
 http://each.sinaapp.com/angular
 
-angular学习笔记
+angular 学习笔记
 http://www.zouyesheng.com/angular.html
 
 React
@@ -428,22 +428,22 @@ https://fakefish.github.io/react-webpack-cookbook
 webpack
 https://github.com/webpack/webpack
 
-Webpack，101入门体验
+Webpack，101 入门体验
 http://html-js.com/article/3009
 
-webpack入门教程
+webpack 入门教程
 http://html-js.com/article/3113
 
-基于webpack搭建前端工程解决方案探索
+基于 webpack 搭建前端工程解决方案探索
 http://segmentfault.com/a/1190000003499526
 
-React原创实战视频教程
+React 原创实战视频教程
 http://www.piliyu.com
 
-移动端API
+移动端 API
 地址
 
-99移动端知识集合
+99 移动端知识集合
 https://github.com/jtyjty99999/mobileTech
 
 移动端前端开发知识库
@@ -452,7 +452,7 @@ https://github.com/AlloyTeam/Mars
 移动前端的一些坑和解决方法（外观表现）
 http://caibaojian.com/mobile-web-bug.html
 
-【原】移动web资源整理
+【原】移动 web 资源整理
 http://www.cnblogs.com/PeunZhang/p/3407453.html
 
 zepto 1.0 中文手册
@@ -476,16 +476,16 @@ https://github.com/maxzhang/maxzhang.github.com/issues
 移动开发大杂烩
 https://github.com/hoosin/mobile-web-favorites
 
-微信webview中的一些问题
+微信 webview 中的一些问题
 http://lin-chao.github.io/2014/11/14/%E5%BE%AE%E4%BF%A1webview%E4%B8%AD%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98
 
 框架
 地址
 
-特色的HTML框架可以创建精美的iOS应用
+特色的 HTML 框架可以创建精美的 iOS 应用
 http://framework7.taobao.org
 
-淘宝SUI
+淘宝 SUI
 http://m.sui.taobao.org
 
 avalon
@@ -494,34 +494,34 @@ avalon
 avalonjs
 http://avalonjs.github.io
 
-Avalon新一代UI库： OniUI
+Avalon 新一代 UI 库： OniUI
 http://ued.qunar.com/oniui/index.html
 
-avalon.oniui-基于avalon的组件库
+avalon.oniui-基于 avalon 的组件库
 https://github.com/RubyLouvre/avalon.oniui
 
 Requriejs
 地址
 
-Javascript模块化编程（一）：模块的写法
+Javascript 模块化编程（一）：模块的写法
 http://www.ruanyifeng.com/blog/2012/10/javascript_module.html
 
-Javascript模块化编程（二）：AMD规范
+Javascript 模块化编程（二）：AMD 规范
 http://www.ruanyifeng.com/blog/2012/10/asynchronous_module_definition.html
 
-Javascript模块化编程（三）：require.js的用法
+Javascript 模块化编程（三）：require.js 的用法
 http://www.ruanyifeng.com/blog/2012/11/require_js.html
 
-RequireJS入门（一）
+RequireJS 入门（一）
 http://www.cnblogs.com/snandy/archive/2012/05/22/2513652.html
 
-RequireJS入门（二）
+RequireJS 入门（二）
 http://www.cnblogs.com/snandy/archive/2012/05/23/2513712.html
 
-RequireJS进阶（三）
+RequireJS 进阶（三）
 http://www.cnblogs.com/snandy/archive/2012/06/08/2538001.html
 
-requrie源码学习
+requrie 源码学习
 http://www.cnblogs.com/yexiaochai/p/3632580.html
 
 requrie 入门指南
@@ -533,7 +533,7 @@ http://www.cnblogs.com/yexiaochai/p/3214926.html
 requriejs 其一
 http://cyj.me/why-seajs/requirejs/
 
-require backbone结合
+require backbone 结合
 http://www.cnblogs.com/yexiaochai/p/3221081.html
 
 Seajs
@@ -551,7 +551,7 @@ Less,sass
 sass
 http://www.w3cplus.com/sassguide
 
-sass教程-sass中国
+sass 教程-sass 中国
 http://www.sass.hk
 
 Sass 中文文档
@@ -566,20 +566,20 @@ Markdown
 Markdown 语法说明 (简体中文版
 http://wowubuntu.com/markdown
 
-markdown入门参考
+markdown 入门参考
 https://github.com/LearnShare/Learning-Markdown/blob/master/README.md
 
 gitbook
-https://www.gitbook.com 国外的在线markdown可编辑成书
+https://www.gitbook.com 国外的在线 markdown 可编辑成书
 
 mdeditor
-https://www.zybuluo.com/mdeditor 一款国内的在线markdown编辑器
+https://www.zybuluo.com/mdeditor 一款国内的在线 markdown 编辑器
 
 stackedit
-https://stackedit.io 国外的在线markdown编辑器，功能强大，同步云盘
+https://stackedit.io 国外的在线 markdown 编辑器，功能强大，同步云盘
 
 mditor
-http://bh-lay.github.io/mditor 一款轻量级的markdown编辑器
+http://bh-lay.github.io/mditor 一款轻量级的 markdown 编辑器
 
 lepture-editor
 https://github.com/lepture/editor
@@ -611,7 +611,7 @@ http://javascript.ruanyifeng.com/library/d3.html
 esma 兼容列表
 http://kangax.github.io/compat-table/es6
 
-W3C CSS验证服务
+W3C CSS 验证服务
 http://jigsaw.w3.org/css-validator/validator.html.zh-cn
 
 caniuse
@@ -629,7 +629,7 @@ http://www.responsinator.com
 emulators
 https://www.manymo.com/emulators
 
-UI相关
+UI 相关
 地址
 
 bootcss
@@ -680,28 +680,28 @@ HTTP
 HTTP API 设计指南
 http://segmentfault.com/bookmark/1230000002521721
 
-其它API
+其它 API
 地址
 
-javascript流行库汇总
+javascript 流行库汇总
 javascriptoo
 
-验证api
+验证 api
 http://niceue.com/validator/demo/index.php
 
 underscore 中文手册
 http://www.css88.com/doc/underscore
 
-underscore源码分析
+underscore 源码分析
 http://www.html-js.com/article/Underscorejs-source-code-analysis-of-underscorejs-source-code-analysis%203031
 
-underscore源码分析-亚里士朱德的博客
+underscore 源码分析-亚里士朱德的博客
 http://yalishizhude.github.io/tags/underscore
 
 underscrejs en api
 http://underscorejs.org
 
-lodash - underscore的代替品
+lodash - underscore 的代替品
 https://lodash.com
 
 ext4api
@@ -710,7 +710,7 @@ http://extjs-doc-cn.github.io/ext4api
 backbone 中文手册
 http://www.csser.com/tools/backbone/backbone.js.html
 
-qwrap手册
+qwrap 手册
 http://dev.qwrap.com/resource/js/_docs/youa/#/qw/base/loadJs.htm
 
 缓动函数
@@ -719,7 +719,7 @@ http://easings.net/zh-cn
 svg 中文参考
 http://www.w3school.com.cn/svg/svg_reference.asp
 
-svg mdn参考
+svg mdn 参考
 https://developer.mozilla.org/en-US/docs/Web/SVG
 
 svg 导出 canvas
@@ -737,10 +737,10 @@ https://github.com/machao/localStorage
 图表类
 地址
 
-Highcharts 中文API
+Highcharts 中文 API
 http://www.hcharts.cn/api/index.php
 
-Highcharts 英文API
+Highcharts 英文 API
 http://api.highcharts.com/highcharts
 
 ECharts 百度的图表软件
@@ -776,16 +776,16 @@ https://github.com/vuejs/awesome-vue
 正则
 地址
 
-JS正则表达式元字符
+JS 正则表达式元字符
 http://segmentfault.com/a/1190000002471140
 
-正则表达式30分钟入门教程
+正则表达式 30 分钟入门教程
 http://deerchao.net/tutorials/regex/regex.htm
 
 MDN-正则表达式
 https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions
 
-ruanyifeng - RegExp对象
+ruanyifeng - RegExp 对象
 http://javascript.ruanyifeng.com/stdlib/regexp.html
 
 小胡子哥 - 进阶正则表达式
@@ -812,19 +812,19 @@ http://mockjs.com
 前端
 地址
 
-通过分析github代码库总结出来的工程师代码书写习惯
+通过分析 github 代码库总结出来的工程师代码书写习惯
 http://alloyteam.github.io/CodeGuide
 
-HTML&CSS编码规范 by @mdo
+HTML&CSS 编码规范 by @mdo
 http://codeguide.bootcss.com
 
-团队合作的css命名规范-腾讯AlloyTeam前端团队
+团队合作的 css 命名规范-腾讯 AlloyTeam 前端团队
 http://www.alloyteam.com/2011/10/107
 
-前端编码规范之js - by yuwenhui
+前端编码规范之 js - by yuwenhui
 http://yuwenhui.github.io
 
-前端编码规范之js - by 李靖
+前端编码规范之 js - by 李靖
 http://www.cnblogs.com/hustskyking/p/javascript-spec.html
 
 前端开发规范手册
@@ -833,16 +833,16 @@ http://zhibimo.com/read/Ashu/front-end-style-guide
 Airbnb JavaScript 编码规范（简体中文版）
 https://github.com/yuche/javascript#table-of-contents
 
-AMD与CMD规范的区别
+AMD 与 CMD 规范的区别
 http://www.zhihu.com/question/20351507
 
-AMD与CMD规范的区别
+AMD 与 CMD 规范的区别
 http://www.cnblogs.com/tugenhua0707/p/3507957.html
 
 KISSY 源码规范
 http://docs.kissyui.com/1.4/docs/html/tutorials/style-guide/kissy-source-style.html
 
-bt编码规范
+bt 编码规范
 http://codeguide.bootcss.com
 
 规范加强版
@@ -863,13 +863,13 @@ http://zhuanlan.zhihu.com/fuyun/19884834
 ECMAScript6 编码规范--广发证券前端团队
 https://github.com/gf-rd/es6-coding-style
 
-JavaScript 风格指南/编码规范（Airbnb公司版）
+JavaScript 风格指南/编码规范（Airbnb 公司版）
 http://blog.jobbole.com/79484
 
 网易前端开发规范
 http://nec.netease.com/standard
 
-css模块
+css 模块
 http://www.75team.com/archives/1049
 
 前端规范资源列表
@@ -878,16 +878,16 @@ https://github.com/ecomfe/spec
 PHP
 地址
 
-最流行的PHP 代码规范
+最流行的 PHP 代码规范
 http://segmentfault.com/a/1190000000443795
 
-最流行的PHP 代码规范
+最流行的 PHP 代码规范
 https://github.com/hfcorriez/fig-standards/blob/zh_CN/%E6%8E%A5%E5%8F%97/PSR-2-coding-style-guide.md
 
 Android
 地址
 
-【敏捷开发】Android团队开发规范
+【敏捷开发】Android 团队开发规范
 http://www.cnblogs.com/lcw/p/3619181.html
 
 Android 开发规范与应用
@@ -899,13 +899,13 @@ http://www.jianshu.com/p/4390f4fe19b3
 Facebook Projects
 https://code.facebook.com/projects/web
 
-百度web前端研发部
+百度 web 前端研发部
 http://fex.baidu.com
 
-百度EFE
+百度 EFE
 http://efe.baidu.com
 
-百度github
+百度 github
 https://github.com/fex-team
 
 alloyteam
@@ -920,19 +920,19 @@ https://github.com/AlloyTeam/AlloyGameEngine
 AlloyDesigner
 http://alloyteam.github.io/AlloyDesigner 即时修改，即时保存，设计稿较正，其它开发辅助工具
 
-H5交互页编辑器AEditor介绍
-http://www.alloyteam.com/2015/06/h5-jiao-hu-ye-bian-ji-qi-aeditor-jie-shao H5动画交互页开发的工具介绍
+H5 交互页编辑器 AEditor 介绍
+http://www.alloyteam.com/2015/06/h5-jiao-hu-ye-bian-ji-qi-aeditor-jie-shao H5 动画交互页开发的工具介绍
 
 AEditor
-http://aeditor.alloyteam.com H5动画交互页开发的工具
+http://aeditor.alloyteam.com H5 动画交互页开发的工具
 
 maka
 http://forum.maka.im/wordpress
 
-值得订阅的weekly
+值得订阅的 weekly
 https://github.com/fenbility/weekly-feed
 
-腾讯html5
+腾讯 html5
 http://cube.qq.com
 
 奇舞团开源项目
@@ -947,7 +947,7 @@ http://scrat.io
 常用
 地址
 
-ieBetter.js-让IE6-IE8拥有IE9+,Chrome等浏览器特性
+ieBetter.js-让 IE6-IE8 拥有 IE9+,Chrome 等浏览器特性
 http://www.zhangxinxu.com/wordpress/2013/12/iebetter-js-make-ie6-ie8-like-modern-browser-ie9-chrome
 
 模拟键盘
@@ -965,13 +965,13 @@ https://github.com/mc-zone/IDValidator
 数据结构与算法 JavaScript 描述. 章节练习
 https://github.com/Ralph-Wang/algorithm.in.js
 
-常见排序算法（JS版）
+常见排序算法（JS 版）
 https://github.com/twobin/twobinSort
 
 经典排序
 https://github.com/luofei2011/jsAgm/blob/master/js/sort.js
 
-常见排序算法-js版本
+常见排序算法-js 版本
 https://github.com/hechangmin/jssort
 
 JavaScript 算法与数据结构 精华集
@@ -983,10 +983,10 @@ http://www.nowcoder.com/live/courses
 JSON
 地址
 
-模拟生成JSON数据
+模拟生成 JSON 数据
 http://beta.json-generator.com
 
-返回跨域JSONAPI
+返回跨域 JSONAPI
 http://jsonp.afeld.me
 
 Html5
@@ -1016,16 +1016,16 @@ http://www.superslide2.com
 soChange
 http://www.bujichong.com/sojs/soChange/index.html
 
-Ext, EasyUI, J-UI 及其它各种UI方案
+Ext, EasyUI, J-UI 及其它各种 UI 方案
 地址
 
 extjs
 https://www.sencha.com/products/extjs
 
-ext4英文api
+ext4 英文 api
 http://docs.sencha.com/extjs/4.0.7
 
-ext4中文api
+ext4 中文 api
 http://extjs-doc-cn.github.io/ext4api
 
 EasyUI
@@ -1043,7 +1043,7 @@ http://jui.org
 Other
 地址
 
-MUI-最接近原生APP体验的高性能前端框架
+MUI-最接近原生 APP 体验的高性能前端框架
 http://dcloudio.github.io/mui
 
 Amaze UI
@@ -1052,10 +1052,10 @@ Amaze UI
 淘宝 HTML5 前端框架
 http://m.sui.taobao.org
 
-KISSY - 阿里前端JavaScript库
+KISSY - 阿里前端 JavaScript 库
 http://docs.kissyui.com
 
-网易Nej - Nice Easy Javascript
+网易 Nej - Nice Easy Javascript
 http://nej.netease.com
 
 Kendo UI MVVM Demo
@@ -1067,17 +1067,17 @@ http://www.bootcss.com
 Smart UI
 http://smartui.chinamzz.com
 
-雅虎UI - CSS UI
+雅虎 UI - CSS UI
 http://developer.yahoo.com/yui/grids
 
 页面 社会化 分享功能
 地址
 
 百度分享
-http://share.baidu.com pc端
+http://share.baidu.com pc 端
 
 JiaThis
-http://jiathis.com pc端
+http://jiathis.com pc 端
 
 社会化分享组件
 http://developer.baidu.com/soc/share 移动端
@@ -1097,10 +1097,10 @@ https://www.tinymce.com
 百度 ueditor
 http://ueditor.baidu.com/website
 
-经典的ckeditor
+经典的 ckeditor
 http://ckeditor.com
 
-经典的kindeditor
+经典的 kindeditor
 http://kindeditor.net
 
 wysiwyg
@@ -1109,13 +1109,13 @@ http://www.bootcss.com/p/bootstrap-wysiwyg
 一个有情怀的编辑器。Bach's Editor
 http://integ.github.io/BachEditor
 
-tower用的编辑器
+tower 用的编辑器
 https://github.com/mycolorway/simditor
 
 summernote 编辑器
 https://github.com/summernote/summernote
 
-html5编辑器
+html5 编辑器
 http://neilj.github.io/Squire
 
 XEditor
@@ -1127,7 +1127,7 @@ https://github.com/wangfupeng1988/wangEditor
 PC
 地址
 
-经典my97
+经典 my97
 http://www.my97.net/dp/demo/index.htm
 
 强大的独立日期选择器
@@ -1136,10 +1136,10 @@ http://www.cnblogs.com/gbin1/archive/2012/04/16/2452105.html
 fullcalendar
 http://fullcalendar.io
 
-fullcalendar日历控件知识点集合
+fullcalendar 日历控件知识点集合
 http://blog.csdn.net/francislaw/article/details/7740630
 
-中文api
+中文 api
 http://blog.sina.com.cn/s/blog_9475b1c101012c5f.html
 
 农历日历
@@ -1157,16 +1157,16 @@ https://github.com/Johnqing/QPAYCalendar
 我群某管理作品
 https://github.com/Iamlars/dateMarker
 
-input按位替换-官网
+input 按位替换-官网
 http://digitalbush.com/projects/masked-input-plugin
 
-input按位替换-github
+input 按位替换-github
 https://github.com/digitalBush/jquery.maskedinput/tree/1.2.2
 
 bootstrap-daterangepicker
 https://github.com/dangrossman/bootstrap-daterangepicker
 
-国外30个插件集合
+国外 30 个插件集合
 http://www.vandelaydesign.com/30-best-free-jquery-plugins
 
 JavaScript datepicker
@@ -1181,7 +1181,7 @@ https://github.com/glad/glDatePicker
 弹出层式的全日历
 http://amsul.ca/pickadate.js/date
 
-jquery双日历
+jquery 双日历
 http://www.daterangepicker.com
 
 Date library
@@ -1199,10 +1199,10 @@ http://sugarjs.com/api/Date
 效果网
 http://www.jq22.com
 
-17素材
+17 素材
 http://www.17sucai.com
 
-常用的JavaScript代码片段
+常用的 JavaScript 代码片段
 http://microjs.com
 
 概述
@@ -1217,28 +1217,28 @@ https://github.com/fouber/blog/issues/10?from=timeline&isappinstalled=0#
 Gulp
 地址
 
-Gulp官网
+Gulp 官网
 http://gulpjs.com
 
-Gulp中文网
+Gulp 中文网
 http://www.gulpjs.com.cn
 
-gulp资料收集
+gulp 资料收集
 https://github.com/Platform-CUF/use-gulp
 
 Gulp：任务自动管理工具 - ruanyifeng
 http://javascript.ruanyifeng.com/tool/gulp.html
 
-Gulp插件
+Gulp 插件
 http://gulpjs.com/plugins
 
-Gulp不完全入门教程
+Gulp 不完全入门教程
 http://www.ido321.com/1622.html
 
-为什么使用gulp?
+为什么使用 gulp?
 hjzheng/CUF_meeting_knowledge_share#33
 
-Gulp安装及配合组件构建前端开发一体化
+Gulp 安装及配合组件构建前端开发一体化
 http://www.dbpoo.com/getting-started-with-gulp
 
 Gulp 入门指南
@@ -1247,16 +1247,16 @@ https://github.com/nimojs/gulp-book
 Gulp 入门指南 - nimojs
 nimojs/blog#19
 
-Gulp入门教程
+Gulp 入门教程
 http://markpop.github.io/2014/09/17/Gulp%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B
 
 Gulp in Action
 http://www.imooc.com/video/5692
 
-Gulp开发教程（翻译）
+Gulp 开发教程（翻译）
 http://www.w3ctech.com/topic/134
 
-前端构建工具gulpjs的使用介绍及技巧
+前端构建工具 gulpjs 的使用介绍及技巧
 http://www.cnblogs.com/2050/p/4198792.html
 
 Grunt
@@ -1265,7 +1265,7 @@ Grunt
 gruntjs
 http://gruntjs.com
 
-Grunt中文网
+Grunt 中文网
 http://www.gruntjs.net
 
 Fis
@@ -1277,16 +1277,16 @@ http://fex-team.github.io/fis-site/index.html
 fis
 http://fis.baidu.com
 
-pc图轮
+pc 图轮
 地址
 
-单屏轮播sochange
+单屏轮播 sochange
 http://www.jsfoot.com/jquery/demo/2011-09-20/192.html
 
 左右按钮多图切换
 http://bxslider.com/examples/carousel-demystified
 
-fullpage全屏轮播
+fullpage 全屏轮播
 https://github.com/alvarotrigo/fullPage.js
 
 移动端
@@ -1298,7 +1298,7 @@ http://www.swipejs.com
 滑屏效果
 http://www.idangero.us/swiper
 
-全屏fullpage
+全屏 fullpage
 https://github.com/peunzhang/fullpage
 
 单个图片切换
@@ -1319,7 +1319,7 @@ https://github.com/saw/touch-interfaces
 旋转拖动设置
 http://baijs.com/tinycircleslider
 
-类似于swipe切换
+类似于 swipe 切换
 http://touchslider.com
 
 支持多种形式的触摸滑动
@@ -1328,22 +1328,22 @@ http://www.swiper.com.cn/demo/index.html
 滑屏效果
 https://github.com/joker-ye/main/blob/master/wap/index.html
 
-大话主席pc移动图片轮换
+大话主席 pc 移动图片轮换
 http://www.superslide2.com
 
 滑屏效果
 https://github.com/hahnzhu/parallax.js
 
-基于zepto的fullpage
+基于 zepto 的 fullpage
 https://github.com/yanhaijing/zepto.fullpage
 
-[WebApp]定宽网页设计下，固定宽度布局开发WebApp并实现多终端下WebApp布局自适应
+[WebApp]定宽网页设计下，固定宽度布局开发 WebApp 并实现多终端下 WebApp 布局自适应
 http://www.cnblogs.com/plums/archive/2013/01/10/WebApp-fixed-width-layout-of-multi-terminal-adapter-since.html
 
 判断微信客户端的那些坑
 http://loo2k.com/blog/detecting-wechat-client
 
-可以通过javascript直接调用原生分享的工具
+可以通过 javascript 直接调用原生分享的工具
 https://github.com/JefferyWang/nativeShare.js
 
 JiaThis 分享到微信代码
@@ -1364,10 +1364,10 @@ http://ajccom.github.io/nicescroller
 滑动侧边栏
 https://mango.github.io/slideout
 
-大气实用jQuery手机移动端日历日期选择插件
+大气实用 jQuery 手机移动端日历日期选择插件
 http://www.frankdemo.cn/index.php?c=content&a=show&id=115
 
-jQuery Mobile 移动开发中的日期插件Mobiscroll
+jQuery Mobile 移动开发中的日期插件 Mobiscroll
 https://mobiscroll.com
 
 fastclick
@@ -1397,10 +1397,10 @@ http://elemefe.github.io/image-cropper
 图片裁剪-shearphoto
 http://www.shearphoto.com
 
-jQuery图片处理
+jQuery 图片处理
 http://www.oschina.net/project/tag/284/jquery-image-tools?lang=0&os=0&sort=view&p=2
 
-模拟select
+模拟 select
 地址
 
 糖饼 select
@@ -1409,7 +1409,7 @@ http://aui.github.io/popupjs/doc/selectbox.html
 flexselect
 https://github.com/rmm5t/jquery-flexselect
 
-双select
+双 select
 http://loudev.com
 
 select2
@@ -1433,7 +1433,7 @@ https://github.com/mattfarina/farbtastic
 城市联动
 地址
 
-jquery.cityselect.js基于jQuery+JSON的省市或自定义联动效果
+jquery.cityselect.js 基于 jQuery+JSON 的省市或自定义联动效果
 http://www.ijquery.cn/?p=360
 
 剪贴板
@@ -1445,7 +1445,7 @@ https://github.com/zeroclipboard/zeroclipboard
 clipboard 最新的剪切方案
 http://zenorocha.github.io/clipboard.js
 
-不是Flash的剪贴板
+不是 Flash 的剪贴板
 https://github.com/zenorocha/clipboard.js
 
 简繁转换
@@ -1457,13 +1457,13 @@ https://github.com/BYVoid/OpenCC
 表格 Grid
 地址
 
-facebook表格
+facebook 表格
 http://facebook.github.io/fixed-data-table
 
-类似于Excel编辑表格-handsontable
+类似于 Excel 编辑表格-handsontable
 http://handsontable.com
 
-bootstrap-table插件
+bootstrap-table 插件
 http://bootstrap-table.wenzhixin.net.cn
 
 datatables
@@ -1526,61 +1526,61 @@ http://www.rainweb.cn/article/category/Nodejs
 node express 入门教程
 http://www.w3cfuns.com/article-5598538-1-1.html
 
-nodejs定时任务
+nodejs 定时任务
 http://my.oschina.net/u/568264/blog/193773
 
-一个nodejs博客
+一个 nodejs 博客
 http://60sky.com
 
-【NodeJS 学习笔记04】新闻发布系统
+【NodeJS 学习笔记 04】新闻发布系统
 http://www.cnblogs.com/yexiaochai/p/3536547.html
 
-过年7天乐，学nodejs 也快乐
+过年 7 天乐，学 nodejs 也快乐
 http://www.cnblogs.com/qqloving/p/3541099.html
 
-七天学会NodeJS
+七天学会 NodeJS
 https://github.com/nqdeng/7-days-nodejs
 
-Nodejs学习笔记（二）--- 事件模块
+Nodejs 学习笔记（二）--- 事件模块
 http://www.cnblogs.com/zhongweiv/p/nodejs_events.html
 
-nodejs入门
+nodejs 入门
 http://www.cnblogs.com/liusuqi/p/3735491.html
 
 angularjs nodejs
 https://github.com/zensh/jsgen
 
-从零开始nodejs系列文章
+从零开始 nodejs 系列文章
 http://blog.fens.me/series-nodejs
 
-理解nodejs
+理解 nodejs
 http://debuggable.com/posts/understanding-node-js:4bd98440-45e4-4a9a-8ef7-0f7ecbdd56cb
 
-nodejs事件轮询
+nodejs 事件轮询
 http://blog.mixu.net/2011/02/01/understanding-the-node-js-event-loop
 
-node入门
+node 入门
 http://www.nodebeginner.org/index-zh-cn.html
 
 nodejs cms
 http://ourjs.com/detail/53e1f281c5910a9806000001
 
-Node初学者入门，一本全面的NodeJS教程
+Node 初学者入门，一本全面的 NodeJS 教程
 http://ourjs.com/detail/529ca5950cb6498814000005
 
-NodeJS的代码调试和性能调优
+NodeJS 的代码调试和性能调优
 http://www.barretlee.com/blog/2015/10/07/debug-nodejs-in-command-line
 
 常规优化
 地址
 
-Javascript高性能动画与页面渲染
+Javascript 高性能动画与页面渲染
 http://www.infoq.com/cn/articles/javascript-high-performance-animation-and-page-rendering
 
-移动H5前端性能优化指南
+移动 H5 前端性能优化指南
 http://isux.tencent.com/h5-performance.html
 
-5173首页前端性能优化实践
+5173 首页前端性能优化实践
 http://ued.5173.com/?p=1731
 
 给网页设计师和前端开发者看的前端性能优化
@@ -1595,13 +1595,13 @@ http://www.zhangxinxu.com/wordpress/tag/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD
 前端性能监控总结
 http://www.xiaoqiang.org/javascript/font-end-performance-monitor.html
 
-网站性能优化之CSS无图片技术
+网站性能优化之 CSS 无图片技术
 http://udc.weibo.com/2013/05/%E7%BD%91%E7%AB%99%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E4%B9%8Bcss%E6%97%A0%E5%9B%BE%E7%89%87%E6%8A%80%E6%9C%AF
 
-web前端性能优化进阶路
+web 前端性能优化进阶路
 http://www.aliued.cn/2013/01/20/web%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E8%BF%9B%E9%98%B6%E8%B7%AF.html
 
-前端技术：网站性能优化之CSS无图片技术
+前端技术：网站性能优化之 CSS 无图片技术
 http://my.eoe.cn/tuwandou/archive/4544.html
 
 浏览器的加载与页面性能优化
@@ -1613,7 +1613,7 @@ http://www.w3ctech.com/p/1503
 Hey——前端性能
 http://www.feelcss.com/tag/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD
 
-html优化
+html 优化
 http://www.baiduux.com/blog/2010/03/15/html%E4%BC%98%E5%8C%96-2
 
 99css——性能
@@ -1622,10 +1622,10 @@ http://www.99css.com/tag/%e6%80%a7%e8%83%bd
 Yslow——性能优化
 http://www.yslow.net/category.php?cid=20
 
-YSLOW中文介绍
+YSLOW 中文介绍
 http://www.cnblogs.com/yslow
 
-转一篇Yahoo关于网站性能优化的文章，兼谈本站要做的优化
+转一篇 Yahoo 关于网站性能优化的文章，兼谈本站要做的优化
 http://www.360ito.com/article/40.html
 
 Yahoo!团队实践分享：网站性能
@@ -1661,19 +1661,19 @@ http://www.gbin1.com/technology/html/20130217-tips-for-speed-up-page-loading
 页面加载中的图片性能优化
 http://www.f2es.com/images-bytes-opt
 
-web前端优化(基于Yslow
+web 前端优化(基于 Yslow
 http://www.tcreator.info/webSchool/website/Front-end-Opt-Yslow.html
 
 网站性能优化工具大全
 https://www.qianduan.net/website-performance-optimization-tool.html
 
-【高性能前端1】高性能HTML
+【高性能前端 1】高性能 HTML
 http://www.alloyteam.com/2012/10/high-performance-html
 
-【高性能前端2】高性能CSS
+【高性能前端 2】高性能 CSS
 http://www.alloyteam.com/2012/10/high-performance-css
 
-由12306谈谈网站前端性能和后端性能优化
+由 12306 谈谈网站前端性能和后端性能优化
 http://coolshell.cn/articles/6470.html
 
 AlloyTeam——前端优化
@@ -1682,7 +1682,7 @@ http://www.alloyteam.com/webfrontend/%E5%89%8D%E7%AB%AF%E4%BC%98%E5%8C%96
 毫秒必争，前端网页性能最佳实践
 http://www.cnblogs.com/developersupport/p/3248695.html
 
-网站性能工具Yslow的使用方法
+网站性能工具 Yslow 的使用方法
 http://blog.sina.com.cn/s/blog_6e9d2e0701017kvu.html
 
 前端工程与性能优化（上）：静态资源版本更新与缓存
@@ -1691,7 +1691,7 @@ http://www.infoq.com/cn/articles/front-end-engineering-and-performance-optimizat
 前端工程与性能优化（下）：静态资源管理与模板框架
 http://www.infoq.com/cn/articles/front-end-engineering-and-performance-optimization-part2
 
-HTTPS连接的前几毫秒发生了什么
+HTTPS 连接的前几毫秒发生了什么
 http://blog.jobbole.com/48369
 
 Yslow
@@ -1733,7 +1733,7 @@ http://www.html-js.com/article/3091
 在线工具
 地址
 
-google在线工具
+google 在线工具
 https://developers.google.com/speed/pagespeed/insights
 
 阿里测
@@ -1742,10 +1742,10 @@ http://www.alibench.com
 阿里-免费测试服务
 http://itest.aliyun.com
 
-阿里-F2etest多浏览器兼容性测试解决方案
+阿里-F2etest 多浏览器兼容性测试解决方案
 https://github.com/alibaba/f2etest
 
-js性能测试
+js 性能测试
 http://jsperf.com
 
 前端架构
@@ -1763,13 +1763,13 @@ http://www.zhihu.com/question/24092572
 关于前端架构-张克军
 http://hikejun.com/sharing/2010webrebuild/?file=fe-infrastructure.html
 
-百度腾讯offer比较（腾讯游戏VS百度基础架构）
+百度腾讯 offer 比较（腾讯游戏 VS 百度基础架构）
 http://www.zhihu.com/question/25583350
 
 推荐作品
 地址
 
-winter代码片段需要翻墙
+winter 代码片段需要翻墙
 https://gist.github.com/wintercn
 
 fgm
@@ -1778,16 +1778,16 @@ http://www.fgm.cc/learn
 岑安作品集
 https://github.com/hongru/hongru.github.com
 
-当耐特demo集合
+当耐特 demo 集合
 http://kmdjs.github.io
 
-米空格 js作品
+米空格 js 作品
 http://www.laoshu133.com/Lab
 
 myFocus
 http://koen301.github.io
 
-SeaJS组件库
+SeaJS 组件库
 http://panxuepeng.github.io/seajslib
 
 颜海镜作品
@@ -1796,13 +1796,13 @@ http://yanhaijing.com/myProject
 脚儿网作品
 http://jo2.org/category/myworks
 
-javascript个人作品
+javascript 个人作品
 http://www.cnitblog.com/yemoo/category/3107.html
 
 妙味的雷东升游戏作品
 http://bbs.miaov.com/forum.php?mod=viewthread&tid=7790
 
-javascript作品集
+javascript 作品集
 http://bbs.csdn.net/topics/380227212
 
 云五笔，灰度产生生成工具
@@ -1838,7 +1838,7 @@ http://pingfan1990.sinaapp.com
 jyg 游戏案例
 http://www.lovewebgames.com
 
-很多jquery插件
+很多 jquery 插件
 http://www.helloweba.com/list.html
 
 不羁虫 - soJs 作品系列
@@ -1886,7 +1886,7 @@ http://www.linqing07.com/resume.html
 简历池
 http://www.mojianli.com/resume/view
 
-haorooms博客
+haorooms 博客
 http://www.haorooms.com/about
 
 Justin Young
@@ -1898,37 +1898,37 @@ http://cv.youngdze.com
 那几个月在找工作（百度，网易游戏）
 http://www.nowcoder.com/discuss/3196
 
-2014最新面试题
+2014 最新面试题
 http://www.html-js.com/article/1743
 
 阿里前端面试题
 http://www.w3cfuns.com/thread-5598563-2-1.html
 
-2016校招内推 -- 阿里巴巴前端 -- 三面面试经历
+2016 校招内推 -- 阿里巴巴前端 -- 三面面试经历
 http://www.cnblogs.com/imwtr/p/4685546.html
 
 腾讯面试题
 http://www.w3cfuns.com/article-5599657-1-1.html
 
-年后跳槽那点事：乐视+金山+360面试之行
+年后跳槽那点事：乐视+金山+360 面试之行
 http://www.cnblogs.com/lvdabao/p/3660707.html
 
 阿里前端面试题上线
 http://fatesinger.com/2722.html
 
-拉勾网js面试题
+拉勾网 js 面试题
 http://www.cnblogs.com/52cik/p/js-question-lg.html
 
 前端面试
 http://www.cnblogs.com/allenxing/p/3724382.html
 
-Web开发笔试面试题 大全
+Web 开发笔试面试题 大全
 http://mianshiti.diandian.com
 
 前端开发面试题
 http://segmentfault.com/a/1190000000465431
 
-2014最新前端面试题
+2014 最新前端面试题
 https://github.com/markyun/My-blog/tree/master/Front-end-Developer-Questions
 
 百度面试
@@ -1943,7 +1943,7 @@ https://github.com/darcyclarke/Front-end-Developer-Interview-Questions/tree/mast
 前端开发面试题
 http://segmentfault.com/a/1190000000465431
 
-5个经典的前端面试问题
+5 个经典的前端面试问题
 http://ourjs.com/detail/5%E4%B8%AA%E7%BB%8F%E5%85%B8%E7%9A%84%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%97%AE%E9%A2%98
 
 最全前端面试问题及答案总结
@@ -1961,7 +1961,7 @@ http://www.cnblogs.com/xiaoruo/p/4665163.html
 史上最全 前端开发面试问题及答案整理
 https://github.com/hawx1993/Front-end-Interview-questions
 
-BAT及各大互联网公司2014前端笔试面试题：JavaScript篇
+BAT 及各大互联网公司 2014 前端笔试面试题：JavaScript 篇
 http://blog.jobbole.com/78738
 
 前端开发面试题大收集
@@ -2000,7 +2000,7 @@ http://www.zhangxinxu.com/wordpress/?s=icomoon
 icommon
 https://icomoon.io/app
 
-用字体在网页中画ICON图标(推荐教程
+用字体在网页中画 ICON 图标(推荐教程
 http://imooc.com/learn/243
 
 字体压缩工具
@@ -2027,13 +2027,13 @@ https://code.visualstudio.com
 Fiddler
 地址
 
-Fiddler调试使用知多少(一)深入研究
+Fiddler 调试使用知多少(一)深入研究
 http://www.cnblogs.com/tugenhua0707/p/4623317.html
 
-微信fiddle
+微信 fiddle
 http://www.cnblogs.com/strick/p/4570006.html
 
-微信fiddle
+微信 fiddle
 http://gaoboy.com/article/26.html
 
 Chrome
@@ -2060,34 +2060,34 @@ http://www.cnblogs.com/constantince/p/4624241.html
 Chrome - 使用技巧
 http://www.cnblogs.com/liyunhua/p/4544738.html
 
-Chrome - Console控制台不完全指南
+Chrome - Console 控制台不完全指南
 http://www.cnblogs.com/Wayou/p/chrome-console-tips-and-tricks.html
 
-Chrome - Workspace使浏览器变成IDE
+Chrome - Workspace 使浏览器变成 IDE
 http://c7sky.com/chrome-devtools-workspace.html
 
-network面板
+network 面板
 http://www.html-js.com/article/Nothing-blind%202975
 
-chrome开发工具快捷键
+chrome 开发工具快捷键
 http://anti-code.com/devtools-cheatsheet
 
-chrome调试工具常用功能整理
+chrome 调试工具常用功能整理
 http://www.html-js.com/article/2327
 
 Chrome 开发工具 Workspace 使用
 http://www.iinterest.net/2014/05/09/chrome-dev-tool-workspace
 
-Chrome神器Vimium快捷键学习记录
+Chrome 神器 Vimium 快捷键学习记录
 http://www.cppblog.com/deercoder/archive/2011/10/22/158886.html
 
-sass调试-w3cplus
+sass 调试-w3cplus
 http://www.w3cplus.com/sassguide/debug.html
 
-如何更专业的使用Chrome开发者工具-w3cplus
+如何更专业的使用 Chrome 开发者工具-w3cplus
 http://www.w3cplus.com/tools/how-to-use-chrome-devtools-like-a-pro.html
 
-chrome调试canvas
+chrome 调试 canvas
 http://sentsin.com/web/253.html
 
 chrome profiles1
@@ -2099,25 +2099,25 @@ http://h5dev.uc.cn/article-25-1.html
 chrome profiles3
 http://www.oschina.net/translate/performance-optimisation-with-timeline-profiles
 
-chrome移动版调试
+chrome 移动版调试
 https://developer.chrome.com/devtools/docs/mobile-emulation
 
-chrome调试
+chrome 调试
 http://ued.taobao.org/blog/2012/06/debug-with-chrome-dev-tool
 
-chrome的调试
+chrome 的调试
 http://www.cnblogs.com/QLeelulu/archive/2011/08/28/2156402.html
 
 chrome console 命令详解
 https://developer.chrome.com/devtools/docs/commandline-api
 
-查看事件绑定1
+查看事件绑定 1
 http://www.cnblogs.com/leonkao/p/3809655.html
 
-查看事件绑定2
+查看事件绑定 2
 http://www.cnblogs.com/xiaoyao2011/p/3447421.html
 
-神器——Chrome开发者工具(一
+神器——Chrome 开发者工具(一
 http://segmentfault.com/a/1190000000683599
 
 奇趣百科性能优化(Chrome DevTools 中的 Timeline Profils 等工具使用介绍
@@ -2126,7 +2126,7 @@ https://xinranliu.me/2015-05-22-qiqu-performance
 chrome 开发者工具的 15 个小技巧
 http://frontenddev.org/link/15-tips-of-chrome-developer-tools.html
 
-Chrome开发者工具不完全指南
+Chrome 开发者工具不完全指南
 http://1ke.co/course/361
 
 Chrome 开发者工具使用技巧
@@ -2135,7 +2135,7 @@ http://segmentfault.com/a/1190000003882567
 Firebug
 地址
 
-firebug视频教程
+firebug 视频教程
 http://www.imooc.com/learn/137
 
 firefox 模拟器
@@ -2144,10 +2144,10 @@ https://developer.mozilla.org/zh-CN/docs/Tools/WebIDE
 console.log 命令详解
 http://www.cnblogs.com/ctriphire/p/4116207.html
 
-Firebug入门指南
+Firebug 入门指南
 http://www.ruanyifeng.com/blog/2008/06/firebug_tutorial.html
 
-Firebug控制台详解
+Firebug 控制台详解
 http://www.ruanyifeng.com/blog/2011/03/firebug_console_tutorial.html
 
 移动,微信调试
@@ -2162,10 +2162,10 @@ http://yujiangshui.com/multidevice-frontend-debug
 使用 Chrome 远程调试 Android 设备
 https://github.com/yujiangshui/CN-Chrome-DevTools/blob/remote-debugging/md/Use-Tools/remote-debugging.md
 
-mac移动端调试
+mac 移动端调试
 http://plus.uc.cn/document/webapp/doc5.html
 
-mac移动端调试
+mac 移动端调试
 http://www.mihtool.com
 
 无线调试攻略
@@ -2174,13 +2174,13 @@ http://thx.github.io/mobile/debugging-in-mobile
 无线调试攻略
 http://yanhaijing.com/mobile/2014/12/17/web-debug-for-mobile
 
-屌爆了,完美调试 微信webview(x5
+屌爆了,完美调试 微信 webview(x5
 http://www.jianshu.com/p/ccf124f1f74b
 
 微信调试的那些事
 http://liyaodong.com/2015/07/06/%E5%BE%AE%E4%BF%A1%E8%B0%83%E8%AF%95%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B
 
-远程console
+远程 console
 http://jsconsole.com
 
 微信调试工具
@@ -2195,7 +2195,7 @@ iOS Simulator
 Simulator
 https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/iOS_Simulator_Guide/Introduction/Introduction.html
 
-Xcode中的iOS模拟器(iOS Simulator的介绍和使用心得
+Xcode 中的 iOS 模拟器(iOS Simulator 的介绍和使用心得
 http://www.crifan.com/intro_ios_simulator_in_xcode_and_usage_summary
 
 img
@@ -2207,7 +2207,7 @@ http://preloaders.net/en/circular
 智图-图片优化平台
 http://zhitu.isux.us
 
-在线png优化
+在线 png 优化
 https://tinypng.com
 
 生成二维码
@@ -2231,7 +2231,7 @@ http://getf5.com
 File Watchers
 http://geek100.com/2608
 
-在线PPT制作
+在线 PPT 制作
 地址
 
 nodePPT
@@ -2279,25 +2279,25 @@ https://github.com/jnoodle/f2e-collect
 F2E 前端导航
 http://f2e.im/static/pages/nav/index.html
 
-常用CDN
+常用 CDN
 地址
 
-新浪CDN
+新浪 CDN
 http://lib.sinaapp.com
 
 百度静态资源公共库
 http://cdn.code.baidu.com
 
-360网站卫士常用前端公共库CDN服务
+360 网站卫士常用前端公共库 CDN 服务
 http://libs.useso.com
 
-Bootstrap中文网开源项目免费 CDN 服务
+Bootstrap 中文网开源项目免费 CDN 服务
 http://www.bootcdn.cn
 
 开放静态文件 CDN - 七牛
 http://staticfile.org
 
-CDN加速 - jq22
+CDN 加速 - jq22
 http://www.jq22.com/cdn
 
 jQuery CDN
@@ -2306,7 +2306,7 @@ http://code.jquery.com
 Google jQuery CDN
 http://www.google-jquery-cdn.com
 
-微软CDN
+微软 CDN
 http://www.asp.net/ajax/cdn
 
 Git
@@ -2315,7 +2315,7 @@ Git
 git-scm
 http://git-scm.com
 
-廖雪峰-Git教程
+廖雪峰-Git 教程
 http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000
 
 git-for-windows
@@ -2327,92 +2327,92 @@ http://daemon369.github.io/git/2015/03/10/add-ssh-keys-for-github
 gogithub
 http://www.worldhello.net/gotgithub/index.html
 
-git常规命令练习
+git 常规命令练习
 http://pcottle.github.io/learnGitBranching
 
-git的资料整理
+git 的资料整理
 https://github.com/xirong/my-git
 
-我所记录的git命令（非常实用）
+我所记录的 git 命令（非常实用）
 http://www.cnblogs.com/fanfan259/p/4810517.html
 
-企业开发git工作流模式探索部分休整
+企业开发 git 工作流模式探索部分休整
 https://github.com/xirong/my-git/blob/master/git-workflow-tutorial.md
 
 GitHub 漫游指南
 https://github.com/phodal/github-roam
 
-GitHub秘籍
+GitHub 秘籍
 https://github.com/tiimgreen/github-cheat-sheet/blob/master/README.zh-cn.md
 
-使用git和github进行协同开发流程
+使用 git 和 github 进行协同开发流程
 http://livoras.com/post/28
 
-动画方式练习git
+动画方式练习 git
 http://onlywei.github.io/explain-git-with-d3
 
-优秀JavaScript项目
+优秀 JavaScript 项目
 地址
 
-Angular和Webpack种子文件
+Angular 和 Webpack 种子文件
 https://github.com/AngularClass/angular2-webpack-starter
 
-Fis3面向前端的工程构建系统
+Fis3 面向前端的工程构建系统
 https://github.com/fex-team/fis3
 
 Fis3 DEMO
 https://github.com/fex-team/fis3-demo
 
-前端JQuery系列:源码剖析
+前端 JQuery 系列:源码剖析
 https://github.com/JsAaron/jQuery
 
-avalon框架
+avalon 框架
 https://github.com/RubyLouvre/avalon
 
-Microsoft ChakraCore 微软的Chakra引擎
+Microsoft ChakraCore 微软的 Chakra 引擎
 https://github.com/Microsoft/ChakraCore
 
-Quintus HTML游戏引擎
+Quintus HTML 游戏引擎
 https://github.com/cykod/Quintus
 
-一个用node.js搭建的有趣博客
+一个用 node.js 搭建的有趣博客
 https://github.com/STRML/strml.net
 
-Web前端助手--FeHelper（Chrome扩展）
+Web 前端助手--FeHelper（Chrome 扩展）
 https://github.com/zxlie/FeHelper
 
 百度前端技术学院
 https://github.com/baidu-ife/ife
 
-Cheerio（node.js中的jQuery）
+Cheerio（node.js 中的 jQuery）
 https://github.com/cheeriojs/cheerio
 
-nodejs的一个聊天软件 类似微信
+nodejs 的一个聊天软件 类似微信
 https://github.com/BryanYang/freechat
 
-使用html5和node.js构建的网易云音乐
+使用 html5 和 node.js 构建的网易云音乐
 https://github.com/stkevintan/Cube
 
-babel ES6转换为ES5
+babel ES6 转换为 ES5
 https://github.com/babel/babel
 
-一个JS富文本编辑器
+一个 JS 富文本编辑器
 https://github.com/fex-team/ueditor
 
-一个JS脑图可视化工具
+一个 JS 脑图可视化工具
 https://github.com/fex-team/kityminder-core
 
-一个JS写的Flappy Bird Game
+一个 JS 写的 Flappy Bird Game
 https://github.com/ellisonleao/clumsy-bird
 
-一个JS写的GBA模拟器
+一个 JS 写的 GBA 模拟器
 https://github.com/taisel/IodineGBA
 
-SegmentFault写的Markdown解析器
+SegmentFault 写的 Markdown 解析器
 https://github.com/SegmentFault/HyperDown.js
 
-基于node.js的Ghost博客
+基于 node.js 的 Ghost 博客
 https://github.com/TryGhost/Ghost
 
-学习react的demos
+学习 react 的 demos
 https://github.com/ruanyf/react-demos

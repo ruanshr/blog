@@ -91,7 +91,6 @@ compressImg (base64, scale, callback) {
 ```
 
 ```js
-
 function drawShotImage(target) {
   var imgCanvas = document.createElement('canvas')
   imgCanvas.width = area.width
@@ -122,6 +121,6 @@ function drawShotImage(target) {
     ajaxImageCharacters(imgBase64.split(',')[1])
   }
 
-  anonyImg.src = target.src;
+  anonyImg.src = target.src
 }
 ```

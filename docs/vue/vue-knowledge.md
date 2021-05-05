@@ -29,6 +29,7 @@ files.keys().forEach(key => {
 
 components: modules
 ```
+
 这样不管页面引入多少组件,都可以使用这个方法
 
 3.API 方法
@@ -39,4 +40,3 @@ require.context(directory,useSubdirectories,regExp)
 directory：说明需要检索的目录
 useSubdirectories：是否检索子目录
 regExp: 匹配文件的正则表达式,一般是文件名
- 

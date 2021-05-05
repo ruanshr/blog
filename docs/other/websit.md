@@ -9,3 +9,7 @@ http://www.lianhanghao.com/
 
 3、谷歌工具
 https://developers.google.cn/web/tools/chrome-devtools
+
+
+10、县及县以上行政区划代码
+https://github.com/cn/GB2260

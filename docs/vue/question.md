@@ -292,9 +292,11 @@ select 字段将 value 作为 prop 并将 change 作为事件。
 
 如果在自定义组件中，v-model 默认会利用名为  value 的 prop 和名为  input  的事件，如下所示：
 父组件：
+
 ```js
 <ModelChild v-model="message"></ModelChild>
 ```
+
 子组件：
 
 ```js

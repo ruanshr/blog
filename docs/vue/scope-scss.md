@@ -54,11 +54,9 @@ e.g.
 编译后的样式
 
 ```html
-
 <div class="container" data-v-d5989cea>
   <div class="content" data-v-d5989cea></div>
 </div>
-
 
 <style>
   .container[data-v-d5989cea] {
@@ -84,7 +82,7 @@ e.g.
 <template>
   <div class="container">
     <div class="content">
-        <x-icon type="ios-arrow-right" size="20" ></x-icon>
+      <x-icon type="ios-arrow-right" size="20"></x-icon>
     </div>
   </div>
 </template>
@@ -96,17 +94,15 @@ e.g.
     .content {
       background-color: rgb(149, 102, 211);
       height: 100px;
-      /deep/ .vux-x-icon-ios-arrow-right{
-          background-color: #000;
+      /deep/ .vux-x-icon-ios-arrow-right {
+        background-color: #000;
       }
     }
   }
 </style>
 ```
 
-
 ```html
-
 <style>
   .container[data-v-d5989cea] {
     background-color: #ccc;
@@ -121,14 +117,13 @@ e.g.
     background-color: #000;
   }
 </style>
-
 ```
 
 在使用第三方组件库时也会经常遇到另外一个问题，即第三方组件库进行渲染的时候仅最外层加上了 data 值，其内部的标签没有 data 值，那么如果要修改组件内部的样式，使用 deep 深度选择器也不起作用了。
 
 那怎么办呢？
 
-想到了最简单的方法，就是使用 css 样式覆盖，组件内建立一个不添加 scoped 属性的 style 标签（一个vue文件是可以有多个style标签的）。这样就可以直接进行控制样式了。
+想到了最简单的方法，就是使用 css 样式覆盖，组件内建立一个不添加 scoped 属性的 style 标签（一个 vue 文件是可以有多个 style 标签的）。这样就可以直接进行控制样式了。
 
 但是这样又会产生一个新的问题，如果在其他模块内也使用了此组件，组件的样式就受到了之前模块的影响了。
 

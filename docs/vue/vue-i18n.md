@@ -72,7 +72,6 @@ change(){
 
 修改配置信息，将语言配置信息存入 localStorage 中，默认 locale 从获取 localStorage 获取，切换语言时同时修改 localStorage 中的信息，这样下次进来时系统就会根据用户上次设定的语言进行显示了。
 
-
 ```js
 // 实例化i18n并引入语言文件。
 const i18n = new VueI18n({
