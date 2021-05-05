@@ -5,7 +5,7 @@ next: /javascript-base/costom-function
 
 # ES6 新特性之 BigInt
 
-BigInt 是一种内置对象，它提供了一种方法来表示大于 $2^{53}$ - 1 的整数。这原本是 Javascript 中可以用 Number 表示的最大数字。BigInt 可以表示任意大的整数。
+BigInt 是一种内置对象，它提供了一种方法来表示大于 $2^{53}$ - 1 的整数。这原本是 Javascript 中可以用 Number 表示的最大数字。BigInt 可以表示任意大的**整数**。
 在一个整数字面量后面加 n 的方式定义一个 BigInt ，如：10n，或者调用函数 BigInt()
 
 ```js
@@ -67,7 +67,7 @@ bigN * -1n
 
 ```
 
-/ 操作符对于整数的运算也没问题。可是因为这些变量是 BigInt 而不是 BigDecimal ，该操作符结果会向零取整
+“/” 操作符对于整数的运算也没问题。可是因为这些变量是 BigInt 而不是 BigDecimal ，该操作符结果会向零取整
 
 ```js
 const expected = 4n / 2n

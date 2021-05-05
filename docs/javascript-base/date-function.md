@@ -3,7 +3,7 @@ prev: /javascript-base/custom-function
 next: /javascript-base/debounce-throttle
 ---
 
-# javascript 日期Date详解
+# javascript 日期 Date 详解
 
 Date()构造函数有四种基本形式
 
@@ -17,7 +17,7 @@ new Date(year, monthIndex [, day [, hours [, minutes [, seconds [, milliseconds]
 
 **Date.length**
 
-可接收参数个数，值为7
+可接收参数个数，值为 7
 
 **Date.now()**
 
@@ -25,11 +25,11 @@ new Date(year, monthIndex [, day [, hours [, minutes [, seconds [, milliseconds]
 
 **Date.prototype.getDate()**
 
-根据本地时间，返回一个指定的日期对象为一个月中的哪一日（从1--31）
+根据本地时间，返回一个指定的日期对象为一个月中的哪一日（从 1--31）
 
 **Date.prototype.getDay()**
 
-根据本地时间，返回一个具体日期中一周的第几天，0 表示星期天。对于某个月中的第几天（从0--6）
+根据本地时间，返回一个具体日期中一周的第几天，0 表示星期天。对于某个月中的第几天（从 0--6）
 
 **Date.prototype.getFullYear()**
 
@@ -50,7 +50,7 @@ new Date(year, monthIndex [, day [, hours [, minutes [, seconds [, milliseconds]
 
 **Date.prototype.getMonth()**
 
-根据本地时间，返回一个指定的日期对象的月份，为基于0的值（0表示一年中的第一月）
+根据本地时间，返回一个指定的日期对象的月份，为基于 0 的值（0 表示一年中的第一月）
 
 **Date.prototype.getSeconds()**
 
@@ -63,13 +63,13 @@ new Date(year, monthIndex [, day [, hours [, minutes [, seconds [, milliseconds]
 ```js
 const currentDate = new Date()
 
-console.log(currentDate.getFullYear())  // 2020
+console.log(currentDate.getFullYear()) // 2020
 
-console.log(currentDate.getMonth())  // 6 
+console.log(currentDate.getMonth()) // 6
 
-console.log(currentDate.getDay())  // 5
+console.log(currentDate.getDay()) // 5
 
-console.log(currentDate.getDate())  // 10
+console.log(currentDate.getDate()) // 10
 
 const invalidDate = new Date('a')
 
@@ -82,12 +82,11 @@ console.log(invalidDate.getTime()) // NaN
 function parseDate(date) {
   let result
   if (typeof date === 'string') {
-    date = date.replace(/-/g,'/') 
+    date = date.replace(/-/g, '/')
   }
   result = new Date(date)
-  if(result instanceof Date && result.getTime()){
+  if (result instanceof Date && result.getTime()) {
     return result
   }
 }
-
 ```

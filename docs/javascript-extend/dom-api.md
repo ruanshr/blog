@@ -2,6 +2,7 @@
 prev: /javascript-extend/document
 next: /javascript-extend/event-loop
 ---
+
 # before(),after(),prepend(),append()等新增 DOM API
 
 ## 1. DOM API 之 before()
@@ -97,7 +98,8 @@ void ChildNode.before((节点或字符串)... 其它更多节点);
 ```
 
 ## 3. DOM API 之 replaceWith()
-   其语法如下：
+
+其语法如下：
 
 ChildNode.replaceWith((节点或字符串)... 更多节点);
 表示替换当前节点为其他节点内容。

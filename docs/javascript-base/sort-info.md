@@ -2,6 +2,7 @@
 prev: /javascript-base/set-map
 next: /javascript-base/string-function
 ---
+
 # 十大算法
 
 十大排序算法可以说是每个程序都必须得掌握的。
@@ -24,22 +25,20 @@ next: /javascript-base/string-function
 
 ```js
 function selectSort(arr) {
-  const len = arr.length;
+  const len = arr.length
   for (let i = 0; i < len - 1; i++) {
-    let min = i;
+    let min = i
     for (let j = i + 1; j < len; j++) {
       if (arr[min] > arr[j]) {
-        min = j;
+        min = j
       }
     }
-    const temp = arr[i];
-    arr[i] = arr[min];
-    arr[min] = temp;
+    ;[arr[min], arr[i]] = [arr[i], arr[min]]
   }
-  return arr;
+  return arr
 }
 
-selectSort([1, 3, 4, 5, 8, 1, 3, 4]);
+selectSort([1, 3, 4, 5, 8, 1, 3, 4])
 ```
 
 性质：
@@ -56,37 +55,35 @@ selectSort([1, 3, 4, 5, 8, 1, 3, 4]);
 
 ```js
 function insertSort(arr) {
-  const len = arr.length;
+  const len = arr.length
   for (let i = 1; i < n; i++) {
-    let temp = arr[i];
-    let k = i - 1;
+    let temp = arr[i]
+    let k = i - 1
     while (k >= 0 && arr[k] > temp) {
-      k--;
+      k--
     }
     for (let j = i; j > k + 1; j--) {
-      arr[j] = arr[j - 1];
+      arr[j] = arr[j - 1]
     }
-    arr[k + 1] = temp;
+    arr[k + 1] = temp
   }
-  return arr;
+  return arr
 }
 
-
-
 function insertSort(arr) {
-    let len = arr.length
-    for(let i = 0; i < len; i++) {
-        for(let j = i+1;j > 0; j--) {
-          // 这里开始和左边已排好序的进行比较，如果小于前面的就换位
-            if(arr[j] < arr[j - 1]) {
-                [arr[j - 1], arr[j]] = [arr[j], arr[j - 1]]
-            } else {
-               // 已经排好序
-                break
-            }
-        }
+  let len = arr.length
+  for (let i = 0; i < len; i++) {
+    for (let j = i + 1; j > 0; j--) {
+      // 这里开始和左边已排好序的进行比较，如果小于前面的就换位
+      if (arr[j] < arr[j - 1]) {
+        ;[arr[j - 1], arr[j]] = [arr[j], arr[j - 1]]
+      } else {
+        // 已经排好序
+        break
+      }
     }
-    return arr
+  }
+  return arr
 }
 ```
 
@@ -105,13 +102,11 @@ function insertSort(arr) {
 
 ```js
 function bubbleSort(arr) {
-  const len = arr.length;
+  const len = arr.length
   for (let i = 0; i < len; i++) {
-    for (let j = 0; j < len - i - 1; j++) {
+    for (let j = 0; j < len - 1 - i; j++) {
       if (arr[j + 1] < arr[j]) {
-        let temp = arr[j];
-        arr[j] = arr[j + 1];
-        arr[j + 1] = temp;
+        ;[arr[j + 1], arr[j]] = [arr[j], arr[j + 1]]
       }
     }
   }
@@ -129,19 +124,19 @@ function bubbleSort(arr) {
 
 ```js
 function bubbleSort(arr) {
-  const len = arr.length;
+  const len = arr.length
   for (let i = 0; i < len; i++) {
-    let flag = true;
+    let flag = true
     for (let j = 0; j < len - i - 1; j++) {
       if (arr[j + 1] < arr[j]) {
-        flag = false;
-        let temp = arr[j];
-        arr[j] = arr[j + 1];
-        arr[j + 1] = temp;
+        flag = false
+        let temp = arr[j]
+        arr[j] = arr[j + 1]
+        arr[j + 1] = temp
       }
     }
     if (flag) {
-      break;
+      break
     }
   }
 }
@@ -158,43 +153,43 @@ function bubbleSort(arr) {
 function quickSort(arr, left, right) {
   if (left < right) {
     // 获取中轴元素所处的位置
-    let mid = partition(arr, left, right);
+    let mid = partition(arr, left, right)
     // 进行分割
-    arr = quickSort(arr, left, mid - 1);
-    arr = quickSort(arr, mid + 1, right);
+    arr = quickSort(arr, left, mid - 1)
+    arr = quickSort(arr, mid + 1, right)
   }
-  return arr;
+  return arr
 }
 
 function partition(arr, left, right) {
   // 选取中轴元素
-  let pivot = arr[left];
-  let i = left + 1;
-  let j = right;
+  let pivot = arr[left]
+  let i = left + 1
+  let j = right
   while (true) {
     // 向右找到第一个大于等于 pivot 的元素位置
     while (i <= j && arr[i] <= pivot) {
-      i++;
+      i++
     }
     // 向左找到第一个大于等于 pivot 的元素位置
     while (i <= j && arr[j] >= pivot) {
-      j--;
+      j--
     }
     if (i >= j) {
-      break;
+      break
     }
     //   交换两个元素的位置，使得左边的元素不大于pivot,右边的不小于pivot
-    let temp = arr[i];
-    arr[i] = arr[j];
-    arr[j] = temp;
+    let temp = arr[i]
+    arr[i] = arr[j]
+    arr[j] = temp
   }
-  arr[left] = arr[j];
+  arr[left] = arr[j]
   // 使中轴元素处于有序的位置
-  arr[j] = pivot;
-  return j;
+  arr[j] = pivot
+  return j
 }
 
-quickSort([1, 3, 4, 5, 8, 1, 3, 4], 0, 7);
+quickSort([1, 3, 4, 5, 8, 1, 3, 4], 0, 7)
 ```
 
 性质：
@@ -213,25 +208,25 @@ quickSort([1, 3, 4, 5, 8, 1, 3, 4], 0, 7);
 
 ```js
 function shellSort(arr) {
-  const len = arr.length;
+  const len = arr.length
   for (let h = Math.floor(len / 2); h > 0; h = Math.floor(h / 2)) {
     for (let i = h; i < len; i++) {
-      insertI(arr, h, i);
+      insertI(arr, h, i)
     }
   }
-  return arr;
+  return arr
 }
 
 function insertI(arr, h, i) {
-  const temp = arr[i];
-  let k;
+  const temp = arr[i]
+  let k
   for (k = i - h; k > 0 && temp < arr[k]; k -= h) {
-    arr[k + h] = arr[k];
+    arr[k + h] = arr[k]
   }
-  arr[k + h] = temp;
+  arr[k + h] = temp
 }
 
-shellSort([8, 9, 1, 7, 2, 3, 5, 4, 6, 0]);
+shellSort([8, 9, 1, 7, 2, 3, 5, 4, 6, 0])
 ```
 
 性质：
@@ -250,38 +245,38 @@ shellSort([8, 9, 1, 7, 2, 3, 5, 4, 6, 0]);
 ```js
 function mergeSort(arr, left, right) {
   if (left < right) {
-    let mid = Math.floor((left + right) / 2);
-    arr = mergeSort(arr, left, mid);
-    arr = mergeSort(arr, mid + 1, right);
-    merge(arr, left, mid, right);
+    let mid = Math.floor((left + right) / 2)
+    arr = mergeSort(arr, left, mid)
+    arr = mergeSort(arr, mid + 1, right)
+    merge(arr, left, mid, right)
   }
-  return arr;
+  return arr
 }
 
 function merge(arr, left, mid, right) {
-  const a = Array(right + left - 1);
-  let i = left;
-  let j = right;
-  let k = 0;
+  const a = Array(right + left - 1)
+  let i = left
+  let j = right
+  let k = 0
   while (i <= mid && j <= right) {
     if (arr[i] < arr[j]) {
-      a[k++] = arr[i++];
+      a[k++] = arr[i++]
     } else {
-      a[k++] = arr[j++];
+      a[k++] = arr[j++]
     }
   }
   while (i <= mid) {
-    a[k++] = arr[i++];
+    a[k++] = arr[i++]
   }
   while (j <= right) {
-    a[k++] = arr[j++];
+    a[k++] = arr[j++]
   }
   for (i = 0; i < k; i++) {
-    arr[left++] = a[i];
+    arr[left++] = a[i]
   }
 }
 
-mergeSort([1, 3, 4, 5, 8, 1, 3, 4], 0, 7);
+mergeSort([1, 3, 4, 5, 8, 1, 3, 4], 0, 7)
 ```
 
 性质：
@@ -299,41 +294,41 @@ mergeSort([1, 3, 4, 5, 8, 1, 3, 4], 0, 7);
 
 ```js
 function headSort(arr) {
-  let n = arr.length;
+  let n = arr.length
   for (let i = Math.floor((n - 2) / 2); i >= 0; i--) {
-    downAdjust(arr, i, n - 1);
+    downAdjust(arr, i, n - 1)
   }
   for (let i = n - 1; i >= 1; i--) {
-    let temp = arr[i];
-    arr[i] = arr[0];
-    arr[0] = temp;
+    let temp = arr[i]
+    arr[i] = arr[0]
+    arr[0] = temp
     // 把打乱的堆进行调整，恢复堆的特性
-    downAdjust(arr, 0, i - 1);
+    downAdjust(arr, 0, i - 1)
   }
-  return arr;
+  return arr
 }
 
 function downAdjust(arr, parent, n) {
-  let temp = arr[parent];
+  let temp = arr[parent]
   // 定位左孩子节点的位置
-  let child = 2 * parent + 1;
+  let child = 2 * parent + 1
   // 开始下沉
   while (child <= n) {
     // 如果右孩子节点比左孩子大，则定位到右孩子
     if (child + 1 <= n && arr[child] < arr[child + 1]) {
-      child++;
+      child++
     }
     if (arr[child] <= temp) {
-      break;
+      break
     }
-    arr[parent] = arr[child];
-    parent = child;
-    child = 2 * parent + 1;
+    arr[parent] = arr[child]
+    parent = child
+    child = 2 * parent + 1
   }
-  arr[parent] = temp;
+  arr[parent] = temp
 }
 
-headSort([1, 3, 4, 5, 8, 1, 3, 4]);
+headSort([1, 3, 4, 5, 8, 1, 3, 4])
 ```
 
 性质：
@@ -350,68 +345,68 @@ headSort([1, 3, 4, 5, 8, 1, 3, 4]);
 ![count-sort](../images/javascript/count-sort.gif)
 
 ```js
-function countSort(arr){
-  let n = arr.length;
-  let max = arr[0];
+function countSort(arr) {
+  let n = arr.length
+  let max = arr[0]
   // 寻找数组的最大值
   for (let i = 1; i < n; i++) {
-      if(max < arr[i]){
-        max = arr[i];
-      }
+    if (max < arr[i]) {
+      max = arr[i]
+    }
   }
   //创建大小为max的临时数组
-  const temp = Array(max).fill(0);
+  const temp = Array(max).fill(0)
   //统计元素i出现的次数
   for (let i = 0; i < n; i++) {
-      temp[arr[i]]++;
+    temp[arr[i]]++
   }
-  let k = 0;
+  let k = 0
   //把临时数组统计好的数据汇总到原数组
   for (let i = 0; i <= max; i++) {
-      for (let j = temp[i]; j > 0; j--) {
-          arr[k++] = i;
-      }
+    for (let j = temp[i]; j > 0; j--) {
+      arr[k++] = i
+    }
   }
-  return arr;
+  return arr
 }
 
-countSort([1, 3, 4, 5, 8, 1, 3, 4]);
+countSort([1, 3, 4, 5, 8, 1, 3, 4])
 ```
 
 优化存储空间
 
 ```js
-function countSort(arr){
-  let n = arr.length;
+function countSort(arr) {
+  let n = arr.length
   let min = arr[0]
-  let max = arr[0];
+  let max = arr[0]
   // 寻找数组的最大值
   for (let i = 1; i < n; i++) {
-      if(max < arr[i]){
-        max = arr[i];
-      }
-      if(min > arr[i]) {
-        min = arr[i]
-      }
+    if (max < arr[i]) {
+      max = arr[i]
+    }
+    if (min > arr[i]) {
+      min = arr[i]
+    }
   }
   let d = max - min + 1
   //创建大小为max的临时数组
-  const temp = Array(d).fill(0);
+  const temp = Array(d).fill(0)
   //统计元素i出现的次数
   for (let i = 0; i < n; i++) {
-      temp[arr[i] - min]++;
+    temp[arr[i] - min]++
   }
-  let k = 0;
+  let k = 0
   //把临时数组统计好的数据汇总到原数组
   for (let i = 0; i <= max; i++) {
-      for (let j = temp[i]; j > 0; j--) {
-          arr[k++] = i + min;
-      }
+    for (let j = temp[i]; j > 0; j--) {
+      arr[k++] = i + min
+    }
   }
-  return arr;
+  return arr
 }
 
-countSort([10001, 10003, 10004, 10005, 10008, 10001, 10003, 10004]);
+countSort([10001, 10003, 10004, 10005, 10008, 10001, 10003, 10004])
 ```
 
 性质：
@@ -428,47 +423,47 @@ countSort([10001, 10003, 10004, 10005, 10008, 10001, 10003, 10004]);
 
 ```js
 function bucketSort(arr) {
-  let n = arr.length;
-  let max = arr[0];
-  let min = arr[0];
+  let n = arr.length
+  let max = arr[0]
+  let min = arr[0]
   // 寻找数组的最大值与最小值
   for (let i = 1; i < n; i++) {
     if (min > arr[i]) {
-      min = arr[i];
+      min = arr[i]
     }
     if (max < arr[i]) {
-      max = arr[i];
+      max = arr[i]
     }
   }
   // 和优化版本的计数排序一样，弄一个大小为 min 的偏移值
-  let d = max - min;
+  let d = max - min
   // 创建 d / 5 + 1 个桶，第 i 桶存放  5*i ~ 5*i+5-1范围的数
-  let bucketNum = Math.floor(d / 5) + 1;
+  let bucketNum = Math.floor(d / 5) + 1
   // 初始化桶
   const bucketList = Array(bucketNum)
     .fill(0)
-    .map(() => []);
+    .map(() => [])
 
   //遍历原数组，将每个元素放入桶中
   for (let i = 0; i < n; i++) {
-    bucketList[Math.floor((arr[i] - min) / d)].push(arr[i] - min);
+    bucketList[Math.floor((arr[i] - min) / d)].push(arr[i] - min)
   }
   //对桶内的元素进行排序，我这里采用系统自带的排序工具
   for (let i = 0; i < bucketNum; i++) {
-    bucketList[i].sort();
+    bucketList[i].sort()
   }
   //把每个桶排序好的数据进行合并汇总放回原数组
-  let k = 0;
+  let k = 0
   for (let i = 0; i < bucketNum; i++) {
-    const tempList = bucketList[i];
+    const tempList = bucketList[i]
     for (let j = 0; j < tempList.length; j++) {
-      arr[k++] = tempList[j] + min;
+      arr[k++] = tempList[j] + min
     }
   }
-  return arr;
+  return arr
 }
 
-bucketSort([1, 3, 4, 5, 8, 1, 3, 4]);
+bucketSort([1, 3, 4, 5, 8, 1, 3, 4])
 ```
 
 性质：
@@ -486,38 +481,38 @@ bucketSort([1, 3, 4, 5, 8, 1, 3, 4]);
 
 ```js
 function radioSort(arr) {
-  let n = arr.length;
-  let max = arr[0];
+  let n = arr.length
+  let max = arr[0]
   for (let i = 1; i < n; i++) {
     if (max < arr[i]) {
-      max = arr[i];
+      max = arr[i]
     }
   }
-  let num = 1;
+  let num = 1
   while (max / 10 > 1) {
-    num++;
-    max = max / 10;
+    num++
+    max = max / 10
   }
   let bucketList = Array(10)
     .fill(0)
-    .map(() => []);
+    .map(() => [])
   for (let i = 1; i <= num; i++) {
     for (let j = 0; j < n; j++) {
-      let radio = (arr[j] / Math.pow(10, i - 1)) % 10;
-      bucketList[radio].push(arr[j]);
+      let radio = (arr[j] / Math.pow(10, i - 1)) % 10
+      bucketList[radio].push(arr[j])
     }
-    let k = 0;
+    let k = 0
     for (let j = 0; j < 10; j++) {
-      const tempList = bucketList[j];
+      const tempList = bucketList[j]
       for (let m = 0; m < tempList.length; m++) {
-        arr[k++] = tempList[m];
+        arr[k++] = tempList[m]
       }
     }
   }
-  return arr;
+  return arr
 }
 
-radioSort([1, 3, 4, 5, 8, 1, 3, 4]);
+radioSort([1, 3, 4, 5, 8, 1, 3, 4])
 ```
 
 性质：
@@ -526,7 +521,6 @@ radioSort([1, 3, 4, 5, 8, 1, 3, 4]);
 3、稳定排序
 4、非原地排序
 
-
-### 汇总 
+### 汇总
 
 ![sort-summary](../images/javascript/sort-summary.jpg)

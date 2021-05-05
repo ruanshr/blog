@@ -48,7 +48,20 @@ function Animal() {
     hello: 'world'
   }
 }
-const animal = new Animal() // { hello: 'world' }
+
+// 返回null
+function Animal() {
+  return null
+}
+const animal = new Animal() // {}
+
+// 返回函数
+function Animal() {
+  return function Cat() {}
+}
+const animal = new Animal() // function Cat() {}
+
+
 ```
 
 在实例化构造函数时，返回非对象类型将不生效
@@ -107,7 +120,7 @@ setTimeout(() => {
 
 在 0-4 层，setTimeout 的间隔是 1ms ，而到第 5 层时，间隔至少是 4ms 。
 
-### 7、es6 函数带默认参数时将生成声明作用域
+### 7、ES6 函数带默认参数时将生成声明作用域
 
 ```js
 var x = 10
@@ -169,7 +182,7 @@ var x = 1.23 | 0 // 1
 const arr = [1, 2, 3];
 
 // 存在，等效于 > -1
-if (～arr.indexOf(1)) {
+if (~arr.indexOf(1)) {
 
 }
 
@@ -178,7 +191,7 @@ if (～arr.indexOf(1)) {
 
 ```
 
-按位操作效率高点，代码也简洁一些。也可以使用 es6 的 includes() 。但写开源库需要考虑兼容性的道友还是用 indexOf 比较好
+按位操作效率高点，代码也简洁一些。也可以使用 ES6 的 includes() 。但写开源库需要考虑兼容性的道友还是用 indexOf 比较好
 
 ### 12、getter/setter 也可以动态设置吗？
 
@@ -228,6 +241,7 @@ hel.getName() // jimi
 
 0.3 - 0.2 - 0.1 <= Number.EPSILON // true
 
+
 ### 14、class 语法糖到底是怎么继承的？
 
 ```js
@@ -259,7 +273,7 @@ const extends = (Child, Super) => {
 }
 ```
 
-### 15、es6 居然可以重复解构对象
+### 15、ES6 居然可以重复解构对象
 
 ```js
 const obj = {
@@ -312,7 +326,7 @@ People.prototype = {}
 man instanceof People // false
 ```
 
-如果您用 es6 的 class 的话，prototype 原型是不允许被重新定义的，所以不会出现上述情况
+如果您用 ES6 的 class 的话，prototype 原型是不允许被重新定义的，所以不会出现上述情况
 
 ### 19、Object.prototype.**proto**
 

@@ -5,23 +5,26 @@ next: /javascript-extend/dom-api
 
 # document
 
+获取 **html** 标签内容
 
-获取html标签内容
 ```js
 doucment.documentElement
 ```
 
-获取head标签内容
+获取 **head** 标签内容
+
 ```js
 document.documentElement.querySelector('head')
 ```
 
-获取body标签内容
+获取 **body** 标签内容
+
 ```js
 doucment.body
 ```
 
-添加DOM
+添加 **DOM**
+
 ```js
 document.body.appendChild(subDom)
 ```

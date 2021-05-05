@@ -69,7 +69,7 @@ console.log(Number.MAX_VALUE + 1)          // 精度丢失
 JavaScript 中最小的安全整数 (-(2的53次幂 - 1)).
 
 - Number.MIN_VALUE
-能表示的最小正数即最接近 0 的正数 (实际上不会变成 0)。最大的负数是 -MIN_VALUE。
+能表示的最小正数即最接近 0 的正数 (实际上不会变成 0)。最大的负数是 -MAX_VALUE。
 ```js
 console.log(Number.MIN_VALUE)              // 5e-324
 ```

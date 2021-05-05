@@ -4,7 +4,7 @@ next: /javascript-base/bigInt
 ---
 # Array.prototype.reduce
 
-reduce的核心在于降维，降数字reduce为一个值，比如求和：
+reduce的核心在于降维，降数字reduce为一个值，比如求和，而且遍历数组：
 
 ```js
 
@@ -22,7 +22,7 @@ map方法可以通过reduce方法实现
 
 Array.prototype.custMap = function(fn) {
    return this.reduce((acc, v, i) => {
-       return x.concat(fn(v, i, this))
+       return acc.concat(fn(v, i, this))
    },[])
 }
 
@@ -48,6 +48,9 @@ Array.prototype.custEvery = function(fn) {
 ```js
 
 Array.prototype.custFind = function(fn) {
+    if(!this.length) {
+        return 
+    }
     return this.reduce((acc, v, i) => {
         return acc === undefined && fn(v, i, this) ? val: acc
     })
@@ -74,7 +77,7 @@ Array.prototype.custIndexOf = function(value) {
 
 Array.prototype.custFilter = function(fn) {
     return this.reduce((acc, v, i) => {
-        return fn(v) ? acc.concat(v) : acc
+        return fn(v, i, this) ? acc.concat(v) : acc
     }, [])
 }
 

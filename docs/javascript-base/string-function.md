@@ -7,4 +7,7 @@ next: /javascript-base/symbol-function
 
 JavaScript 的 String 对象是经过封装的能让你处理字符串的对象。
 
-String.formCharCode  
+**String.formCharCode**
+
+
+**String.prototype.charAt**
