@@ -14,10 +14,10 @@
 
 4.打开谷歌浏览器，网址输入chrome://extensions/，
 
-![devtools](../images/react/devtools_1.png)
+![devtools](../images/react/devtools-1.png)
 
 选择react-detools-3目录下的shells->chrome中build目录中的unpacked即可
 
 到此 react-devtools安装成功!
 
-![devtools](../images/react/devtools_2.png)
+![devtools](../images/react/devtools-2.png)

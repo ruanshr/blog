@@ -13,9 +13,20 @@ DOM window对象通过history对象提供了对浏览器的会话历史的访问
 这和用户点击浏览器中退回按钮的效果相同。类似的，也可以向前跳转（如果点击了后退按钮）
 
 
-### 利用HTML5的history.replacestate()修改当前页面的URL
+### 利用HTML5的history.replaceState()修改当前页面的URL
 
 HTML5为history对象添加了两个新方法，history.pushState()和history.replaceState()，用来在浏览历史中添加和修改记录。state属性用来保存记录对象，而popstate事件用来监听history对象的变化
+
+```js
+
+// http://xxx.xx.com/a/b.html
+
+history.replaceState(null, null, '/c/d.html')
+
+// http://xxx.xx.com/c/d.html
+
+// 页面并没有重新刷新，只是改变了地址栏地址
+```
 
 **history.pushState**
 history.pushState()方法向浏览器历史添加了一个状态(增加一个记录)。pushState()方法带有三个参数：一个状态对象、一个标题(现在被忽略了)以及一个可选的URL地址

@@ -12,12 +12,12 @@
 
 下面这张图是微服务的示意图，微服务主要是业务模块按照一定的规则拆分，独立开发，独立部署，部署后通过 Nginx 做路由转发，微服务的难点是需要考虑多个模块之间如何调用的问题，以及鉴权，日志，甚至加入网关层
 
- ![micro-frontends](../images/section/micro_frontends.png)
+ ![micro-frontends](../images/section/micro-frontends.png)
  
 
 对于微服务来说，模块分开解藕基本就完事了，但是微前端不一样，前端应用在运行时却是一个整体，需要聚合，甚至还需要交互，通信。
 
-![micro-frontends](../images/section/micro_frontends-1.png)
+![micro-frontends](../images/section/micro-frontends-1.png)
 
 ### 为什么需要微前端（Micro Front-end）
 
@@ -79,7 +79,7 @@
  
 
 
-![micro-frontends](../images/section/micro_frontends-2.png)
+![micro-frontends](../images/section/micro-frontends-2.png)
  
 
 ### 应用注册，加载，销毁机制
@@ -212,7 +212,7 @@ Github 仓储地址：ngx-planet
 不敢说 “你见过最完善的微前端解决方案” ，但至少是 Angular 社区目前我见过完全可用于生产环境的方案，API 符合 Angular Style ，国内很多大厂做微前端方案基本都忽略了 Angular 这个框架的存在，Worktile 四个研发子产品完全基于  ngx-planet  打造开发，经过接近一年的踩坑和实践，基本完全可用。
 
 
-![micro-frontends](../images/section/micro_frontends-3.png)
+![micro-frontends](../images/section/micro-frontends-3.png)
  
 
 希望 Angular 社区可以多一些微前端的解决方案，一起进步，我们的方案肯定也存在很多问题，也欢迎大家提出改进的建议和吐槽，我们也将继续在 Angular 微前端的路上继续深耕下去，如果你正在寻找 Angular 的微前端类库，不妨试试 ngx-planet。
