@@ -7,7 +7,7 @@ function convertArray(array, k) {
     let left = i * k
     let right = i * k + k - 1
     while (left < right) {
-      [array[right], array[left]] = [array[left], array[right]]
+      ;[array[right], array[left]] = [array[left], array[right]]
       left++
       right--
     }

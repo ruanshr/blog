@@ -1,6 +1,5 @@
 # 找出字符串中最长重复的子串
 
-
 ```js
 
 function findSubString(str, substr) {

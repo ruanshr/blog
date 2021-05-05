@@ -9,7 +9,7 @@ next: /javascript-extend/jslint
 2. JS运行的时候，会有栈内存（stack）和堆内存（heap），当我们new一个类的时候，这个new出来的对象就报错在heap里，而这个对象的引用则存储在stack里。程序通过stack的引用找到这个对象。例如：var a = [1,2,3], heap里存储着内容[1,2,3]的Array对象
 3. 打开调试工具，点击Memory中的Profiles标签，选中“Take heap Snapshot”,点击“start”按钮，就可以拍到当前JS的heap快照了。
 
-![profiles](../images/js-memory/1.png)
+![profiles](../images/javascript/js-memory/1.png)
 
 右边视图中列出了heap里面的对象列表
 * constructor:     类名
@@ -21,7 +21,7 @@ next: /javascript-extend/jslint
 点击上图左上角的黑圈圈，会出现第二个内存快照
 
 ## 2、 内存泄漏的排查
-![profiles](../images/js-memory/2.png)
+![profiles](../images/javascript/js-memory/2.png)
 
 将上图框框切换到comparise（对照）选项，该视图列出了当前实体与上个实体的对象差异
 

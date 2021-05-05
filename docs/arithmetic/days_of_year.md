@@ -2,10 +2,10 @@
 
 ```js
 function isYunYear(year) {
-    if(year % 400 === 0) {
-        return true     
-    }
-    return  year % 4 === 0 && year % 100 !== 0
+  if (year % 400 === 0) {
+    return true
+  }
+  return year % 4 === 0 && year % 100 !== 0
 }
 
 function getDays(str) {
@@ -14,8 +14,8 @@ function getDays(str) {
   let totalDays = day
   for (let i = 0; i < month - 1; i++) {
     totalDays += months[i]
-    if(i > 2 && isYunYear(year)) {
-        totalDays += 1
+    if (i > 2 && isYunYear(year)) {
+      totalDays += 1
     }
   }
   return totalDays

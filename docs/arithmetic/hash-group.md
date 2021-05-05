@@ -8,24 +8,20 @@
 
 输出
 
-[
-    ['ate', 'eat', 'tea'],
-    ['nat', 'tan'],
-    ['bat']
-]
+```js
+[['ate', 'eat', 'tea'], ['nat', 'tan'], ['bat']]
+```
 
 ```js
-
 function groupAnagrams(strs) {
-    let hash = {}
-    for(let str of strs) {
-        let key = [ ...str ].sort().join()
-        if(hash[key] === undefined) {
-            hash[key] = []
-        }
-        hash[key].push(str)
+  let hash = {}
+  for (let str of strs) {
+    let key = [...str].sort().join()
+    if (hash[key] === undefined) {
+      hash[key] = []
     }
-    return Object.keys(hash).map(key => hash[key])
+    hash[key].push(str)
+  }
+  return Object.keys(hash).map(key => hash[key])
 }
-
 ```
