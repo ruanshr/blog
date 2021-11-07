@@ -188,12 +188,14 @@ console.log(arr3) // [1,2,3,4,5,6,7,8,9]
 
 ## Array.prototype.includes
 includes() 方法 判断元素是否存在于当前数组，结果为布尔值，其比较的是 === ， 其等价于  indexOf
+而且优化了NaN的判断，存在则会返回为true
 ```js
 const a = [1,2,3,7];
 const b = a.includes(1);     // true
 const c = a.includes(4);     // false
 const d = a.includes('1');   // false
-
+const e = [NaN].inculdes(NaN) // true
+const f = [NaN].indexOf(NaN) // -1
 const students =  [{name:'Jack'},{name:'Marry'}];
 
 const exist = students.includes({name:'Jack'})  // false  对象引用值不同
