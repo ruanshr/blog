@@ -209,7 +209,7 @@ npm-[package name]-[version]-[shasum]`
 我们可以通过命令查看已经缓存过的包。
 yarn cache list    列出已缓存的每个包
 
-yarn cache list --pattern <pattern>  列出匹配指定模式的已缓存的包
+yarn cache list --pattern &lt;pattern&gt;  列出匹配指定模式的已缓存的包
 复制代码例如执行 yarn cache list --pattern vue
 
 yarn.lock
@@ -262,7 +262,7 @@ yarn install 安装依赖
 
 yarn install / yarn  在本地 node_modules 目录安装 package.json 里列出的所有依赖
 yarn install --force 重新拉取所有包，即使之前已经安装的（所以以后别在删除node-modules了...）
-yarn install --modules-folder <path> 为 node_modules 目录指定另一位置，代替默认的 ./node_modules
+yarn install --modules-folder &lt;path&gt; 为 node_modules 目录指定另一位置，代替默认的 ./node_modules
 yarn install --no-lockfile 不读取或生成 yarn.lock 文件
 yarn install --production[=true|false] / --production / --prod 只安装 dependence下的包，不安装 devDependencies 的包
 
@@ -270,19 +270,19 @@ yarn install --production[=true|false] / --production / --prod 只安装 depende
 yarn add
 
 yarn add package-name 会安装 latest 最新版本。
-yarn add <package...>  安装包到dependencies中
-yarn add <package...> [--dev/-D]  用 --dev 或 -D 安装包到 devDependencies
-yarn add <package...> [--peer/-P]  用 --peer 或者 -P 安装包到 peerDependencies
-yarn add <package...> [--optional/-O] 用 --optional 或者 -O 安装包到 optionalDependencies 
-yarn add <package...> [--exact/-E] 用 --exact 或者 -E 会安装包的精确版本。默认是安装包的主要版本里的最新版本。 比如说， yarn add foo@1.2.3 会接受 1.9.1 版，但是 yarn add foo@1.2.3 --exact 只会接受 1.2.3 版。
+yarn add &lt;package...&gt;  安装包到dependencies中
+yarn add &lt;package...&gt; [--dev/-D]  用 --dev 或 -D 安装包到 devDependencies
+yarn add &lt;package...&gt; [--peer/-P]  用 --peer 或者 -P 安装包到 peerDependencies
+yarn add &lt;package...&gt; [--optional/-O] 用 --optional 或者 -O 安装包到 optionalDependencies 
+yarn add &lt;package...&gt; [--exact/-E] 用 --exact 或者 -E 会安装包的精确版本。默认是安装包的主要版本里的最新版本。 比如说， yarn add foo@1.2.3 会接受 1.9.1 版，但是 yarn add foo@1.2.3 --exact 只会接受 1.2.3 版。
 yarn add <package...> [--tilde/-T]  用 --tilde 或者 -T 来安装包的次要版本里的最新版。 默认是安装包的主要版本里的最新版本。 比如说，yarn add foo@1.2.3 --tilde 会接受 1.2.9，但不接受 1.3.0。
 复制代码
 yarn config 管理配置文件
 
-yarn config get <key> 查看配置key的值
+yarn config get &lt;key&gt; 查看配置key的值
 yarn config list 查看当前的配置
-yarn config delete <key> 从配置中删除配置key
-yarn config set <key> <value> [-g|--global] 设置配置项 key 的值为 value
+yarn config delete &lt;key&gt; 从配置中删除配置key
+yarn config set &lt;key&gt; &lt;value&gt; [-g|--global] 设置配置项 key 的值为 value
 复制代码
 其他常用命令
 

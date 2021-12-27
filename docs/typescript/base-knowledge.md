@@ -2,7 +2,7 @@
 
 最近在新环境的日常工作中也需要用到 TypeScript，学习过程中遇到一些疑惑，做了记录
 
-- ts 类型中的?，<>意思是什么？
+- ts 类型中的?，&lt;&gt;意思是什么？
 
 - 什么是 duck typing？
 
@@ -78,7 +78,7 @@ var nullable
 
 例子中，options?:?Object 的意思是 options 的值类型可以是 Object，null（仅在 strictNullChecks 为 true 时允许）。
 
-### ts 类型中的<>什么意思？
+### ts 类型中的&lt;&gt;什么意思？
 
 ```js
 deps: Array<Dep>a
@@ -350,7 +350,7 @@ function log(value: any): any {
 }
 ```
 
-通过泛型函数可以精准实现：函数名后加一个<T>这里的 T 可以理解为泛型的名字。指定输入类型为 T，返回值为 T。
+通过泛型函数可以精准实现：函数名后加一个&lt;T&gt;这里的 T 可以理解为泛型的名字。指定输入类型为 T，返回值为 T。
 
 ```js
 function log<T>(value: T): T {
@@ -396,9 +396,9 @@ myLog('s') // "s"
 myLog(1) // Error
 ```
 
-ts 中的<>
+ts 中的&lt;&gt;
 
-在 ts 中，遇到<>的话，尖括号中间大多情况下都是类型。
+在 ts 中，遇到&lt;&gt;的话，尖括号中间大多情况下都是类型。
 
 ```js
 Array<string>
@@ -509,7 +509,7 @@ console.log("Square side length", shape.sideLength);
 
 避免将类型推断为联合类型。
 
-避免将类型推断为 (boolean | typeof load)[]，而是推断为[boolean, typeof load]。
+避免将类型推断为 (boolean | typeof load)，而是推断为[boolean, typeof load]。
 
 ```js
 export function useLoading() {

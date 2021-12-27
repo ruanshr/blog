@@ -17,7 +17,7 @@ Lighthouse 是直接集成到 chrome 开发者工具中的，位于‘Audits’�
 然后点击“Run audits”，之后就是等待生成评估界面。
 
 
-![lighthouse](../images/section/lighthouse_1.png)
+<!-- ![lighthouse](../images/section/lighthouse_1.png) -->
 
 ### 2、使用 Node Cli
 
@@ -42,6 +42,6 @@ $ lighthouse https://www.baidu.com
 
 在这里面你可以看到它给你各个方面的建议，比如图片、css、js 这些文件的处理，还有 html 里面标签的使用，缓存处理等建议，可以根据这些来对网站进行优化。
 
-![lighthouse](../images/section/lighthouse_report.png)
+<!-- ![lighthouse](../images/section/lighthouse_report.png) -->
 
 ### 3、附上 Lighthouse 的 git 地址，更为详细的内容，可以去参考 git：https://github.com/GoogleChrome/lighthouse
