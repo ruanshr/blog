@@ -1,6 +1,6 @@
 ---
-prev: false
-next: /http/http-cache
+prev: /http/domain
+next: /http/http-base
 ---
 
 # HTTP 304状态码的详细讲解

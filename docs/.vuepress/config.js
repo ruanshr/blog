@@ -9,6 +9,7 @@ module.exports = {
     editLinkText: 'Edit this page',
     lastUpdated: '更新日期',
     sidebar: {
+      '/css/': ['css-animate-transition'],
       '/vue/': ['eslint-config', 'question'],
       '/javascript-base/': ['format','es6-format','es6-proxy','p6-questions','dom-api','js-memory','array-function'],
       '/nodejs/': ['introduction', 'koa']
@@ -22,6 +23,18 @@ module.exports = {
         text: 'javascript',
         link: '/javascript-base/format',
         items: [
+          {
+            text: 'css动画',
+            link: '/css/css-animate-transition'
+          },
+          {
+            text: 'git命令',
+            link: '/git/git-commit'
+          },
+          {
+            text: 'http跨域',
+            link: '/http/domain'
+          },
           {
             text: 'JavaScript 风格指南',
             link: '/javascript-base/format'

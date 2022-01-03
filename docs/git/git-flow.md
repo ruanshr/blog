@@ -1,6 +1,6 @@
 ---
-prev: /javascript/garbage
-next: /javascript/html-load
+prev: /git/git-commit
+next: /git/git-operation
 ---
 
 # 如何规范 Git 版本分支的管理
