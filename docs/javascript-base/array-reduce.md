@@ -91,7 +91,7 @@ const flat1 = arr => [].concat(...arr)
 
 const flat2 = arr => arr.reduce(arr, v => arr.concat(v), [])
 
-const flatAllX = arr => arr.reduce((acc, v) => Array.isArray(v) ? acc.concat(flatAllX(v)) : acc.concat(v))
+const flatAllX = arr => arr.reduce((acc, v) => Array.isArray(v) ? acc.concat(flatAllX(v)) : acc.concat(v), [])
 
 
 Array.prototype.custFlatAll = function custFlatAll() {
