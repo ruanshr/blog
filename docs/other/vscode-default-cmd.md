@@ -32,7 +32,7 @@ ctrl + shift + ~
       "icon": "terminal-cmd"
     },
     "Git": {
-      "path": "XXX\\Git\\bin\\base.exe"
+      "path": "XXX\\Git\\bin\\bash.exe"
     }
   },
   "terminal.integrated.defaultProfile.windows": "Git"
