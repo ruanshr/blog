@@ -217,7 +217,7 @@ type Instance = InstanceType<typeof TestClass>;         // TestClass
 
 #### ReturnType
 
-ReturnType<T>的作用是用于获取函数 T 的返回类型。
+**ReturnType&lt;T&gt;**的作用是用于获取函数 T 的返回类型。
 
 定义：
 
