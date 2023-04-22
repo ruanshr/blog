@@ -10,7 +10,7 @@ npm install reat-router-dom
 
 ### 入门
 
-用 React + React Router Dom 创建单页应用非常简单：通过 React.js，我们已经用组件组成了我们的应用。当加入 Router 时，我们需要做的就是将我们的组件映射到路由上，让 Router 知道在哪里渲染它们。下面是一个基本的例子：
+用 React + [React Router Dom](https://reactrouter.com/en/main/routers/create-browser-router) 创建单页应用非常简单：通过 React.js，我们已经用组件组成了我们的应用。当加入 Router 时，我们需要做的就是将我们的组件映射到路由上，让 Router 知道在哪里渲染它们。下面是一个基本的例子：
 
 **App.tsx**
 
