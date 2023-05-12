@@ -3,7 +3,7 @@
 ### FiberRoot
 
 ```js
-type BaseFiberRootProperties = {|
+type BaseFiberRootProperties = {
   // root节点，render方法接收的第二个参数
   containerInfo: any,
   // 只有在持久更新中会用到，也就是不支持增量更新的平台，react-dom不会用到

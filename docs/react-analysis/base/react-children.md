@@ -1,5 +1,5 @@
 ---
-prev: /react-analysis/base/reactElement
+prev: /react-analysis/base/react-element
 next: /react-analysis/base/react-structure
 ---
 
