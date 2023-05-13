@@ -49,7 +49,10 @@ function push<T>(cursor: StackCursor<T>, value: T, fiber: Fiber): void {
 
 而在这个唯一的数组上要存储以下不怎么相关的数据：
 
--`childContext`-`NewContext`-`HostContext`-`HostContainer`
+- `childContext`
+- `NewContext`
+- `HostContext`
+- `HostContainer`
 
 为了能够在同一个栈中区分不同的功能，`React`设计了一个`StackCursor`类型，用来区分不同的类型的数据的当前值。对于`cursor`的操作很简单，入栈的时候设置`cursor.current`为新的值，出栈的时候设置`cursor.current`为上一个值
 

@@ -5,7 +5,7 @@ next: /react-analysis/features/event-create-event-object
 
 # 事件触发
 
-之前我们已经讲了事件是绑定在`container` 上的，那么具体事件触发的时候是如何派发到具体的监听者上的呢？这里我们就往下看，假设我们绑定的是`dispatchInteractiveEvent` 方法，那么我们来看看他的实现过程：
+之前我们已经讲了事件是绑定在`container`上的，那么具体事件触发的时候是如何派发到具体的监听者上的呢？这里我们就往下看，假设我们绑定的是`dispatchInteractiveEvent`方法，那么我们来看看他的实现过程：
 
 ```js
 function dispatchInteractiveEvent(topLevelType, nativeEvent) {
@@ -21,7 +21,7 @@ let _interactiveUpdatesImpl = function (fn, a, b) {
 }
 ```
 
-这里简单来说就是调用了`dispatchEvent(topLevelType, nativeEvent)`，`topLevelType` 就是`onClick` 这类得`React` 中得`props` 名字，`nativeEvent` 就是`DOM` 事件对象。那么我们来看`dispatchEvent`
+这里简单来说就是调用了`dispatchEvent(topLevelType, nativeEvent)`，`topLevelType`就是`onClick`这类得`React`中得`props`名字，`nativeEvent`就是`DOM`事件对象。那么我们来看`dispatchEvent`
 
 ```js
 export function dispatchEvent(topLevelType: DOMTopLevelEventType, nativeEvent: AnyNativeEvent) {
@@ -53,7 +53,7 @@ function getEventTarget(nativeEvent) {
 }
 ```
 
-这里主要创建了`bookKeeping` 对象，包含了事件名称，原始事件对象，以及最近的`Fiber` 对象，然后调用`batchedUpdates`，我们来看看这个方法：
+这里主要创建了`bookKeeping`对象，包含了事件名称，原始事件对象，以及最近的`Fiber`对象，然后调用`batchedUpdates`，我们来看看这个方法：
 
 ```js
 // 来自'events/ReactGenericBatching'
@@ -79,7 +79,7 @@ let _batchedUpdatesImpl = function (fn, bookkeeping) {
 }
 ```
 
-其实就是设置了一下`isBatching` 这个公共变量，然后调用`handleTopLevel`，接着看
+其实就是设置了一下`isBatching`这个公共变量，然后调用`handleTopLevel`，接着看
 
 ```js
 function handleTopLevel(bookKeeping) {
@@ -121,7 +121,7 @@ function findRootContainerNode(inst) {
 }
 ```
 
-这里简单来说如果目标节点在`portal` 内，那么需要包括`portal` 外部的节点，对于每个`ancestor`，调用`runExtractedEventsInBatch`
+这里简单来说如果目标节点在`portal`内，那么需要包括`portal`外部的节点，对于每个`ancestor`，调用`runExtractedEventsInBatch`
 
 ```js
 export function runExtractedEventsInBatch(
@@ -160,7 +160,7 @@ function extractEvents(
 }
 ```
 
-这里开始生成事件，调用每个`plugin` 的`extractEvents` 方法来生产事件，并调用`accumulateInto` 来合并事件
+这里开始生成事件，调用每个`plugin`的`extractEvents`方法来生产事件，并调用`accumulateInto`来合并事件
 
 ```js
 function accumulateInto<T>(current: ?(Array<T> | T), next: T | Array<T>): T | Array<T> {
@@ -185,7 +185,7 @@ function accumulateInto<T>(current: ?(Array<T> | T), next: T | Array<T>): T | Ar
 }
 ```
 
-这个方法主要是判断当前的`events` 和`next` 对应的刚产生的`event`，因为他们都可能是单个事件或者是数组，最终目的是要达成数组合并，最终返回一个数组，事件生产好之后，调用`runEventsInBatch`，接下去看
+这个方法主要是判断当前的`events`和`next`对应的刚产生的`event`，因为他们都可能是单个事件或者是数组，最终目的是要达成数组合并，最终返回一个数组，事件生产好之后，调用`runEventsInBatch`，接下去看
 
 ```js
 export function runEventsInBatch(

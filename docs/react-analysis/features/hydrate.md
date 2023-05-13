@@ -51,11 +51,11 @@ function getReactRootElementInContainer(container: any) {
 
 在更新到`HostRoot`的时候，就正式开始了`hydrate`的流程，`hydrate`是一个整体的模块设计，会存在着一系列的公共变量
 
-| 变量名                   | 作用                              |
-| ------------------------ | --------------------------------- |
-|`nextHydratableInstance`| 下一个可以被`hydrate`的节点     |
-|`isHydrating`           | 是否正在`hydrate`               |
-|`hydrationParentFiber`  | 下一个被`hydrate`的节点的父节点 |
+| 变量名                   | 作用                            |
+| ------------------------ | ------------------------------- |
+| `nextHydratableInstance` | 下一个可以被`hydrate`的节点     |
+| `isHydrating`            | 是否正在`hydrate`               |
+| `hydrationParentFiber`   | 下一个被`hydrate`的节点的父节点 |
 
 `supportsHydration`来自于`HostConfig.js`，在`ReactDOM`中，他是固定值`true`
 
@@ -327,7 +327,7 @@ export function diffHydratedText(textNode: Text, text: string): boolean {
 }
 ```
 
-### 删除多余的 DOM 节点 deleteHydratableInstance 
+### 删除多余的 DOM 节点 deleteHydratableInstance
 
 最终的删除要放到`commit`阶段去做，所以这里专门为了记录删除行为创建了`Fiber`对象，用于记录`side effect`，并加入到了`effect`链上。
 

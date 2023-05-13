@@ -3,7 +3,9 @@ prev: /react-analysis/features/event-dispatch
 next: /react-analysis/features/suspense-component
 ---
 
-# 创建 event 对象
+# 事件对象生成
+
+### 创建 event 对象
 
 在触发事件的过程中，我们会调用每个插件的`extractEvents`方法来创建对应的事件，这里我们就看看事件创建的过程。这里我们拿最常用的事件之一`onChange`来举例，主要看的是`ChangeEventPlugin.js`
 

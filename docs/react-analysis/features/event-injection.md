@@ -84,13 +84,13 @@ const ChangeEventPlugin = {
 
 ### 注册插件
 
-| 变量名                     | 作用                                                                            |
-| -------------------------- | ------------------------------------------------------------------------------- |
-|`eventPluginOrder`        | 记录插件的调用顺序                                                              |
-|`namesToPlugins`          | 以插件名为`key`的插件`map`                                                  |
-|`plugins`                 | 按照`eventPluginOrder`顺序存储的插件模块数组                                  |
-|`eventNameDispatchConfigs`| 按照每个插件中的 eventTypes 中的每一项为`key`，其对应的对象为`value`的对象   |
-|`registrationNameModules` | 存储有`phasedRegistrationNames`或者`registrationName`的插件的事件对应的模块 |
+| 变量名                     | 作用                                                                        |
+| -------------------------- | --------------------------------------------------------------------------- |
+| `eventPluginOrder`         | 记录插件的调用顺序                                                          |
+| `namesToPlugins`           | 以插件名为`key`的插件`map`                                                  |
+| `plugins`                  | 按照`eventPluginOrder`顺序存储的插件模块数组                                |
+| `eventNameDispatchConfigs` | 按照每个插件中的 eventTypes 中的每一项为`key`，其对应的对象为`value`的对象  |
+| `registrationNameModules`  | 存储有`phasedRegistrationNames`或者`registrationName`的插件的事件对应的模块 |
 
 首先调用`injectEventPluginOrder`，设置`eventPluginOrder`
 
@@ -106,7 +106,7 @@ const ChangeEventPlugin = {
 
 ### 结构
 
-**`eventNameDispatchConfigs`**
+**eventNameDispatchConfigs**
 
 ```js
 {
@@ -115,7 +115,7 @@ const ChangeEventPlugin = {
 }
 ```
 
-**`registrationNameModules`**
+**registrationNameModules**
 
 ```js
 {
@@ -124,7 +124,7 @@ const ChangeEventPlugin = {
 }
 ```
 
-**`registrationNameDependencies`**
+**registrationNameDependencies**
 
 ```js
 {
