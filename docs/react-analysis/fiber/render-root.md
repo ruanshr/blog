@@ -43,7 +43,7 @@ function workLoop(isYieldy) {
 
 首先判断是否有`nextUnitOfWork`，如果是预期错误那么这个值是存在的，如果不存在代表是 React 无法预期的错误
 
-如果存在，在开发时会调用`replayUnitOfWork`重放一下。然后看一下`nextUnitOfWork.return`是否存在，如果不存在也是无法预期的错误。然后执行`throwException`，这个方法非常重要，我单独写一篇文章进行分析，看这里
+如果存在，在开发时会调用`replayUnitOfWork`重放一下。然后看一下`nextUnitOfWork.return`是否存在，如果不存在也是无法预期的错误。然后执行`throwException`，这个方法非常重要，我单独写一篇文章进行分析，看[这里](./render-root/throw-exception.md)
 
 在`throwException`之后会直接调用`completeWork`当前的`nextUnitOfWork`，因为他已经报错了，所以没必要再渲染他的子节点了。
 

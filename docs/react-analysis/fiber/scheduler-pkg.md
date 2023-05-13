@@ -1,3 +1,8 @@
+---
+prev: /react-analysis/fiber/schedule-work
+next: /react-analysis/fiber/perform-work
+---
+
 # scheduler
 
 `React16.5` 之后把`scheduler`单独发一个包了，就叫`scheduler`

@@ -1,3 +1,8 @@
+---
+prev: /react-analysis/fiber/render-root
+next: /react-analysis/fiber/reconcile-children
+---
+
 # beginWork
 
 这个版本`React`优化了是否需要更新的验证，直接放在`beginWork`的顶部
@@ -27,8 +32,9 @@ if (
 
 关于`stack`和`context`看[这里](../features/context.md)
 
+`bailoutOnAlreadyFinishedWork`
+
 ```js
-bailoutOnAlreadyFinishedWork
 function bailoutOnAlreadyFinishedWork(
   current: Fiber | null,
   workInProgress: Fiber,
@@ -44,24 +50,24 @@ function bailoutOnAlreadyFinishedWork(
 }
 ```
 
-这里根据之前设置的 `childExpirationTime` 来判断子树是否需要更新，如果子树也不需要更新则就直接` return null `了，代表可以直接 `complete` 了。如果有更新还是需要调和子节点。
+这里根据之前设置的 `childExpirationTime` 来判断子树是否需要更新，如果子树也不需要更新则就直接`return null`了，代表可以直接 `complete` 了。如果有更新还是需要调和子节点。
 
 如果不能跳过，那么就根据节点类型进行更新了：
 
-- [`mountIndeterminateComponent`](./begin-work/update-context-consumer.md)
-- [`mountLazyComponent`](./begin-work/update-context-consumer.md)
-- [`updateFunctionComponent`](./begin-work/update-context-consumer.md)
-- [`updateClassComponent`](./begin-work/update-context-consumer.md)
-- [`updateHostRoot`](./begin-work/update-context-consumer.md)
-- [`updateHostComponent`](./begin-work/update-context-consumer.md)
-- [`updateHostText`](./begin-work/update-context-consumer.md)
-- [`updateSuspenseComponent`](./begin-work/update-context-consumer.md)
-- [`updatePortalComponent`](./begin-work/update-context-consumer.md)
-- [`updateForwardRef`](./begin-work/update-context-consumer.md)
-- [`updateFragment`](./begin-work/update-context-consumer.md)
-- [`updateMode`](./begin-work/update-context-consumer.md)
-- [`updateProfiler`](./begin-work/update-context-consumer.md)
-- [`updateContextProvider`](./begin-work/update-context-consumer.md)
+- [`mountIndeterminateComponent`](./begin-work/mount-indeterminate-component.md)
+- [`mountLazyComponent`](./begin-work/mount-lazy-component.md)
+- [`updateFunctionComponent`](./begin-work/update-functional-component.md)
+- [`updateClassComponent`](./begin-work/update-class-component.md)
+- [`updateHostRoot`](./begin-work/update-host-root.md)
+- [`updateHostComponent`](./begin-work/update-host-component.md)
+- [`updateHostText`](./begin-work/update-host-text.md)
+- [`updateSuspenseComponent`](./begin-work/update-suspense-component.md)
+- [`updatePortalComponent`](./begin-work/update-portal-component.md)
+- [`updateForwardRef`](./begin-work/update-forward-ref.md)
+- [`updateFragment`](./begin-work/update-fragment.md)
+- [`updateMode`](./begin-work/update-mode.md)
+- [`updateProfiler`](./begin-work/update-profiler.md)
+- [`updateContextProvider`](./begin-work/update-context-provider.md)
 - [`updateContextConsumer`](./begin-work/update-context-consumer.md)
 
 ```js

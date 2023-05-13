@@ -1,12 +1,12 @@
 # reconcileSingleElement
 
-第一个 while 循环的目的明显就是找到老的 children 和新的 children 中第一个 key 和节点类型相同的节点，直接复用这个节点，然后删除老的 children 中其他的（我们无法保证新的 children 是单个节点的时候老的 children 也是单个的，所以要用遍历。）
+第一个 while 循环的目的明显就是找到老的`children`和新的`children`中第一个 key 和节点类型相同的节点，直接复用这个节点，然后删除老的`children`中其他的（我们无法保证新的`children`是单个节点的时候老的`children`也是单个的，所以要用遍历。）
 
-注意 key 为 null 我们也认为是相等，因为单个节点没有 key 也是正常的
+注意`key`为`null`我们也认为是相等，因为单个节点没有`key`也是正常的
 
-如果找了一圈没发现，那么就把老的`children` 都删了，重新为新的`children` 创建节点。
+如果找了一圈没发现，那么就把老的`children`都删了，重新为新的`children`创建节点。
 
-coerceRef 的作用是把规范化`ref`，因为`ref` 有三种形式，`string ref` 要转换成方法。
+coerceRef 的作用是把规范化`ref`，因为`ref`有三种形式，`string ref`要转换成方法。
 
 ```js
 function coerceRef(returnFiber: Fiber, current: Fiber | null, element: ReactElement) {
@@ -58,7 +58,7 @@ function coerceRef(returnFiber: Fiber, current: Fiber | null, element: ReactElem
 }
 ```
 
-这个方法可以看出来会把 string ref 转换成一个方法，最终会把对象设置到 inst.refs 上。
+这个方法可以看出来会把`string ref`转换成一个方法，最终会把对象设置到`inst.refs`上。
 
 ```js
 function reconcileSingleElement(
@@ -119,8 +119,9 @@ function reconcileSingleElement(
 }
 ```
 
-reconcileSinglePortal
-portal 其实就是特殊的 ReactElement，他的$$typeof 不是 REACT_ELEMENT_TYPE。但是他们的处理方式其实差不多，也都是循环老的 children 找能复用的，找不到就创建新的，只是创建 Fiber 的方法不一样。
+### reconcileSinglePortal
+
+`portal`其实就是特殊的`ReactElement`，他的`$$typeof`不是`REACT_ELEMENT_TYPE`。但是他们的处理方式其实差不多，也都是循环老的`children`找能复用的，找不到就创建新的，只是创建`Fiber`的方法不一样。
 
 ```js
 function reconcileSinglePortal(
@@ -158,8 +159,9 @@ function reconcileSinglePortal(
 }
 ```
 
-reconcileSingleTextNode
-文字节点的对比比较简单粗暴，直接找老的 children 中的第一个节点，如果是文字节点就复用，如果不是就删除全部老的节点，创建新的文字节点。
+### reconcileSingleTextNode
+
+文字节点的对比比较简单粗暴，直接找老的`children`中的第一个节点，如果是文字节点就复用，如果不是就删除全部老的节点，创建新的文字节点。
 
 ```js
 function reconcileSingleTextNode(

@@ -1,3 +1,8 @@
+---
+prev: /react-analysis/fiber/schedule-global
+next: /react-analysis/fiber/scheduler-pkg
+---
+
 # scheduleWork
 
 这里先 `scheduleWorkToRoot`，这一步非常重要，他主要做了一下几个任务

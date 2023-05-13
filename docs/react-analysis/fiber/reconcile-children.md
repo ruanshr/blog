@@ -1,3 +1,8 @@
+---
+prev: /react-analysis/fiber/begin-work
+next: /react-analysis/fiber/commit-phase/commit-root
+---
+
 # reconcileChildren
 
 该方法最终调用的是 reconcileChildFibers

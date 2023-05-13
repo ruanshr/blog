@@ -1,3 +1,8 @@
+---
+prev: /react-analysis/update/expiration-time
+next: /react-analysis/fiber/schedule-work
+---
+
 # 全局变量
 
 ### 在 FiberScheduler 中的全局变量

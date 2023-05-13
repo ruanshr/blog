@@ -1,3 +1,8 @@
+---
+prev: /react-analysis/fiber/perform-work
+next: /react-analysis/fiber/render-root
+---
+
 # performUnitOfWork
 
 这个方法还是比较好理解的
@@ -122,7 +127,7 @@ function bailoutOnAlreadyFinishedWork(
 
 最主要的是看最后面的判断，如果`childExpirationTime === NoWork || childExpirationTime > renderExpirationTime`成立，也就是他的子树上没有更新，他返回的是`null`，回想一下`performUnitOfWork`的逻辑，这里`return null`代表着`next`是`null`，就直接`completeUnitOfWork`了，就不解析`child`了。
 
-如果不满足就是复用当前 Fiber 对象，然后返回他的子节点，因为他的子节点还是有工作要做的。
+如果不满足就是复用当前 `Fiber` 对象，然后返回他的子节点，因为他的子节点还是有工作要做的。
 
 然后就是根据`element`的不同类型执行不同的`update。`
 

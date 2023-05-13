@@ -1,5 +1,5 @@
 ---
-prev: /react-analysis/commit-phase/commit-root
+prev: /react-analysis/fiber/reconcile-children
 next: /react-analysis/commit-phase/invoke-guarded-callback
 ---
 
