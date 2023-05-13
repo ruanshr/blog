@@ -1,3 +1,8 @@
+---
+prev: /react-analysis/base/react-children
+next: /react-analysis/update/react-dom-render
+---
+
 # React 中的数据结构
 
 ### FiberRoot

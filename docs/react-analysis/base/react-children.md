@@ -32,9 +32,9 @@ function mapIntoWithKeyPrefixInternal(children, array, prefix, func, context) {
 }
 ```
 
-`map` 和 `forEach` 的最大区别就是有没有 `return result`。
+`map`和`forEach`的最大区别就是有没有`return result`。
 
-`getPooledTraverseContext` 就是从 `pool` 里面找一个对象，`releaseTraverseContext` 会把当前的 `context` 对象清空然后放回到 `pool` 中。
+`getPooledTraverseContext`就是从`pool`里面找一个对象，`releaseTraverseContext`会把当前的`context`对象清空然后放回到`pool`中。
 
 ```js
 const POOL_SIZE = 10
@@ -60,7 +60,7 @@ function releaseTraverseContext(traverseContext) {
 }
 ```
 
-那么按照这个流程来看，是不是`pool`永远都只有一个值呢，毕竟推出之后操作完了就推入了，这么循环着。答案肯定是否的，这就要讲到 `React.Children.map` 的一个特性了，那就是对每个节点的`map` 返回的如果是数组，那么还会继续展开，这是一个递归的过程。接下去我们就来看看。
+那么按照这个流程来看，是不是`pool`永远都只有一个值呢，毕竟推出之后操作完了就推入了，这么循环着。答案肯定是否的，这就要讲到`React.Children.map`的一个特性了，那就是对每个节点的`map`返回的如果是数组，那么还会继续展开，这是一个递归的过程。接下去我们就来看看。
 
 ```js
 function traverseAllChildren(children, callback, traverseContext) {
@@ -130,7 +130,7 @@ function traverseAllChildrenImpl(children, nameSoFar, callback, traverseContext)
 }
 ```
 
-这里就是一层递归了，对于可循环的`children`，都会重复调用 `traverseAllChildrenImpl`，直到是一个节点的情况，然后调用 `callback`，也就是 `mapSingleChildIntoContext`
+这里就是一层递归了，对于可循环的`children`，都会重复调用`traverseAllChildrenImpl`，直到是一个节点的情况，然后调用`callback`，也就是`mapSingleChildIntoContext`
 
 ```js
 function mapSingleChildIntoContext(bookKeeping, child, childKey) {
@@ -155,13 +155,13 @@ function mapSingleChildIntoContext(bookKeeping, child, childKey) {
 }
 ```
 
-`mapSingleChildIntoContext` 这个方法其实就是调用 `React.Children.map(children, callback)`这里的 `callback`，就是我们传入的第二个参数，并得到 map 之后的结果。注意重点来了，如果 map 之后的节点还是一个数组，那么再次进入 mapIntoWithKeyPrefixInternal，那么这个时候我们就会再次从 `pool` 里面去 `context` 了，而 pool 的意义大概也就是在这里了，如果循环嵌套多了，可以减少很多对象创建和 `gc` 的损耗。
+`mapSingleChildIntoContext`这个方法其实就是调用`React.Children.map(children, callback)`这里的`callback`，就是我们传入的第二个参数，并得到 map 之后的结果。注意重点来了，如果 map 之后的节点还是一个数组，那么再次进入`mapIntoWithKeyPrefixInternal`，那么这个时候我们就会再次从`pool`里面去`context`了，而`pool`的意义大概也就是在这里了，如果循环嵌套多了，可以减少很多对象创建和`gc`的损耗。
 
 而如果不是数组并且是一个合规的`ReactElement`，就触达顶点了，替换一下`key`就推入`result`了。
 
-`React` 这么实现主要是两个目的：
+`React`这么实现主要是两个目的：
 
 - 拆分`map`出来的数组
 - 因为对 Children 的处理一般在`render`里面，所以会比较频繁，所以设置一个`pool`减少声明和`gc`的开销
 
-这就是 `Children.map` 的实现，虽然不算什么特别神奇的代码，但是阅读一下还是挺有意思的。
+这就是`Children.map`的实现，虽然不算什么特别神奇的代码，但是阅读一下还是挺有意思的。
