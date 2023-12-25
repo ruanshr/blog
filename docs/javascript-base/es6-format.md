@@ -1,7 +1,7 @@
 ---
-prev: /javascript-base/decorator
-next: /javascript-base/es6-proxy
+order: 1
 ---
+
 # ES6 代码规范
 
 **不再使用 var，而使用 let 和 const 。优先使用 const**
@@ -107,13 +107,13 @@ function sayHi(name) {
 
 ```js
 // bad
-;[1, 2, 3].map(function(x) {
+;[1, 2, 3].map(function (x) {
   const y = x + 1
   return x * y
 })
 
 // good
-;[1, 2, 3].map(x => {
+;[1, 2, 3].map((x) => {
   const y = x + 1
   return x * y
 })
@@ -123,7 +123,7 @@ function sayHi(name) {
 
 ```js
 // good
-;[1, 2, 3].map(x => x * x)
+;[1, 2, 3].map((x) => x * x)
 
 // good
 ;[1, 2, 3].reduce((total, n) => {
@@ -138,7 +138,7 @@ function sayHi(name) {
 function Queue(contents = []) {
   this._queue = [...contents]
 }
-Queue.prototype.pop = function() {
+Queue.prototype.pop = function () {
   const value = this._queue[0]
   this._queue.splice(0, 1)
   return value
@@ -166,7 +166,7 @@ function PeekableQueue(contents) {
   Queue.apply(this, contents)
 }
 inherits(PeekableQueue, Queue)
-PeekableQueue.prototype.peek = function() {
+PeekableQueue.prototype.peek = function () {
   return this._queue[0]
 }
 
@@ -186,7 +186,7 @@ var ref = 'some value'
 const atom = {
   ref: ref,
   value: 1,
-  addValue: function(value) {
+  addValue: function (value) {
     return atom.value + value
   }
 }
@@ -238,7 +238,7 @@ const goSportsTeam = true
 const dragonball = 'z'
 ```
 
-** 将所有的 const 和 let 分组**
+**将所有的 `const` 和 `let` 分组**
 
 **为什么？当你需要把已赋值变量赋值给未赋值变量时非常有用。**
 
@@ -265,7 +265,7 @@ let i
 let length
 ```
 
-**优先使用 === 和 !== 而不是 == 和 !=.**
+**优先使用 `===` 和 `!==` 而不是 `==` 和 `!=`.**
 
 **在对象声明的开头将您的简写属性分组 (写到一起)**
 
@@ -290,7 +290,7 @@ const obj = {
 }
 ```
 
-**在 BOOL 运算时使用简写。**
+**在 `BOOL` 运算时使用简写。**
 
 ```js
 // bad
@@ -315,7 +315,7 @@ if (collection.length) {
 ```
 
 **只有引用非法的变易命名时才用引号将属性名包起来，其它情况一率不采用这种方式。**
-**它改进了语法高亮显示，并且更容易被许多 js 引擎优化。**
+**它改进了语法高亮显示，并且更容易被许多 `js` 引擎优化。**
 
 ```js
 const bad = {
@@ -330,7 +330,7 @@ const good = {
 }
 ```
 
-**使用解构符来对 Object 进行拷贝**
+**使用解构符来对 `Object` 进行拷贝**
 
 ```js
 // very bad
@@ -403,7 +403,7 @@ function concateAll(...args) {
 }
 ```
 
-**使用 /** ... \*/ 作为多行注释。包含描述、指定所有参数和返回值的类型和值。\*\*
+**使用 `/** ... \*/` 作为多行注释。包含描述、指定所有参数和返回值的类型和值。**
 
 ```js
 // bad
@@ -435,9 +435,9 @@ function make(tag) {
 
 **给注释增加 FIXME 或 TODO 的前缀可以帮助其他开发者快速了解这是一个需要复查的问题，或是给需要实现的功能提供一个解决方式。**
 
-这将有别于常见的注释，因为它们是可操作的。使用 FIXME -- need to figure this out 或者 TODO -- need to implement。\
+这将有别于常见的注释，因为它们是可操作的。使用 `FIXME -- need to figure this out 或者 TODO -- need to implement。`
 
-使用 // FIXME: 标注问题。
+使用 `// FIXME: `标注问题。
 
 ```js
 class Calculator {
@@ -448,7 +448,7 @@ class Calculator {
 }
 ```
 
-**使用 // TODO: 标注问题的解决方式。**
+**使用 `// TODO`: 标注问题的解决方式。**
 
 ```js
 class Calculator {
@@ -530,7 +530,7 @@ const good = new User({
 })
 ```
 
-**不要使用下划线 \_ 结尾或开头来命名属性和方法。**
+**不要使用下划线 `_` 结尾或开头来命名属性和方法。**
 
 ```js
 // bad
@@ -548,7 +548,7 @@ this.firstName = 'Panda'
 // bad
 function foo() {
   const self = this
-  return function() {
+  return function () {
     console.log(self)
   }
 }
@@ -556,7 +556,7 @@ function foo() {
 // bad
 function foo() {
   const that = this
-  return function() {
+  return function () {
     console.log(that)
   }
 }
@@ -569,7 +569,7 @@ function foo() {
 }
 ```
 
-**如果你需要存取函数时使用 getVal() 和 setVal('hello')。**
+**如果你需要存取函数时使用 `getVal()` 和 `setVal('hello')`。**
 
 ```js
 // bad
@@ -585,7 +585,7 @@ dragon.age(25)
 dragon.setAge(25)
 ```
 
-**如果属性是布尔值，使用 isVal() 或 hasVal()。**
+**如果属性是布尔值，使用 `isVal()`或 `hasVal()`。**
 
 ```js
 // bad

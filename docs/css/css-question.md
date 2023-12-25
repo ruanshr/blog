@@ -1,3 +1,6 @@
+---
+order: -2
+---
 # CSS 面试题
 
 ### 1 介绍一下标准的 CSS 的盒子模型？与低版本 IE 的盒子模型有什么不同的？
@@ -587,3 +590,66 @@ webp 格式是谷歌在 2010 年推出的图片格式，压缩率只有 jpg 的 
 然后利用 CSS 的 background-image，background- repeat，background-position 的组合进行背景定位。
 利用 CSS Sprites 能很好地减少网页的 http 请求，从而大大的提高页面的性能；
 CSS Sprites 能减少图片的字节
+
+
+### 如何让div居中
+
+要让一个`div`元素居中，可以使用不同的CSS技术来实现。以下是几种常见的方法：
+1. 使用flex布局：将`div`元素的父元素设置为`display: flex;`，并使用`justify-content: center;`和`align-items: center;`来水平和垂直居中。
+```css
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+```
+```html
+<div class="container">
+  <div>居中的内容</div>
+</div>
+```
+2. 使用绝对定位和transform：将`div`元素的父元素设置为`position: relative;`，然后将`div`元素设置为`position: absolute;`，并使用`top: 50%; left: 50%; transform: translate(-50%, -50%);`来居中。
+```css
+.container {
+  position: relative;
+}
+.centered-div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+```
+```html
+<div class="container">
+  <div class="centered-div">居中的内容</div>
+</div>
+```
+3. 使用grid布局：将`div`元素的父元素设置为`display: grid;`，并使用`place-items: center;`来居中。
+```css
+.container {
+  display: grid;
+  place-items: center;
+}
+```
+```html
+<div class="container">
+  <div>居中的内容</div>
+</div>
+```
+4. 使用table布局：将`div`元素的父元素设置为`display: table;`，并将`div`元素设置为`display: table-cell;`和`vertical-align: middle;`来居中。
+```css
+.container {
+  display: table;
+}
+.centered-div {
+  display: table-cell;
+  vertical-align: middle;
+}
+```
+```html
+<div class="container">
+  <div class="centered-div">居中的内容</div>
+</div>
+```
+这些方法中的任何一种都可以让`div`元素居中。选择使用哪种方法取决于你的具体需求和项目的布局结构。
