@@ -1,6 +1,5 @@
 ---
-prev: /css/css-reflow
-next: /css/css-weight
+order: 1
 ---
 
 # CSS 规范

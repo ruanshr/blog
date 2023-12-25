@@ -6,7 +6,7 @@
 
 ### 媒介类型
 
-在 CSS2 中，媒体查询只使用于&lt;style&gt;和&lt;link&gt;标签中，以 media 属性存在
+在 CSS2 中，媒体查询只使用于`<style></style>`和`<link>`标签中，以 media 属性存在
 
 media 属性用于为不同的媒介类型规定不同的样式
 
@@ -37,27 +37,29 @@ media 属性用于为不同的媒介类型规定不同的样式
 
 ### 媒体属性
 
-媒体属性是 CSS3 新增的内容，多数媒体属性带有“min-”和“max-”前缀，用于表达“小于等于”和“大于等于”。这避免了使用与 HTML 和 XML 冲突的“&lt;”和“&gt;”字符
+媒体属性是 CSS3 新增的内容，多数媒体属性带有“`min-`”和“`max-`”前缀，用于表达“小于等于”和“大于等于”。这避免了使用与 HTML 和 XML 冲突的“`<`”和“`>`”字符
 
-[注意]媒体属性必须用括号()包起来，否则无效
+[注意]媒体属性必须用括号`()`包起来，否则无效
 
 下表中列出了所有的媒体属性
 
-     width | min-width | max-width
-     height | min-height | max-height
-     device-width | min-device-width | max-device-width
-     device-height | min-device-height | max-device-height
-     aspect-ratio | min-aspect-ratio | max-aspect-ratio
-     device-aspect-ratio | min-device-aspect-ratio | max-device-aspect-ratio
-     color | min-color | max-color
-     color-index | min-color-index | max-color-index
-     monochrome | min-monochrome | max-monochrome
-     resolution | min-resolution | max-resolution
-     scan | grid
+```
+  width | min-width | max-width
+  height | min-height | max-height
+  device-width | min-device-width | max-device-width
+  device-height | min-device-height | max-device-height
+  aspect-ratio | min-aspect-ratio | max-aspect-ratio
+  device-aspect-ratio | min-device-aspect-ratio | max-device-aspect-ratio
+  color | min-color | max-color
+  color-index | min-color-index | max-color-index
+  monochrome | min-monochrome | max-monochrome
+  resolution | min-resolution | max-resolution
+  scan | grid
+```
 
 **【1】颜色（color）**
 
-指定输出设备每个像素单元的比特值。如果设备不支持输出颜色，则该值为 0
+指定输出设备每个像素单元的比特值。如果设备不支持输出颜色，则该值为 `0`
 
 向所有能显示颜色的设备应用样式表
 
@@ -76,9 +78,9 @@ media 属性用于为不同的媒介类型规定不同的样式
 
 **【2】颜色索引（color-index）**
 
-颜色索引指定了输出设备中颜色查询表中的条目数量，如果没有使用颜色查询表，则值等于 0
+颜色索引指定了输出设备中颜色查询表中的条目数量，如果没有使用颜色查询表，则值等于 `0`
 
-向所有使用至少 256 个索引颜色的设备应用样式表(下列代码无显示，说明返回值为 0)
+向所有使用至少 256 个索引颜色的设备应用样式表(下列代码无显示，说明返回值为 `0`)
 
 ```html
 <style>
@@ -95,7 +97,7 @@ media 属性用于为不同的媒介类型规定不同的样式
 
 **【3】宽高比（aspect-ratio）**
 
-宽高比描述了输出设备目标显示区域的宽高比。该值包含两个以“/”分隔的正整数。代表了水平像素数（第一个值）与垂直像素数（第二个值）的比例
+宽高比描述了输出设备目标显示区域的宽高比。该值包含两个以“`/`”分隔的正整数。代表了水平像素数（第一个值）与垂直像素数（第二个值）的比例
 
 向可视区域是正方形或者是宽屏的设备应用样式表
 
@@ -114,9 +116,9 @@ media 属性用于为不同的媒介类型规定不同的样式
 
 **【4】设备宽高比（device-aspect-ratio）**
 
-设备宽高比描述了输出设备的宽高比。该值包含两个以“/”分隔的正整数。代表了水平像素数（第一个值）与垂直像素数（第二个值）的比例
+设备宽高比描述了输出设备的宽高比。该值包含两个以“`/`”分隔的正整数。代表了水平像素数（第一个值）与垂直像素数（第二个值）的比例
 
-向宽高比为 16:9 的特殊宽屏设备应用样式表
+向宽高比为 `16:9` 的特殊宽屏设备应用样式表
 
 ```html
 <style>
@@ -171,7 +173,7 @@ media 属性用于为不同的媒介类型规定不同的样式
 
 **【7】网格（grid）**
 
-网格判断输出设备是网格设备还是位图设备。如果设备是基于网格的（例如电传打字机终端或只能显示一种字形的电话），该值为 1，否则为 0
+网格判断输出设备是网格设备还是位图设备。如果设备是基于网格的（例如电传打字机终端或只能显示一种字形的电话），该值为 `1`，否则为 `0`
 
 向非网格设备应用样式表
 
@@ -249,7 +251,7 @@ media 属性用于为不同的媒介类型规定不同的样式
 
 方向指定了设备处于横屏（宽度大于宽度）模式还是竖屏（高度大于宽度）模式
 
-值：landscape(横屏) | portrait(竖屏)
+值：`landscape(横屏)` | `portrait(竖屏)`
 
 向竖屏设备应用样式表
 
@@ -291,13 +293,13 @@ media 属性用于为不同的媒介类型规定不同的样式
 
 扫描描述了电视输出设备的扫描过程
 
-值： progressive | interlace
+值： `progressive` | `interlace`
 
 语法
 
 媒体查询包含了一个 CSS2 已有的媒介类型(或称为媒体类型)和 CSS3 新增的包含一个或多个表达式的媒体属性，这些媒体属性会被解析成真或假
 
-当媒体查询为真时，相关的样式表或样式规则就会按照正常的级联规则被应用。即使媒体查询返回假， &lt;link&gt; 标签上带有媒体查询的样式表仍将被下载（只不过不会被应用）
+当媒体查询为真时，相关的样式表或样式规则就会按照正常的级联规则被应用。即使媒体查询返回假， `<link>` 标签上带有媒体查询的样式表仍将被下载（只不过不会被应用）
 
 ```html
 <link rel="stylesheet" href="style.css" media="print" />
@@ -319,10 +321,10 @@ and 操作符用来把多个媒体属性组合起来，合并到同一条媒体�
 
 满足横屏以及最小宽度为 700px 的条件应用样式表
 
-@media all and (min-width: 700px) and (orientation: landscape) { ... }
+`@media all and (min-width: 700px) and (orientation: landscape) { ... }`
 　　由于不使用 not 或 only 操作符的情况下，媒体类型是可选的，默认为 all，所以可以简写为
 
-@media (min-width: 700px) and (orientation: landscape) { ... }
+`@media (min-width: 700px) and (orientation: landscape) { ... }`
 
 **or**
 
@@ -330,7 +332,7 @@ and 操作符用来把多个媒体属性组合起来，合并到同一条媒体�
 
 满足最小宽度为 700 像素或是横屏的手持设备应用样式表
 
-@media (min-width: 700px), handheld and (orientation: landscape) { ... }
+`@media (min-width: 700px), handheld and (orientation: landscape) { ... }`
 **not**
 
 not 操作符用来对一条媒体查询的结果进行取反
@@ -341,23 +343,23 @@ not 操作符用来对一条媒体查询的结果进行取反
 
 only 操作符表示仅在媒体查询匹配成功时应用指定样式。可以通过它让选中的样式在老式浏览器中不被应用
 
-media="only screen and (max-width:1000px)"{...}
+`media="only screen and (max-width:1000px)"{...}`
 　　上面这行代码，在老式浏览器中被解析为 media="only"，因为没有一个叫 only 的设备，所以实际上老式浏览器不会应用样式
 
-media="screen and (max-width:1000px)"{...}
+`media="screen and (max-width:1000px)"{...}`
 　　上面这行代码，在老式浏览器中被解析为 media="screen"，它把后面的逻辑表达式忽略了。所以老式浏览器会应用样式
 
 所以，在使用媒体查询时，only 最好不要忽略
 
 **方法**
 
-window.matchMedia()方法用来检查 CSS 的 mediaQuery 语句
+`window.matchMedia()`方法用来检查 CSS 的 mediaQuery 语句
 
 [注意]IE9-浏览器不支持，可以使用第三方函数库 matchMedia.js
 
 **属性**
 
-window.matchMedia()方法接受一个 mediaQuery 语句的字符串作为参数，返回一个 MediaQueryList 对象。该对象有 media 和 matches 两个属性
+`window.matchMedia()`方法接受一个 mediaQuery 语句的字符串作为参数，返回一个 MediaQueryList 对象。该对象有 media 和 matches 两个属性
 
 media：返回所查询的 mediaQuery 语句字符串
 matches：返回一个布尔值，表示当前环境是否匹配查询语句
@@ -379,7 +381,7 @@ if (result.matches) {
 }
 ```
 
-[注意]如果 window.matchMedia 无法解析 mediaQuery 参数，matches 属性返回的总是 false，而不是报错
+[注意]如果 `window.matchMedia` 无法解析 `mediaQuery` 参数，`matches` 属性返回的总是 `false`，而不是报错
 
 ```js
 var result = window.matchMedia('123')
@@ -388,12 +390,12 @@ console.log(result.matches) //false
 
 **事件**
 
-window.matchMedia 方法返回的 MediaQueryList 对象有两个方法，用来监听事件：addListener 方法和 removeListener 方法
+`window.matchMedia` 方法返回的 `MediaQueryList` 对象有两个方法，用来监听事件：`addListener` 方法和 `removeListener` 方法
 
 // 指定回调函数
-mql.addListener(mqCallback);
+`mql.addListener(mqCallback);`
 // 撤销回调函数
-mql.removeListener(mqCallback);
+`mql.removeListener(mqCallback);`
 　　注意，只有 mediaQuery 查询结果发生变化时，才调用指定的回调函数
 
 所以，如果想要 mediaQuery 查询未变化时，就显示相应效果，需要提前调用一次函数
@@ -481,17 +483,17 @@ function mqCallback(mql) {
 
 如果 HTML 设置字体大小为 12px，设置如下媒体查询
 
-media="only screen and (max-width:1rem)"
+`media="only screen and (max-width:1rem)"`
 　　实际上，max-width 等于 16px，而不是 12px
 
 而正是由于媒体查询是相对于浏览器的， 所以使用 rem 就没有必要，完全可以使用 em 来替代
 
-media="only screen and (max-width:1em)"
+`media="only screen and (max-width:1em)"`
 媒体查询多用于响应式网页中。
 
 1.初始化设置：
 
-在 HTML 文件中，网页顶部<head></head>标签中插入一句话：
+在 `HTML` 文件中，网页顶部<head></head>标签中插入一句话：
 
 ```html
 <meta
@@ -502,16 +504,16 @@ media="only screen and (max-width:1em)"
 
 这句话在于对响应式网页做一个初始化设置，主要包括：
 
-name="viewport"：标记显示设备为视口；
+`name="viewport"`：标记显示设备为视口；
 
-width = device-width：宽度等于当前设备的宽度；
+`width = device-width`：宽度等于当前设备的宽度；
 
 initial-scale：初始的缩放比例（默认设置为 1.0）；
 minimum-scale：允许用户缩放到的最小比例（默认设置为 1.0）；
 maximum-scale：允许用户缩放到的最大比例（默认设置为 1.0）；  
 user-scalable：用户是否可以手动缩放（默认设置为 no，因为我们不希望用户放大缩小页面）。
 
-2.解决 IE 浏览器的兼容性问题：
+### 2.解决 IE 浏览器的兼容性问题：
 
 因为 IE 浏览器(IE8)不支持 HTML5 和 CSS3 中的 media，所以要加载用于解决 IE 浏览器兼容性问题的 JS 文件：
 
@@ -523,21 +525,21 @@ user-scalable：用户是否可以手动缩放（默认设置为 no，因为我�
 <![endif]-->
 ```
 
-两个&lt;script&gt;&lt;/script&gt;标签中的 src 属性所指向的文件链接地址为固定地址中的文件，直接异地引用就好，不用下载到本地引用。
+两个`<script></script>`标签中的 src 属性所指向的文件链接地址为固定地址中的文件，直接异地引用就好，不用下载到本地引用。
 
-3.设置 IE 的渲染方式为最高：
+### 3.设置 IE 的渲染方式为最高：
 
 现在有很多人的 IE 浏览器都升级到 IE9 以上，这个时候会有很多诡异的事情发生，例如现在是 IE9 的浏览器，但是浏览器的文档模式却是 IE8，为了防止这种情况，我们需要下面这段代码来让 IE 的文档模式永远都是最新：
 
-&lt;meta http-equiv="X-UA-Compatible"content="IE=edge"&gt;
+`<meta http-equiv="X-UA-Compatible"content="IE=edge">`
 
 当然还有一个更给力的写法：
 
-&lt;meta http-equiv="X-UA-Compatible"content="IE=Edge，chrome=1"&gt;
+`<meta http-equiv="X-UA-Compatible"content="IE=Edge，chrome=1">`
 
 这段代码后面加了一个 chrome=1，这是由于 Google Chrome Frame（谷歌内嵌浏览器框架 GCF），如果用户电脑安装这个 chrome 插件，就可让电脑内的 IE 浏览器规避版本因素，使用 Webkit 引擎及 V8 引擎进行排版及运算。当然如果用户没装这个插件，这段代码就会让 IE 浏览器以最高的文档模式展现效果。
 
-4.CSS3 media 媒体查询的写法：
+### 4.CSS3 media 媒体查询的写法：
 
 ```css
 @media screen and (max-width: 960px) {
@@ -561,7 +563,7 @@ user-scalable：用户是否可以手动缩放（默认设置为 no，因为我�
 
 本着思维严谨的原则，个人不会采用这种写法。
 
-5.CSS3 媒体查询主体代码组合：
+### 5.CSS3 媒体查询主体代码组合：
 
 在响应式网页布局中需要持续运用媒体查询代码组合，主要作用在于判断所适配屏幕的宽度，并根据各种宽度条件套用不同的 CSS 样式。
 
@@ -607,16 +609,16 @@ user-scalable：用户是否可以手动缩放（默认设置为 no，因为我�
 }
 ```
 
-6.总体开发思路：
+### 6.总体开发思路：
 
 使用 CSS3 中媒体查询的大致思路就是判断网页在不同设备中所处的宽度范围，这样的范围可能有三种（PC、平板、手机），也可能有四种（PC、平板、中大屏手机、小屏手机），当然也可能只需要两种（平板、手机，PC 端单独开发一版时可不作为 CSS3 媒体查询的使用对象），并为各种宽度范围情况下的所需页面元素套用不同的 CSS 样式，从而适配各种设备。
 
-7.响应式网页开发中的宽度问题：
+### 7.响应式网页开发中的宽度问题：
 
 在实际开发中，通常需要设置响应式网页宽度的最大值，一旦忽略最大宽度，臃肿或零散的网页布局都会造成视觉洪灾，也就是我们常说的看起来很 low。
 另外谈谈目前显示设备中的网页宽度问题（由于篇幅问题，就不从工业革命开始扯了），目前最为常见的宽度基本上都是：大于或等于 960px 的 PC 端（1920px、1600px、1440px、1280px、1140px、960px）、960px 至 640px 之间的平板端（768px、640px）以及 640px 以下的手机端（480px、320px），以上宽度存在已久，且显示设备中的网页宽度会长期处于这样的状态下，在响应式网页宽度设计上，基本从这几个尺寸考虑就已经足够。
 
-8.media 媒体查询所有参数汇总：
+### 8.media 媒体查询所有参数汇总：
 
 媒体查询器中还包含并不常用的相关功能，悉如示下：
 
@@ -648,7 +650,7 @@ grid：检测输出的设备是网格的还是位图设备。
 
 media 媒体查询并不是 CSS3 诞生之后的专用功能，早在 CSS2 开始就已经支持 media，比如：
 
-在 HTML 文件中的<head></head>标签中写入这句：
+在 HTML 文件中的`<head></head>`标签中写入这句：
 
 ```html
 <link rel="stylesheet" type="text/css" media="screen" href="style.css" />

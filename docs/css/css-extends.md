@@ -1,65 +1,64 @@
 ---
-prev: /css/css-display-flex
-next: /css/css-fake
+order: 5
 ---
 
-# css有哪些属性可以继承
+# CSS 有哪些属性可以继承
 
 ## 有继承性的属性：
 
 1、字体系列属性
 
-font：组合字体
+`font`：组合字体
 
-font-family：规定元素的字体系列
+`font-family`：规定元素的字体系列
 
-font-weight：设置字体的粗细
+`font-weight`：设置字体的粗细
 
-font-size：设置字体的尺寸
+`font-size`：设置字体的尺寸
 
-font-style：定义字体的风格
+`font-style`：定义字体的风格
 
-font-variant：设置小型大写字母的字体显示文本，这意味着所有的小写字母均会被转换为
+`font-variant`：设置小型大写字母的字体显示文本，这意味着所有的小写字母均会被转换为
 
 大写，但是所有使用小型大写字体的字母与其余文本相比，其字体尺寸更小。
 
-font-stretch：允许你使文字变宽或变窄。所有主流浏览器都不支持。
+`font-stretch`：允许你使文字变宽或变窄。所有主流浏览器都不支持。
 
-font-size-adjust：为某个元素规定一个 aspect 值，字体的小写字母 "x" 的高度与
+`font-size-adjust`：为某个元素规定一个 aspect 值，字体的小写字母 "x" 的高度与
 
-"font-size" 高度之间的比率被称为一个字体的 aspect 值。这
+"`font-size`" 高度之间的比率被称为一个字体的 aspect 值。这
 
 样就可以保持首选字体的 x-height。
 
 2、文本系列属性
 
-text-indent：文本缩进
+`text-indent`：文本缩进
 
-text-align：文本水平对齐
+`text-align`：文本水平对齐
 
-line-height：行高
+`line-height`：行高
 
-word-spacing：增加或减少单词间的空白（即字间隔）
+`word-spacing`：增加或减少单词间的空白（即字间隔）
 
-letter-spacing：增加或减少字符间的空白（字符间距）
+`letter-spacing`：增加或减少字符间的空白（字符间距）
 
-text-transform：控制文本大小写
+`text-transform`：控制文本大小写
 
-direction：规定文本的书写方向
+`direction`：规定文本的书写方向
 
-color：文本颜色
+`color`：文本颜色
 
-3、元素可见性：visibility
+3、元素可见性：`visibility`
 
-4、表格布局属性：caption-side、border-collapse、border-spacing、
+4、表格布局属性：`caption-side`、`border-collapse`、`border-spacing`、
 
-empty-cells、table-layout
+`empty-cells`、`table-layout`
 
-5、列表属性：list-style-type、list-style-image、list-style-position、list-style
+5、列表属性：`list-style-type`、`list-style-image`、`list-style-position`、`list-style`
 
-6、生成内容属性：quotes
+6、生成内容属性：`quotes`
 
-7、光标属性：cursor
+7、光标属性：`cursor`
 
 8、页面样式属性：page、page-break-inside、windows、orphans
 
@@ -115,10 +114,9 @@ unicode-bidi：
 
 因为它们都有一个默认值
 
-h1为2em
-h2为1.5em
-h3为1.17em
-h4为1em
-h5为0.83em
-h6为0.67em
-
+h1 为 2em
+h2 为 1.5em
+h3 为 1.17em
+h4 为 1em
+h5 为 0.83em
+h6 为 0.67em

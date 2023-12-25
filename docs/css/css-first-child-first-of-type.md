@@ -1,3 +1,6 @@
+---
+order: 8
+---
 # css 选择器中:first-child 与:first-of-type 的区别
 
 :first-child 选择器是 css2 中定义的选择器，从字面意思上来看也很好理解，就是第一个子元素。比如有段代码：
