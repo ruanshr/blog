@@ -1,6 +1,5 @@
 ---
-prev: /javascript-base/format
-next: /javascript-base/number-function
+order: 16
 ---
 
 # 垃圾回收
@@ -9,16 +8,16 @@ next: /javascript-base/number-function
 
 可以将这个过程想象从根溢出一个具体的油漆桶，它从一个根节点触发将可到达的对象标记染色，然后移除未标记的
 **第一步：标记空间中可达值**
-V8 采用的是可达性（reachability）算法来判断对中的对象应不应该被回收
+`V8` 采用的是可达性（`reachability`）算法来判断对中的对象应不应该被回收
 
-- 从根节点（Root）出发，遍历所有的对象。
-- 可以遍历到的对象，是可达的（reachable）
-- 没有被遍历到的对象，不可达的（unreachable）
+- 从根节点（`Root`）出发，遍历所有的对象。
+- 可以遍历到的对象，是可达的（`reachable`）
+- 没有被遍历到的对象，不可达的（`unreachable`）
 
 在浏览器环境下，根节点有很多，主要包括这几个
 
-- 全局变量 window，位于每个 iframe 中
-- 文档 DOM 树
+- 全局变量 `window`，位于每个 `iframe` 中
+- 文档 `DOM` 树
 - 存放在栈上的变量
 - ...
 
@@ -38,7 +37,7 @@ V8 采用的是可达性（reachability）算法来判断对中的对象应不�
 
 ### 什么时候垃圾回收
 
-浏览器进行垃圾回收的时候，会暂停 Javascript 脚本，等垃圾回收完毕再继续执行。
+浏览器进行垃圾回收的时候，会暂停 `Javascript` 脚本，等垃圾回收完毕再继续执行。
 
 对于普通应用这样没什么问题，但对于 Js 游戏、动画对连贯性要求比较高的应用，如果暂停时间很长就会造成页面卡顿。
 
@@ -56,7 +55,7 @@ V8 采用的是可达性（reachability）算法来判断对中的对象应不�
 
 **长久对象**
 
-生命周长很长的对象，比如全局的 window，DOM，Web API 等等
+生命周长很长的对象，比如全局的 `window`，`DOM`，`Web API` 等等
 
 这类对象可以慢点回收
 
@@ -170,31 +169,31 @@ V8 采用的是可达性（reachability）算法来判断对中的对象应不�
 
 Javascript 中类型：值类型，引用类型
 
-- 引用类型 在没有引用之后通过 V8 自动回收。
+- 引用类型 在没有引用之后通过 `V8` 自动回收。
 
 值类型
 
-- 如果处于闭包的情况下，要等闭包没有引用才会 V8 回收
-- 非闭包的情况下，等待 V8 的新生代切换的时候回收
+- 如果处于闭包的情况下，要等闭包没有引用才会 `V8` 回收
+- 非闭包的情况下，等待 `V8` 的新生代切换的时候回收
 
 ### 【面试题】哪些情况会导致内存泄漏，如何避免
 
 **内存泄漏是指访问不到的变量依然占据着内存空间，不能被再次利用起来。**
 
-以 Vue 为例，通常有这些情况：
+以 `Vue` 为例，通常有这些情况：
 
-- 监听在 window/ body 等事件没有解绑
-- 绑在 EventBus 的事件没有解绑
-- Vuex 的\$store, watch 了之后没有 unwatch
+- 监听在 `window`/ body 等事件没有解绑
+- 绑在 `EventBus` 的事件没有解绑
+- Vuex 的`$store`, `watch` 了之后没有 `unwatch`
 - 使用第三方库创建，没有调用正确的销毁函数
 
-解决的方法： beforeDestory 中及时销毁
+解决的方法： `beforeDestory` 中及时销毁
 
-- 绑定了 DOM/BOM 对象中的事件 addEventListener，removeEventListner
-- 观察者模式$on，$off 处理
+- 绑定了 `DOM/BOM` 对象中的事件 `addEventListener`，`removeEventListner`
+- 观察者模式`$on`，`$off` 处理
 - 如果在组件中使用了定时器，应销毁处理
-- 如果在 mounted/created 钩子中使用了第三方库初始化，对应的销毁。
-- 使用弱引用 weakMap，weakSet
+- 如果在 `mounted/created` 钩子中使用了第三方库初始化，对应的销毁。
+- 使用弱引用` weakMap`，`weakSet`
 
 ### 【面试题】闭包会导致内存泄漏吗
 
@@ -202,8 +201,8 @@ Javascript 中类型：值类型，引用类型
 
 ### 【面试题】 weakMap，weakSet 和 Map， Set 有什么区别
 
-在 ES6 中新增两个数据结构 WeakMap、WeakSet，就是为了解决内存泄漏的问题。
+在 `ES6` 中新增两个数据结构 `WeakMap`、`WeakSet`，就是为了解决内存泄漏的问题。
 
 它的键名所引用的对象都是弱引用，就是垃圾回收机制就会释放该对象所占用的内存。
 
-也就是，一旦不再需要，WeakMap 里面的键名对象和所应对的键值对会自动释放，不用手动删除引用
+也就是，一旦不再需要，`WeakMap` 里面的键名对象和所应对的键值对会自动释放，不用手动删除引用

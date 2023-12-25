@@ -1,6 +1,5 @@
 ---
-prev: /javascript-base/prototype
-next: /javascript-base/sort-info
+order: 11
 ---
 
 # Set 和 Map
