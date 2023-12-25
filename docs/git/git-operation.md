@@ -1,13 +1,14 @@
 ---
-prev: /git/git-flow
-next: /git/git-problem
+order: 3
 ---
 
-# Git 项目分支build
+# git 项目分支 build
 
-```
+### 以下为切换本地分支脚本
 
-git fetch && git stash && git clean -f 
+```sh
+
+git fetch && git stash && git clean -f
 
 git checkout $1
 
@@ -15,13 +16,13 @@ git branch -D $1
 
 git checkout -b $2 origin/$2
 
-git pull 
+git pull
 
 git status
 
 ```
 
-```
+```sh
 
 echo "---------------- change branch -----------"
 
@@ -34,4 +35,3 @@ yarn && yarn build
 echo "--------------------done ---------------------"
 
 ```
-
