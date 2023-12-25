@@ -1,6 +1,5 @@
 ---
-prev: /javascript-base/set-map
-next: /javascript-base/string-function
+order: 17
 ---
 
 # 十大算法

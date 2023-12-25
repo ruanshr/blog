@@ -1,6 +1,5 @@
 ---
-prev: /css/css-extends
-next: /css/css-import
+order: 6
 ---
 
 # CSS3中什么是伪类和伪元素？

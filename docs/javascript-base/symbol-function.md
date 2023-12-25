@@ -1,13 +1,12 @@
 ---
-prev: /javascript/study
-next: /javascript/tcp-introduction
+order: 10
 ---
 
 # ES6 新特性之 Symbol
 
 ## 数据类型 Symbol
 
-ES6 引入 Symbol 作为一种新的基础数据类型，表示独一无二的值，每个从Symbol()返回的symbol值都是唯一的，一个symbol值能作为对象属性的标识符，这是该数据类型仅有的目的。
+ES6 引入 Symbol 作为一种新的基础数据类型，表示独一无二的值，每个从 Symbol()返回的 symbol 值都是唯一的，一个 symbol 值能作为对象属性的标识符，这是该数据类型仅有的目的。
 
 ES6 之后，JavaScript 一共有 6 种基础数据类型：Symbol、undefined、null、Boolean、String、Number。
 
@@ -47,7 +46,7 @@ let a5 = Symbol()
 !a5 // false
 a5 + 1 // TypeError
 ~a5 + // TypeError
-a5 - // TypeError
+  a5 - // TypeError
   a5 // TypeError
 ```
 
@@ -127,7 +126,7 @@ b2 instanceof Array   // true
 b2 instanceof P2      // false
 ```
 
-- 4、Symbol.match
+- 4、`Symbol.match`
   当执行 str.match(myObject)，传入的属性存在时会调用，并返回该方法的返回值。
 
 ```js
@@ -153,8 +152,8 @@ a[Symbol.replace] = (...s) => {
 'Hello'.replace(a, 'Word') //  ["Hello", "Word"]
 ```
 
-- 6、Symbol.hasInstance
-  当该对象被 String.prototype.search 方法调用时，会返回该方法的返回值。
+- 6、`Symbol.hasInstance`
+  当该对象被 `String.prototype.search` 方法调用时，会返回该方法的返回值。
 
 ```js
 class S {
@@ -168,8 +167,8 @@ class S {
 'Tommery'.search(new S('mm')) // 2
 ```
 
-- 7、Symbol.split
-  当该对象被 String.prototype.split 方法调用时，会返回该方法的返回值。
+- 7、`Symbol.split`
+  当该对象被 `String.prototype.split` 方法调用时，会返回该方法的返回值。
 
 ```js
 class SP {
@@ -187,8 +186,8 @@ class SP {
 'helloword'.split(new SP('llo')) // ['he','word']
 ```
 
-- 8、Symbol.iterator
-  对象进行 for...of 循环时，会调用 Symbol.iterator 方法，返回该对象的默认遍历器。
+- 8、`Symbol.iterator`
+  对象进行 for...of 循环时，会调用 `Symbol.iterator` 方法，返回该对象的默认遍历器。
 
 ```js
 class It {
@@ -223,7 +222,7 @@ let obj = {
       default:
         throw new Error()
     }
-  },
+  }
 }
 
 2 + obj // 5                  hint 为 default
@@ -241,7 +240,7 @@ String(obj) // three           hint 为 string
   在该对象上面调用 Object.prototype.toString 方法时，如果这个属性存在，它的返回值会出现在 toString 方法返回的字符串之中，表示对象的类型。也就是说，这个属性可以用来定制[object Object]或[object Array]中 object 后面的那个字符串。
 
 ```js
-;({ [Symbol.toStringTag]: 'Foo' }.toString())
+;({ [Symbol.toStringTag]: 'Foo' }).toString()
 // [Object Foo]
 
 class Collection {

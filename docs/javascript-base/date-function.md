@@ -1,11 +1,10 @@
 ---
-prev: /javascript-base/custom-function
-next: /javascript-base/debounce-throttle
+order: 7
 ---
 
-# javascript 日期 Date 详解
+# 日期 Date 函数
 
-Date()构造函数有四种基本形式
+`Date()`构造函数有四种基本形式
 
 ```js
 new Date();
@@ -17,19 +16,19 @@ new Date(year, monthIndex [, day [, hours [, minutes [, seconds [, milliseconds]
 
 **Date.length**
 
-可接收参数个数，值为 7
+可接收参数个数，值为 `7`
 
 **Date.now()**
 
-返回自 1970 年 1 月 1 日 00:00:00 (UTC) 到当前时间的毫秒数。
+返回自 `1970 年 1 月 1 日 00:00:00 (UTC)` 到当前时间的毫秒数。
 
 **Date.prototype.getDate()**
 
-根据本地时间，返回一个指定的日期对象为一个月中的哪一日（从 1--31）
+根据本地时间，返回一个指定的日期对象为一个月中的哪一日（从 `1--31`）
 
 **Date.prototype.getDay()**
 
-根据本地时间，返回一个具体日期中一周的第几天，0 表示星期天。对于某个月中的第几天（从 0--6）
+根据本地时间，返回一个具体日期中一周的第几天，`0` 表示星期天。对于某个月中的第几天（从 `0--6`）
 
 **Date.prototype.getFullYear()**
 

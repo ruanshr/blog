@@ -1,22 +1,21 @@
 ---
-prev: /javascript-base/exotic
-next: /javascript-base/garbage
+order: 14
 ---
 
-# JavaScript 风格指南
+# 风格指南
 
-本文基于 github 项目 [airbnb/javascript](https://github.com/airbnb/javascript#types) 翻译，也加入了一些个人理解。规范有利于我们更好的提高代码可读性，避免一些不必要的 bug
+本文基于 `github` 项目 [airbnb/javascript](https://github.com/airbnb/javascript#types) 翻译，也加入了一些个人理解。规范有利于我们更好的提高代码可读性，避免一些不必要的 bug
 
 ## 1.1 基本类型
 
 > 基本类型赋值时，应该直接使用类型的值
 
-string
-number
-boolean
-null
-undefined
-symbol
+- `string`
+- `number`
+- `boolean`
+- `null`
+- `undefined`
+- `symbol`
 
 ```js
 const foo = 1
@@ -31,9 +30,9 @@ console.log(foo, bar) // => 1,9
 
 复杂类型赋值其实是地址的引用
 
-object
-array
-function
+- `object`
+- `array`
+- `function`
 
 ```js
 const foo = [1, 2]
@@ -46,9 +45,11 @@ console.log(foo[0], bar[0]) // => 9, 9
 // 并不能保证引用类型的属性等不变
 ```
 
-## 2.1 所有的赋值都用 const，避免使用 var. eslint: prefer-const, no-const-assign
+## 2.1 所有的赋值都用 `const`，避免使用 `var`. `eslint: prefer-const, no-const-assign`
 
-尽量确保你的代码中的状态是可控范围内的，重复引用会出现难以理解的 bug 和代码。
+尽量确保你的代码中的状态是可控范围内的，重复引用会出现难以理解的 `bug` 和代码。
+
+最小特权法 `const`, `let`
 
 ```js
 // bad
@@ -60,9 +61,9 @@ const a = 1
 const b = 2
 ```
 
-## 2.2 如果你一定要对参数重新赋值，那就用 let，而不是 var. eslint: no-var
+## 2.2 如果你一定要对参数重新赋值，那就用 `let`，而不是 `var`. `eslint: no-var`
 
-let 是块级作用域，var 是函数级作用域，同样是为了减少代码的不可控，减少 “意外”
+`let` 是块级作用域，`var` 是函数级作用域，同样是为了减少代码的不可控，减少 “意外”
 
 ```js
 // bad
@@ -128,7 +129,7 @@ const obj = {
 // bad
 const atom = {
   value: 1,
-  addValue: function(value) {
+  addValue: function (value) {
     return atom.value + value
   }
 }
@@ -366,7 +367,11 @@ return false;
 
 ```js
 // bad
-const arr = [[0, 1], [2, 3], [4, 5]]
+const arr = [
+  [0, 1],
+  [2, 3],
+  [4, 5]
+]
 
 const objectInArray = [
   {
@@ -380,7 +385,11 @@ const objectInArray = [
 const numberInArray = [1, 2]
 
 // good
-const arr = [[0, 1], [2, 3], [4, 5]]
+const arr = [
+  [0, 1],
+  [2, 3],
+  [4, 5]
+]
 
 const objectInArray = [
   {
@@ -543,7 +552,7 @@ function foo() {
 }
 
 // bad
-const foo = function() {
+const foo = function () {
   // ...
 }
 
@@ -560,7 +569,7 @@ const short = function longUniqueMoreDescriptiveLexicalFoo() {
 
 ```js
 // immediately-invoked function expression (IIFE)
-;(function() {
+;(function () {
   console.log('Welcome to the Internet. Please follow me.')
 })()
 ```
@@ -685,12 +694,12 @@ var subtract = Function('a', 'b', 'return a - b')
 
 ```js
 // bad
-const f = function() {}
-const g = function() {}
-const h = function() {}
+const f = function () {}
+const g = function () {}
+const h = function () {}
 
 // good
-const x = function() {}
+const x = function () {}
 const y = function a() {}
 ```
 
@@ -799,16 +808,16 @@ return x \* y;
 
 ```js
 // bad
-;[1, 2, 3].map(number => {
+;[1, 2, 3].map((number) => {
   const nextNumber = number + 1
   ;`A string containing the ${nextNumber}.`
 })
 
 // good
-;[1, 2, 3].map(number => `A string containing the ${number}.`)
+;[1, 2, 3].map((number) => `A string containing the ${number}.`)
 
 // good
-;[1, 2, 3].map(number => {
+;[1, 2, 3].map((number) => {
   const nextNumber = number + 1
   return `A string containing the ${nextNumber}.`
 })
@@ -841,19 +850,13 @@ foo(() => {
 
 ```js
 // bad
-;['get', 'post', 'put'].map(httpMethod =>
-  Object.prototype.hasOwnProperty.call(
-    httpMagicObjectWithAVeryLongName,
-    httpMethod
-  )
+;['get', 'post', 'put'].map((httpMethod) =>
+  Object.prototype.hasOwnProperty.call(httpMagicObjectWithAVeryLongName, httpMethod)
 )
 
 // good
-;['get', 'post', 'put'].map(httpMethod =>
-  Object.prototype.hasOwnProperty.call(
-    httpMagicObjectWithAVeryLongName,
-    httpMethod
-  )
+;['get', 'post', 'put'].map((httpMethod) =>
+  Object.prototype.hasOwnProperty.call(httpMagicObjectWithAVeryLongName, httpMethod)
 )
 ```
 
@@ -889,16 +892,16 @@ return x \* y;
 
 ```js
 // bad
-const itemHeight = item => (item.height > 256 ? item.largeSize : item.smallSize)
+const itemHeight = (item) => (item.height > 256 ? item.largeSize : item.smallSize)
 
 // bad
-const itemHeight = item => (item.height > 256 ? item.largeSize : item.smallSize)
+const itemHeight = (item) => (item.height > 256 ? item.largeSize : item.smallSize)
 
 // good
-const itemHeight = item => (item.height > 256 ? item.largeSize : item.smallSize)
+const itemHeight = (item) => (item.height > 256 ? item.largeSize : item.smallSize)
 
 // good
-const itemHeight = item => {
+const itemHeight = (item) => {
   const { height, largeSize, smallSize } = item
   return height > 256 ? largeSize : smallSize
 }
@@ -908,14 +911,13 @@ const itemHeight = item => {
 
 ```js
 // bad
-foo => bar
-
-foo => bar
+;(foo) => bar
+;(foo) => bar
 
 // good
-foo => bar
-foo => bar
-foo => bar
+;(foo) => bar
+;(foo) => bar
+;(foo) => bar
 ```
 
 ## 9.1 始终用 class，避免直接操作 prototype
@@ -925,7 +927,7 @@ foo => bar
 function Queue(contents = []) {
   this.queue = [...contents]
 }
-Queue.prototype.pop = function() {
+Queue.prototype.pop = function () {
   const value = this.queue[0]
   this.queue.splice(0, 1)
   return value
@@ -955,7 +957,7 @@ function PeekableQueue(contents) {
   Queue.apply(this, contents)
 }
 inherits(PeekableQueue, Queue)
-PeekableQueue.prototype.peek = function() {
+PeekableQueue.prototype.peek = function () {
   return this._queue[0]
 }
 
@@ -971,12 +973,12 @@ class PeekableQueue extends Queue {
 
 ```js
 // bad
-Jedi.prototype.jump = function() {
+Jedi.prototype.jump = function () {
   this.jumping = true
   return true
 }
 
-Jedi.prototype.setHeight = function(height) {
+Jedi.prototype.setHeight = function (height) {
   this.height = height
 }
 
@@ -1148,11 +1150,11 @@ eslint: import/no-mutable-exports
 
 ```js
 // bad
-let foo = 3;
+let foo = 3
 export { foo }
 
 // good
-const foo = 3;
+const foo = 3
 export { foo }
 ```
 
@@ -1234,7 +1236,7 @@ sum === 15
 
 // good
 let sum = 0
-numbers.forEach(num => (sum += num))
+numbers.forEach((num) => (sum += num))
 sum === 15
 
 // best (use the functional force)
@@ -1249,10 +1251,10 @@ for (let i = 0; i < numbers.length; i++) {
 
 // good
 const increasedByOne = []
-numbers.forEach(num => increasedByOne.push(num + 1))
+numbers.forEach((num) => increasedByOne.push(num + 1))
 
 // best (keeping it functional)
-const increasedByOne = numbers.map(num => num + 1)
+const increasedByOne = numbers.map((num) => num + 1)
 ```
 
 ## 11.2 现在不要用 generator
@@ -1603,7 +1605,7 @@ function example() {
 
   anonymous() // => TypeError anonymous is not a function
 
-  var anonymous = function() {
+  var anonymous = function () {
     console.log('anonymous function expression')
   }
 }
@@ -2723,7 +2725,7 @@ this.firstName = 'Panda';
 // bad
 function foo() {
   const self = this
-  return function() {
+  return function () {
     console.log(self)
   }
 }
@@ -2731,7 +2733,7 @@ function foo() {
 // bad
 function foo() {
   const that = this
-  return function() {
+  return function () {
     console.log(that)
   }
 }
@@ -2790,7 +2792,7 @@ function makeStyleGuide() {
 export default makeStyleGuide
 ```
 
-## 23.8 当你 export 一个构造函数/类/单例/函数库对象时用 PascalCase。
+## 23.8 当你 export 一个构造函数/类/单例/函数库对象时用 `PascalCase`。
 
 ```js
 const AirbnbStyleGuide = {
@@ -2834,33 +2836,33 @@ const Requests = [
 
 ```js
 // bad
-const PRIVATE_VARIABLE = 'should not be unnecessarily uppercased within a file';
+const PRIVATE_VARIABLE = 'should not be unnecessarily uppercased within a file'
 
 // bad
-export const THING_TO_BE_CHANGED = 'should obviously not be uppercased';
+export const THING_TO_BE_CHANGED = 'should obviously not be uppercased'
 
 // bad
-export let REASSIGNABLE_VARIABLE = 'do not use let with uppercase variables';
+export let REASSIGNABLE_VARIABLE = 'do not use let with uppercase variables'
 
 // ---
 
 // allowed but does not supply semantic value
-export const apiKey = 'SOMEKEY';
+export const apiKey = 'SOMEKEY'
 
 // better in most cases
-export const API_KEY = 'SOMEKEY';
+export const API_KEY = 'SOMEKEY'
 
 // ---
 
 // bad - unnecessarily uppercases key while adding no semantic value
 export const MAPPING = {
-KEY: 'value'
-};
+  KEY: 'value'
+}
 
 // good
 export const MAPPING = {
-key: 'value'
-};
+  key: 'value'
+}
 ```
 
 ## 24.1 不需要使用属性的访问器函数。

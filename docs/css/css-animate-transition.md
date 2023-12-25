@@ -1,27 +1,60 @@
 ---
-prev: false
-next: /css/css-box
+order: 5
 ---
 
 # animation 和 transition 的区别
 
-**animation** 可以用 name 设置动画的名称，用 duration 设置动画完成的周期，用 timing-function 设置动画的速度曲线，delay 设置动画什么时候开始，iteration-count 设置动画播放的次数，direction 规定下一个周期是否逆向的播放，play-state 动画是否正在进行或者暂停，fill-mode 设置动画停了之后位置什么状态
+**animation** 可以用 `name` 设置动画的名称，用 `duration` 设置动画完成的周期，用 `timing-function` 设置动画的速度曲线，`delay` 设置动画什么时候开始，`iteration-count` 设置动画播放的次数，direction 规定下一个周期是否逆向的播放，`play-state` 动画是否正在进行或者暂停，`fill-mode` 设置动画停了之后位置什么状态
 
-**transition**用 property 去设置过渡效果的属性名称，duration 设置过渡效果的周期，timing-function 规定速度效果的速度曲线，delay 设定过渡效果什么时候开始；
+**transition**用 `property` 去设置过渡效果的属性名称，`duration` 设置过渡效果的周期，`timing-function` 规定速度效果的速度曲线，`delay` 设定过渡效果什么时候开始；
 
-区别：
+### transition
 
-1、transition 是过渡，是样式值的变化的过程，只有开始和结束；animation 其实也叫关键帧，通过和 keyframe 结合可以设置中间帧的一个状态；
+> `transiton` 过度属性 过渡时间 过渡函数 过渡延迟
 
-2、animation 配合 @keyframe 可以不触发时间就触发这个过程，而 transition 需要通过 hover 或者 js 事件来配合触发；
+过渡属性： `all` 或者属性，但属性如高度等计算值需有初始值
 
-3、animation 可以设置很多的属性，比如循环次数，动画结束的状态等等，transition 只能触发一次；
+过渡时间： 秒 / 毫秒
 
-4、animation 可以结合 keyframe 设置每一帧，但是 transition 只有两帧；
+过渡函数： `easy` / `easy-in`
+
+```css
+transition-timing-function: ease
+transition-timing-function: ease-in
+transition-timing-function: ease-out
+transition-timing-function: ease-in-out
+transition-timing-function: linear
+transition-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1)
+transition-timing-function: step-start
+transition-timing-function: step-end
+transition-timing-function: steps(4, end)
+```
+
+过渡延迟：秒
+
+### animation
+
+> `animation` 规则名称 持续时间
+
+> `animation` 规则名称 持续时间 重复次数 时间函数 动画方向 延迟时间
+
+重复次数： `Infinity` 无限循环
+
+动画方向： `alternate`
+
+### 区别
+
+1、`transition` 是过渡，是样式值的变化的过程，只有开始和结束；`animation` 其实也叫关键帧，通过和 keyframe 结合可以设置中间帧的一个状态；
+
+2、`animation` 配合 `@keyframe` 可以不触发时间就触发这个过程，而 `transition` 需要通过 `hover` 或者 `js` 事件来配合触发；
+
+3、`animation` 可以设置很多的属性，比如循环次数，动画结束的状态等等，`transition` 只能触发一次；
+
+4、`animation` 可以结合 `keyframe` 设置每一帧，但是 `transition` 只有两帧；
 
 5、在性能方面：浏览器有一个主线程和排版线程；主线程一般是对 js 运行的、页面布局、生成位图等等，然后把生成好的位图传递给排版线程，而排版线程会通过 GPU 将位图绘制到页面上，也会向主线程请求位图等等；我们在用使用 aniamtion 的时候这样就可以改变很多属性，像我们改变了 width、height、postion 等等这些改变文档流的属性的时候就会引起，页面的回流和重绘，对性能影响就比较大，但是我们用 transition 的时候一般会结合 tansfrom 来进行旋转和缩放等不会生成新的位图，当然也就不会引起页面的重排了；
 
-```
+```css
 transition-property	规定设置过渡效果的 CSS 属性的名称。
 transition-duration	规定完成过渡效果需要多少秒或毫秒。
 transition-timing-function	规定速度效果的速度曲线。
